@@ -38,13 +38,13 @@
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+        <div class="spinner-border text-warning" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
     <!-- Spinner End -->
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-primary text-white d-none d-lg-flex">
+    <div class="container-fluid bg-warning text-white d-none d-lg-flex">
         <div class="container py-3">
             <div class="d-flex align-items-center">
                 <a href="index.html">
@@ -55,11 +55,11 @@
                     <small class="ms-4"><i class="fa fa-envelope me-3"></i>info@example.com</small>
                     <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</small>
                     <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
+                        <a class="btn btn-sm-square btn-light text-warning rounded-circle ms-2" href=""><i
                                 class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
+                        <a class="btn btn-sm-square btn-light text-warning rounded-circle ms-2" href=""><i
                                 class="fab fa-twitter"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
+                        <a class="btn btn-sm-square btn-light text-warning rounded-circle ms-2" href=""><i
                                 class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="ms-auto d-none d-lg-block">
-                        <a href="" class="btn btn-primary rounded-pill py-2 px-3">Get A Quote</a>
+                        <a href="" class="btn btn-warning rounded-pill py-2 px-3">Get A Quote</a>
                     </div>
                 </div>
             </nav>
@@ -124,7 +124,7 @@
                                     <h1 class="display-1 text-white mb-4 animated slideInRight">Unlock Your Business
                                         Growth</h1>
                                     <a href=""
-                                        class="btn btn-primary rounded-pill py-3 px-5 animated slideInRight">Explore
+                                        class="btn btn-warning rounded-pill py-3 px-5 animated slideInRight">Explore
                                         More</a>
                                 </div>
                             </div>
@@ -143,7 +143,7 @@
                                     <h1 class="display-1 text-white mb-5 animated slideInLeft">Ready to Grow Your
                                         Business</h1>
                                     <a href=""
-                                        class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Explore
+                                        class="btn btn-warning rounded-pill py-3 px-5 animated slideInLeft">Explore
                                         More</a>
                                 </div>
                             </div>
@@ -226,7 +226,7 @@
                 </div>
                 <div class="col-lg-6 pt-lg-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="bg-white rounded-top p-5 mt-lg-5">
-                        <p class="fs-5 fw-medium text-primary">About Us</p>
+                        <p class="fs-5 fw-medium text-warning">About Us</p>
                         <h1 class="display-6 mb-4">The Best Marketing Agency to Improve Your Business</h1>
                         <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
                             diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
@@ -242,7 +242,7 @@
                                 <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
                             </div>
                         </div>
-                        <a class="btn btn-primary rounded-pill py-3 px-5" href="">Explore More</a>
+                        <a class="btn btn-warning rounded-pill py-3 px-5" href="">Explore More</a>
                     </div>
                 </div>
             </div>
@@ -277,7 +277,7 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-primary">Our Services</p>
+                <p class="fs-5 fw-medium text-warning">Our Services</p>
                 <h1 class="display-5 mb-5">Digital Marketing Services that We Offer</h1>
             </div>
             <div class="row g-4">
@@ -294,7 +294,7 @@
                                     stet</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="">Read More<i
+                            <a class="text-warning fw-medium" href="">Read More<i
                                     class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>
                     </div>
@@ -312,7 +312,7 @@
                                     stet</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="">Read More<i
+                            <a class="text-warning fw-medium" href="">Read More<i
                                     class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>
                     </div>
@@ -330,7 +330,7 @@
                                     stet</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="">Read More<i
+                            <a class="text-warning fw-medium" href="">Read More<i
                                     class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>
                     </div>
@@ -348,7 +348,7 @@
                                     stet</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="">Read More<i
+                            <a class="text-warning fw-medium" href="">Read More<i
                                     class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>
                     </div>
@@ -366,7 +366,7 @@
                                     stet</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="">Read More<i
+                            <a class="text-warning fw-medium" href="">Read More<i
                                     class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>
                     </div>
@@ -384,7 +384,7 @@
                                     stet</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="">Read More<i
+                            <a class="text-warning fw-medium" href="">Read More<i
                                     class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>
                     </div>
@@ -400,7 +400,7 @@
         <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
                 style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-primary">Our Projects</p>
+                <p class="fs-5 fw-medium text-warning">Our Projects</p>
                 <h1 class="display-5 mb-5">We've Done Lot's of Awesome Projects</h1>
             </div>
             <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
@@ -475,16 +475,16 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="fs-5 fw-medium text-primary">Get A Quote</p>
+                    <p class="fs-5 fw-medium text-warning">Get A Quote</p>
                     <h1 class="display-5 mb-4">Need Our Expert Help? We're Here!</h1>
                     <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita
                         erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
                     <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam
                         et
                         eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
-                    <a class="d-inline-flex align-items-center rounded overflow-hidden border border-primary"
+                    <a class="d-inline-flex align-items-center rounded overflow-hidden border border-warning"
                         href="">
-                        <span class="btn-lg-square bg-primary" style="width: 55px; height: 55px;">
+                        <span class="btn-lg-square bg-warning" style="width: 55px; height: 55px;">
                             <i class="fa fa-phone-alt text-white"></i>
                         </span>
                         <span class="fs-5 fw-medium mx-4">+012 345 6789</span>
@@ -529,7 +529,7 @@
                             </div>
                         </div>
                         <div class="col-12 text-center">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Submit Now</button>
+                            <button class="btn btn-warning w-100 py-3" type="submit">Submit Now</button>
                         </div>
                     </div>
                 </div>
@@ -543,7 +543,7 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-primary">Our Team</p>
+                <p class="fs-5 fw-medium text-warning">Our Team</p>
                 <h1 class="display-5 mb-5">Our Expert People Ready to Help You</h1>
             </div>
             <div class="row g-4">
@@ -551,7 +551,7 @@
                     <div class="team-item rounded overflow-hidden pb-4">
                         <img class="img-fluid mb-4" src="Assets/src/img/team-1.jpg" alt="">
                         <h5>Alex Robin</h5>
-                        <span class="text-primary">Founder & CEO</span>
+                        <span class="text-warning">Founder & CEO</span>
                         <ul class="team-social">
                             <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
                             <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
@@ -564,7 +564,7 @@
                     <div class="team-item rounded overflow-hidden pb-4">
                         <img class="img-fluid mb-4" src="Assets/src/img/team-2.jpg" alt="">
                         <h5>Adam Crew</h5>
-                        <span class="text-primary">Co Founder</span>
+                        <span class="text-warning">Co Founder</span>
                         <ul class="team-social">
                             <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
                             <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
@@ -577,7 +577,7 @@
                     <div class="team-item rounded overflow-hidden pb-4">
                         <img class="img-fluid mb-4" src="Assets/src/img/team-3.jpg" alt="">
                         <h5>Boris Johnson</h5>
-                        <span class="text-primary">Executive Manager</span>
+                        <span class="text-warning">Executive Manager</span>
                         <ul class="team-social">
                             <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
                             <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
@@ -590,7 +590,7 @@
                     <div class="team-item rounded overflow-hidden pb-4">
                         <img class="img-fluid mb-4" src="Assets/src/img/team-4.jpg" alt="">
                         <h5>Robert Jordan</h5>
-                        <span class="text-primary">Digital Marketer</span>
+                        <span class="text-warning">Digital Marketer</span>
                         <ul class="team-social">
                             <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
                             <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
@@ -610,7 +610,7 @@
         <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
                 style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-primary">Testimonial</p>
+                <p class="fs-5 fw-medium text-warning">Testimonial</p>
                 <h1 class="display-5 mb-5">What Clients Say About Our Services!</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
@@ -620,7 +620,7 @@
                         et
                         sit, sed stet lorem sit clita duo justo</p>
                     <h5>Client Name</h5>
-                    <span class="text-primary">Profession</span>
+                    <span class="text-warning">Profession</span>
                 </div>
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
                     <img class="mb-4" src="Assets/src/img/testimonial-2.jpg" alt="">
@@ -628,7 +628,7 @@
                         et
                         sit, sed stet lorem sit clita duo justo</p>
                     <h5>Client Name</h5>
-                    <span class="text-primary">Profession</span>
+                    <span class="text-warning">Profession</span>
                 </div>
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
                     <img class="mb-4" src="Assets/src/img/testimonial-3.jpg" alt="">
@@ -636,7 +636,7 @@
                         et
                         sit, sed stet lorem sit clita duo justo</p>
                     <h5>Client Name</h5>
-                    <span class="text-primary">Profession</span>
+                    <span class="text-warning">Profession</span>
                 </div>
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
                     <img class="mb-4" src="Assets/src/img/testimonial-4.jpg" alt="">
@@ -644,7 +644,7 @@
                         et
                         sit, sed stet lorem sit clita duo justo</p>
                     <h5>Client Name</h5>
-                    <span class="text-primary">Profession</span>
+                    <span class="text-warning">Profession</span>
                 </div>
             </div>
         </div>
@@ -724,7 +724,7 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+    <a href="#" class="btn btn-lg btn-warning btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
 
 
