@@ -33,6 +33,7 @@
     <link href="Assets/FontAwesome/css/solid.css" rel="stylesheet">
     <!-- FontAwesome -->
 
+
     <!-- Customized Bootstrap Stylesheet -->
     <link href="Assets/src/css/bootstrap.min.css" rel="stylesheet">
 
