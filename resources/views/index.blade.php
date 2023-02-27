@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>GrowMark - Digital Marketing HTML Template</title>
+    <title>KIMIA</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -55,12 +55,13 @@
         <div class="container py-3">
             <div class="d-flex align-items-center">
                 <a href="index.html">
-                    <h2 class="text-white fw-bold m-0">GrowMark</h2>
+                    <h2 class="text-white fw-bold m-0">KIMIA</h2>
                 </a>
                 <div class="ms-auto d-flex align-items-center">
-                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</small>
-                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>info@example.com</small>
-                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</small>
+                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>Jl. Prof. Dr. Ir.
+                        Soemantri Brodjonegoro, Gedong Meneng, Rajabasa, Bandar Lampung</small>
+                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>chemistry@fmipa.unila.ac.id</small>
+                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>0721704625</small>
                     <div class="ms-3 d-flex">
                         <a class="btn btn-sm-square btn-light text-warning rounded-circle ms-2" href=""><i
                                 class="fab fa-facebook-f"></i></a>
@@ -81,7 +82,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
                 <a href="index.html" class="navbar-brand d-lg-none">
-                    <h1 class="fw-bold m-0">GrowMark</h1>
+                    <h1 class="fw-bold m-0">KIMIA</h1>
                 </a>
                 <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -106,7 +107,7 @@
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="ms-auto d-none d-lg-block">
-                        <a href="" class="btn btn-warning rounded-pill py-2 px-3">Get A Quote</a>
+                        <a href="" class="btn btn-warning rounded-pill py-2 px-3">Masuk</a>
                     </div>
                 </div>
             </nav>
@@ -126,7 +127,7 @@
                             <div class="row justify-content-start">
                                 <div class="col-lg-7 text-start">
                                     <p class="fs-4 text-white animated slideInRight">Welcome to
-                                        <strong>GrowMark</strong>
+                                        <strong>KIMIA</strong>
                                     </p>
                                     <h1 class="display-1 text-white mb-4 animated slideInRight">Unlock Your Business
                                         Growth</h1>
@@ -145,7 +146,7 @@
                             <div class="row justify-content-end">
                                 <div class="col-lg-7 text-end">
                                     <p class="fs-4 text-white animated slideInLeft">Welcome to
-                                        <strong>GrowMark</strong>
+                                        <strong>KIMIA</strong>
                                     </p>
                                     <h1 class="display-1 text-white mb-5 animated slideInLeft">Ready to Grow Your
                                         Business</h1>
