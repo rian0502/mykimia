@@ -27,6 +27,12 @@
     <link href="Assets/src/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="Assets/src/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
+    <!-- FontAwesome -->
+    <link href="Assets/FontAwesome/css/fontawesome.css" rel="stylesheet">
+    <link href="Assets/FontAwesome/css/brands.css" rel="stylesheet">
+    <link href="Assets/FontAwesome/css/solid.css" rel="stylesheet">
+    <!-- FontAwesome -->
+
     <!-- Customized Bootstrap Stylesheet -->
     <link href="Assets/src/css/bootstrap.min.css" rel="stylesheet">
 
@@ -219,7 +225,7 @@
                 <div class="col-lg-6">
                     <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 300px;">
                         <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                            data-src="https://www.youtube.com/embed/G4_9cV4_EXw" data-bs-target="#videoModal">
                             <span></span>
                         </button>
                     </div>
@@ -487,7 +493,7 @@
                         <span class="btn-lg-square bg-warning" style="width: 55px; height: 55px;">
                             <i class="fa fa-phone-alt text-white"></i>
                         </span>
-                        <span class="fs-5 fw-medium mx-4">+012 345 6789</span>
+                        <span class="fs-5 fw-medium mx-4 text-dark">+012 345 6789</span>
                     </a>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
