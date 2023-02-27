@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="Assets/src/img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -232,12 +232,12 @@
                             diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
                         <div class="row g-5 pt-2 mb-5">
                             <div class="col-sm-6">
-                                <img class="img-fluid mb-4" src="img/icon/icon-5.png" alt="">
+                                <img class="img-fluid mb-4" src="Assets/src/img/icon/icon-5.png" alt="">
                                 <h5 class="mb-3">Managed Services</h5>
                                 <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
                             </div>
                             <div class="col-sm-6">
-                                <img class="img-fluid mb-4" src="img/icon/icon-2.png" alt="">
+                                <img class="img-fluid mb-4" src="Assets/src/img/icon/icon-2.png" alt="">
                                 <h5 class="mb-3">Dedicated Experts</h5>
                                 <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
                             </div>
@@ -286,7 +286,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-5.png" alt="Icon">
+                                <img class="img-fluid" src="Assets/src/img/icon/icon-5.png" alt="Icon">
                             </div>
                             <h5 class="mb-3">Digital Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed
@@ -304,7 +304,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon">
+                                <img class="img-fluid" src="Assets/src/img/icon/icon-6.png" alt="Icon">
                             </div>
                             <h5 class="mb-3">Internet Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed
@@ -322,7 +322,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-7.png" alt="Icon">
+                                <img class="img-fluid" src="Assets/src/img/icon/icon-7.png" alt="Icon">
                             </div>
                             <h5 class="mb-3">Content Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed
@@ -340,7 +340,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon">
+                                <img class="img-fluid" src="Assets/src/img/icon/icon-8.png" alt="Icon">
                             </div>
                             <h5 class="mb-3">Social Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed
@@ -358,7 +358,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-9.png" alt="Icon">
+                                <img class="img-fluid" src="Assets/src/img/icon/icon-9.png" alt="Icon">
                             </div>
                             <h5 class="mb-3">B2B Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed
@@ -376,7 +376,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-10.png" alt="Icon">
+                                <img class="img-fluid" src="Assets/src/img/icon/icon-10.png" alt="Icon">
                             </div>
                             <h5 class="mb-3">E-mail Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed
@@ -406,7 +406,7 @@
             <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/project-1.jpg" alt="">
+                        <img class="img-fluid" src="Assets/src/img/project-1.jpg" alt="">
                         <div class="project-overlay">
                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-1.jpg"
                                 data-lightbox="project"><i class="fa fa-eye"></i></a>
@@ -421,7 +421,7 @@
                 </div>
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/project-2.jpg" alt="">
+                        <img class="img-fluid" src="Assets/src/img/project-2.jpg" alt="">
                         <div class="project-overlay">
                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-2.jpg"
                                 data-lightbox="project"><i class="fa fa-eye"></i></a>
@@ -436,7 +436,7 @@
                 </div>
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/project-3.jpg" alt="">
+                        <img class="img-fluid" src="Assets/src/img/project-3.jpg" alt="">
                         <div class="project-overlay">
                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-3.jpg"
                                 data-lightbox="project"><i class="fa fa-eye"></i></a>
@@ -451,7 +451,7 @@
                 </div>
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/project-4.jpg" alt="">
+                        <img class="img-fluid" src="Assets/src/img/project-4.jpg" alt="">
                         <div class="project-overlay">
                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-4.jpg"
                                 data-lightbox="project"><i class="fa fa-eye"></i></a>
@@ -549,7 +549,7 @@
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-1.jpg" alt="">
+                        <img class="img-fluid mb-4" src="Assets/src/img/team-1.jpg" alt="">
                         <h5>Alex Robin</h5>
                         <span class="text-primary">Founder & CEO</span>
                         <ul class="team-social">
@@ -562,7 +562,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-2.jpg" alt="">
+                        <img class="img-fluid mb-4" src="Assets/src/img/team-2.jpg" alt="">
                         <h5>Adam Crew</h5>
                         <span class="text-primary">Co Founder</span>
                         <ul class="team-social">
@@ -575,7 +575,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-3.jpg" alt="">
+                        <img class="img-fluid mb-4" src="Assets/src/img/team-3.jpg" alt="">
                         <h5>Boris Johnson</h5>
                         <span class="text-primary">Executive Manager</span>
                         <ul class="team-social">
@@ -588,7 +588,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-4.jpg" alt="">
+                        <img class="img-fluid mb-4" src="Assets/src/img/team-4.jpg" alt="">
                         <h5>Robert Jordan</h5>
                         <span class="text-primary">Digital Marketer</span>
                         <ul class="team-social">
@@ -615,7 +615,7 @@
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-1.jpg" alt="">
+                    <img class="mb-4" src="Assets/src/img/testimonial-1.jpg" alt="">
                     <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem
                         et
                         sit, sed stet lorem sit clita duo justo</p>
@@ -623,7 +623,7 @@
                     <span class="text-primary">Profession</span>
                 </div>
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-2.jpg" alt="">
+                    <img class="mb-4" src="Assets/src/img/testimonial-2.jpg" alt="">
                     <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem
                         et
                         sit, sed stet lorem sit clita duo justo</p>
@@ -631,7 +631,7 @@
                     <span class="text-primary">Profession</span>
                 </div>
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-3.jpg" alt="">
+                    <img class="mb-4" src="Assets/src/img/testimonial-3.jpg" alt="">
                     <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem
                         et
                         sit, sed stet lorem sit clita duo justo</p>
@@ -639,7 +639,7 @@
                     <span class="text-primary">Profession</span>
                 </div>
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-4.jpg" alt="">
+                    <img class="mb-4" src="Assets/src/img/testimonial-4.jpg" alt="">
                     <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem
                         et
                         sit, sed stet lorem sit clita duo justo</p>
