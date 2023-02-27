@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>GrowMark - Digital Marketing HTML Template</title>
+    <title>KIMIA</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="Assets/src/img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +27,13 @@
     <link href="Assets/src/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="Assets/src/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
+    <!-- FontAwesome -->
+    <link href="Assets/FontAwesome/css/fontawesome.css" rel="stylesheet">
+    <link href="Assets/FontAwesome/css/brands.css" rel="stylesheet">
+    <link href="Assets/FontAwesome/css/solid.css" rel="stylesheet">
+    <!-- FontAwesome -->
+
+
     <!-- Customized Bootstrap Stylesheet -->
     <link href="Assets/src/css/bootstrap.min.css" rel="stylesheet">
 
@@ -38,28 +45,29 @@
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+        <div class="spinner-border text-warning" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
     <!-- Spinner End -->
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-primary text-white d-none d-lg-flex">
+    <div class="container-fluid bg-warning text-white d-none d-lg-flex">
         <div class="container py-3">
             <div class="d-flex align-items-center">
                 <a href="index.html">
-                    <h2 class="text-white fw-bold m-0">GrowMark</h2>
+                    <h2 class="text-white fw-bold m-0">KIMIA</h2>
                 </a>
                 <div class="ms-auto d-flex align-items-center">
-                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</small>
-                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>info@example.com</small>
-                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</small>
+                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>Jl. Prof. Dr. Ir.
+                        Soemantri Brodjonegoro, Gedong Meneng, Rajabasa, Bandar Lampung</small>
+                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>chemistry@fmipa.unila.ac.id</small>
+                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>0721704625</small>
                     <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
+                        <a class="btn btn-sm-square btn-light text-warning rounded-circle ms-2" href=""><i
                                 class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
+                        <a class="btn btn-sm-square btn-light text-warning rounded-circle ms-2" href=""><i
                                 class="fab fa-twitter"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
+                        <a class="btn btn-sm-square btn-light text-warning rounded-circle ms-2" href=""><i
                                 class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
@@ -74,7 +82,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
                 <a href="index.html" class="navbar-brand d-lg-none">
-                    <h1 class="fw-bold m-0">GrowMark</h1>
+                    <h1 class="fw-bold m-0">KIMIA</h1>
                 </a>
                 <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -99,7 +107,7 @@
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="ms-auto d-none d-lg-block">
-                        <a href="" class="btn btn-primary rounded-pill py-2 px-3">Get A Quote</a>
+                        <a href="" class="btn btn-warning rounded-pill py-2 px-3">Masuk</a>
                     </div>
                 </div>
             </nav>
@@ -119,12 +127,12 @@
                             <div class="row justify-content-start">
                                 <div class="col-lg-7 text-start">
                                     <p class="fs-4 text-white animated slideInRight">Welcome to
-                                        <strong>GrowMark</strong>
+                                        <strong>KIMIA</strong>
                                     </p>
                                     <h1 class="display-1 text-white mb-4 animated slideInRight">Unlock Your Business
                                         Growth</h1>
                                     <a href=""
-                                        class="btn btn-primary rounded-pill py-3 px-5 animated slideInRight">Explore
+                                        class="btn btn-warning rounded-pill py-3 px-5 animated slideInRight">Explore
                                         More</a>
                                 </div>
                             </div>
@@ -138,12 +146,12 @@
                             <div class="row justify-content-end">
                                 <div class="col-lg-7 text-end">
                                     <p class="fs-4 text-white animated slideInLeft">Welcome to
-                                        <strong>GrowMark</strong>
+                                        <strong>KIMIA</strong>
                                     </p>
                                     <h1 class="display-1 text-white mb-5 animated slideInLeft">Ready to Grow Your
                                         Business</h1>
                                     <a href=""
-                                        class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Explore
+                                        class="btn btn-warning rounded-pill py-3 px-5 animated slideInLeft">Explore
                                         More</a>
                                 </div>
                             </div>
@@ -219,30 +227,30 @@
                 <div class="col-lg-6">
                     <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 300px;">
                         <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                            data-src="https://www.youtube.com/embed/G4_9cV4_EXw" data-bs-target="#videoModal">
                             <span></span>
                         </button>
                     </div>
                 </div>
                 <div class="col-lg-6 pt-lg-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="bg-white rounded-top p-5 mt-lg-5">
-                        <p class="fs-5 fw-medium text-primary">About Us</p>
+                        <p class="fs-5 fw-medium text-warning">About Us</p>
                         <h1 class="display-6 mb-4">The Best Marketing Agency to Improve Your Business</h1>
                         <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
                             diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
                         <div class="row g-5 pt-2 mb-5">
                             <div class="col-sm-6">
-                                <img class="img-fluid mb-4" src="img/icon/icon-5.png" alt="">
+                                <img class="img-fluid mb-4" src="Assets/src/img/icon/icon-5.png" alt="">
                                 <h5 class="mb-3">Managed Services</h5>
                                 <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
                             </div>
                             <div class="col-sm-6">
-                                <img class="img-fluid mb-4" src="img/icon/icon-2.png" alt="">
+                                <img class="img-fluid mb-4" src="Assets/src/img/icon/icon-2.png" alt="">
                                 <h5 class="mb-3">Dedicated Experts</h5>
                                 <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
                             </div>
                         </div>
-                        <a class="btn btn-primary rounded-pill py-3 px-5" href="">Explore More</a>
+                        <a class="btn btn-warning rounded-pill py-3 px-5" href="">Explore More</a>
                     </div>
                 </div>
             </div>
@@ -277,7 +285,7 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-primary">Our Services</p>
+                <p class="fs-5 fw-medium text-warning">Our Services</p>
                 <h1 class="display-5 mb-5">Digital Marketing Services that We Offer</h1>
             </div>
             <div class="row g-4">
@@ -286,7 +294,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-5.png" alt="Icon">
+                                <img class="img-fluid" src="Assets/src/img/icon/icon-5.png" alt="Icon">
                             </div>
                             <h5 class="mb-3">Digital Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed
@@ -294,7 +302,7 @@
                                     stet</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="">Read More<i
+                            <a class="text-warning fw-medium" href="">Read More<i
                                     class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>
                     </div>
@@ -304,7 +312,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon">
+                                <img class="img-fluid" src="Assets/src/img/icon/icon-6.png" alt="Icon">
                             </div>
                             <h5 class="mb-3">Internet Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed
@@ -312,7 +320,7 @@
                                     stet</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="">Read More<i
+                            <a class="text-warning fw-medium" href="">Read More<i
                                     class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>
                     </div>
@@ -322,7 +330,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-7.png" alt="Icon">
+                                <img class="img-fluid" src="Assets/src/img/icon/icon-7.png" alt="Icon">
                             </div>
                             <h5 class="mb-3">Content Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed
@@ -330,7 +338,7 @@
                                     stet</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="">Read More<i
+                            <a class="text-warning fw-medium" href="">Read More<i
                                     class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>
                     </div>
@@ -340,7 +348,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon">
+                                <img class="img-fluid" src="Assets/src/img/icon/icon-8.png" alt="Icon">
                             </div>
                             <h5 class="mb-3">Social Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed
@@ -348,7 +356,7 @@
                                     stet</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="">Read More<i
+                            <a class="text-warning fw-medium" href="">Read More<i
                                     class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>
                     </div>
@@ -358,7 +366,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-9.png" alt="Icon">
+                                <img class="img-fluid" src="Assets/src/img/icon/icon-9.png" alt="Icon">
                             </div>
                             <h5 class="mb-3">B2B Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed
@@ -366,7 +374,7 @@
                                     stet</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="">Read More<i
+                            <a class="text-warning fw-medium" href="">Read More<i
                                     class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>
                     </div>
@@ -376,7 +384,7 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-10.png" alt="Icon">
+                                <img class="img-fluid" src="Assets/src/img/icon/icon-10.png" alt="Icon">
                             </div>
                             <h5 class="mb-3">E-mail Marketing</h4>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed
@@ -384,7 +392,7 @@
                                     stet</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-primary fw-medium" href="">Read More<i
+                            <a class="text-warning fw-medium" href="">Read More<i
                                     class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>
                     </div>
@@ -400,13 +408,13 @@
         <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
                 style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-primary">Our Projects</p>
+                <p class="fs-5 fw-medium text-warning">Our Projects</p>
                 <h1 class="display-5 mb-5">We've Done Lot's of Awesome Projects</h1>
             </div>
             <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/project-1.jpg" alt="">
+                        <img class="img-fluid" src="Assets/src/img/project-1.jpg" alt="">
                         <div class="project-overlay">
                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-1.jpg"
                                 data-lightbox="project"><i class="fa fa-eye"></i></a>
@@ -421,7 +429,7 @@
                 </div>
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/project-2.jpg" alt="">
+                        <img class="img-fluid" src="Assets/src/img/project-2.jpg" alt="">
                         <div class="project-overlay">
                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-2.jpg"
                                 data-lightbox="project"><i class="fa fa-eye"></i></a>
@@ -436,7 +444,7 @@
                 </div>
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/project-3.jpg" alt="">
+                        <img class="img-fluid" src="Assets/src/img/project-3.jpg" alt="">
                         <div class="project-overlay">
                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-3.jpg"
                                 data-lightbox="project"><i class="fa fa-eye"></i></a>
@@ -451,7 +459,7 @@
                 </div>
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/project-4.jpg" alt="">
+                        <img class="img-fluid" src="Assets/src/img/project-4.jpg" alt="">
                         <div class="project-overlay">
                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-4.jpg"
                                 data-lightbox="project"><i class="fa fa-eye"></i></a>
@@ -475,19 +483,19 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="fs-5 fw-medium text-primary">Get A Quote</p>
+                    <p class="fs-5 fw-medium text-warning">Get A Quote</p>
                     <h1 class="display-5 mb-4">Need Our Expert Help? We're Here!</h1>
                     <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita
                         erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
                     <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam
                         et
                         eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
-                    <a class="d-inline-flex align-items-center rounded overflow-hidden border border-primary"
+                    <a class="d-inline-flex align-items-center rounded overflow-hidden border border-warning"
                         href="">
-                        <span class="btn-lg-square bg-primary" style="width: 55px; height: 55px;">
+                        <span class="btn-lg-square bg-warning" style="width: 55px; height: 55px;">
                             <i class="fa fa-phone-alt text-white"></i>
                         </span>
-                        <span class="fs-5 fw-medium mx-4">+012 345 6789</span>
+                        <span class="fs-5 fw-medium mx-4 text-dark">+012 345 6789</span>
                     </a>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -529,7 +537,7 @@
                             </div>
                         </div>
                         <div class="col-12 text-center">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Submit Now</button>
+                            <button class="btn btn-warning w-100 py-3" type="submit">Submit Now</button>
                         </div>
                     </div>
                 </div>
@@ -543,15 +551,15 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-primary">Our Team</p>
+                <p class="fs-5 fw-medium text-warning">Our Team</p>
                 <h1 class="display-5 mb-5">Our Expert People Ready to Help You</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-1.jpg" alt="">
+                        <img class="img-fluid mb-4" src="Assets/src/img/team-1.jpg" alt="">
                         <h5>Alex Robin</h5>
-                        <span class="text-primary">Founder & CEO</span>
+                        <span class="text-warning">Founder & CEO</span>
                         <ul class="team-social">
                             <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
                             <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
@@ -562,9 +570,9 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-2.jpg" alt="">
+                        <img class="img-fluid mb-4" src="Assets/src/img/team-2.jpg" alt="">
                         <h5>Adam Crew</h5>
-                        <span class="text-primary">Co Founder</span>
+                        <span class="text-warning">Co Founder</span>
                         <ul class="team-social">
                             <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
                             <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
@@ -575,9 +583,9 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-3.jpg" alt="">
+                        <img class="img-fluid mb-4" src="Assets/src/img/team-3.jpg" alt="">
                         <h5>Boris Johnson</h5>
-                        <span class="text-primary">Executive Manager</span>
+                        <span class="text-warning">Executive Manager</span>
                         <ul class="team-social">
                             <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
                             <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
@@ -588,9 +596,9 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-4.jpg" alt="">
+                        <img class="img-fluid mb-4" src="Assets/src/img/team-4.jpg" alt="">
                         <h5>Robert Jordan</h5>
-                        <span class="text-primary">Digital Marketer</span>
+                        <span class="text-warning">Digital Marketer</span>
                         <ul class="team-social">
                             <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
                             <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
@@ -610,41 +618,41 @@
         <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
                 style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-primary">Testimonial</p>
+                <p class="fs-5 fw-medium text-warning">Testimonial</p>
                 <h1 class="display-5 mb-5">What Clients Say About Our Services!</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-1.jpg" alt="">
+                    <img class="mb-4" src="Assets/src/img/testimonial-1.jpg" alt="">
                     <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem
                         et
                         sit, sed stet lorem sit clita duo justo</p>
                     <h5>Client Name</h5>
-                    <span class="text-primary">Profession</span>
+                    <span class="text-warning">Profession</span>
                 </div>
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-2.jpg" alt="">
+                    <img class="mb-4" src="Assets/src/img/testimonial-2.jpg" alt="">
                     <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem
                         et
                         sit, sed stet lorem sit clita duo justo</p>
                     <h5>Client Name</h5>
-                    <span class="text-primary">Profession</span>
+                    <span class="text-warning">Profession</span>
                 </div>
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-3.jpg" alt="">
+                    <img class="mb-4" src="Assets/src/img/testimonial-3.jpg" alt="">
                     <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem
                         et
                         sit, sed stet lorem sit clita duo justo</p>
                     <h5>Client Name</h5>
-                    <span class="text-primary">Profession</span>
+                    <span class="text-warning">Profession</span>
                 </div>
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-4.jpg" alt="">
+                    <img class="mb-4" src="Assets/src/img/testimonial-4.jpg" alt="">
                     <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem
                         et
                         sit, sed stet lorem sit clita duo justo</p>
                     <h5>Client Name</h5>
-                    <span class="text-primary">Profession</span>
+                    <span class="text-warning">Profession</span>
                 </div>
             </div>
         </div>
@@ -724,7 +732,7 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+    <a href="#" class="btn btn-lg btn-warning btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
 
 
