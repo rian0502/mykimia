@@ -126,14 +126,14 @@
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-lg-7 text-start">
-                                    <p class="fs-4 text-white animated slideInRight">Welcome to
+                                    <p class="fs-4 text-white animated slideInRight">Selamat Datang di
                                         <strong>KIMIA</strong>
                                     </p>
-                                    <h1 class="display-1 text-white mb-4 animated slideInRight">Unlock Your Business
-                                        Growth</h1>
-                                    <a href=""
+                                    <h1 class="display-1 text-white mb-4 animated slideInRight">Kimia adalah jembatan
+                                        antara alam dan teknologi</h1>
+                                    {{-- <a href=""
                                         class="btn btn-warning rounded-pill py-3 px-5 animated slideInRight">Explore
-                                        More</a>
+                                        More</a> --}}
                                 </div>
                             </div>
                         </div>
@@ -145,14 +145,14 @@
                         <div class="container">
                             <div class="row justify-content-end">
                                 <div class="col-lg-7 text-end">
-                                    <p class="fs-4 text-white animated slideInLeft">Welcome to
+                                    <p class="fs-4 text-white animated slideInLeft">Selamat Datang di
                                         <strong>KIMIA</strong>
                                     </p>
-                                    <h1 class="display-1 text-white mb-5 animated slideInLeft">Ready to Grow Your
-                                        Business</h1>
-                                    <a href=""
+                                    <h1 class="display-1 text-white mb-5 animated slideInLeft">Kimia adalah ilmu yang
+                                        mengubah dunia</h1>
+                                    {{-- <a href=""
                                         class="btn btn-warning rounded-pill py-3 px-5 animated slideInLeft">Explore
-                                        More</a>
+                                        More</a> --}}
                                 </div>
                             </div>
                         </div>
