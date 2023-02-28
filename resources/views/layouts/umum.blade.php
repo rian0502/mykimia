@@ -107,7 +107,7 @@
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="ms-auto d-none d-lg-block">
-                        <a href="" class="btn btn-warning rounded-pill py-2 px-3">Masuk</a>
+                        <a href="/beranda" class="btn btn-warning rounded-pill py-2 px-3">Masuk</a>
                     </div>
                 </div>
             </nav>
