@@ -17,6 +17,9 @@ use App\Http\Controllers\ForgotPassword;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/beranda', function () {
+    return view('admin/beranda');
+});
 
 Route::get('/forgot-password', [ForgotPassword::class, 'index'])
     ->name('password.request');
