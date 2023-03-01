@@ -15,8 +15,9 @@ use App\Http\Controllers\ForgotPassword;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
 Route::get('/forgot-password', [ForgotPassword::class, 'index'])
     ->name('password.request');
 Route::post('/forgot-password', [ForgotPassword::class, 'sendResetLinkEmail'])
