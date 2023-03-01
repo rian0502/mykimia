@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\AdminLab;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
@@ -19,8 +20,13 @@ class RolePermision extends Seeder
         //buatkan seeder menggunakan spatie
         $user = User::create([
             'name' => 'Jurusan Kimia',
-            'email' => 'kajur@kimia@mail.com',
+            'email' => 'kajur.kimia@mail.com',
             'password' => bcrypt('kajur'),
+        ]);
+        $adminLab = User::create([
+            'name' => 'Admin Lab Kimia',
+            'email' => 'admin.lab@kimia.com',
+            'password' =>  bcrypt('kajur'),
         ]);
 
         $roles = ['admin lab','admin berkas', 'mahasiswa', 'dosen','pkl','kompre','ta', 'jurusan'];
@@ -31,5 +37,7 @@ class RolePermision extends Seeder
             ]);
         }
         $user->assignRole('jurusan');
+        $adminLab->assignRole('admin lab');
+        
     }
 }
