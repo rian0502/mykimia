@@ -213,4 +213,23 @@ return [
         'Permission' => Spatie\Permission\Models\Permission::class,
     ])->toArray(),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Trusted Proxies
+    |--------------------------------------------------------------------------
+    |
+    | When using the HttpCache middleware, you may need to specify a list of
+    | proxies that should be trusted. These proxies are used to detect the
+    | application's true IP address and should be listed here so Laravel
+    | will properly generate URLs and perform other tasks.
+    */
+    'trusted_proxies' => [
+        'headers' => [
+        \Illuminate\Http\Request::HEADER_X_FORWARDED_FOR,
+        \Illuminate\Http\Request::HEADER_X_FORWARDED_HOST,
+        \Illuminate\Http\Request::HEADER_X_FORWARDED_PORT,
+        \Illuminate\Http\Request::HEADER_X_FORWARDED_PROTO,
+        ],
+    ],
+
 ];
