@@ -7,7 +7,7 @@
     <title>KIMIA</title>
 
     <!-- Favicon -->
-    <link href="Assets/src/img/unila.png" rel="icon">
+    <link href="/Assets/src/img/unila.png" rel="icon">
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -17,18 +17,18 @@
         rel="stylesheet" />
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="Assets/admin/vendors/styles/core.css" />
-    <link rel="stylesheet" type="text/css" href="Assets/admin/vendors/styles/icon-font.min.css" />
+    <link rel="stylesheet" type="text/css" href="/Assets/admin/vendors/styles/core.css" />
+    <link rel="stylesheet" type="text/css" href="/Assets/admin/vendors/styles/icon-font.min.css" />
     <link rel="stylesheet" type="text/css"
-        href="Assets/admin/src/plugins/datatables/css/dataTables.bootstrap4.min.css" />
+        href="/Assets/admin/src/plugins/datatables/css/dataTables.bootstrap4.min.css" />
     <link rel="stylesheet" type="text/css"
-        href="Assets/admin/src/plugins/datatables/css/responsive.bootstrap4.min.css" />
-    <link rel="stylesheet" type="text/css" href="Assets/admin/vendors/styles/style.css" />
+        href="/Assets/admin/src/plugins/datatables/css/responsive.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="/Assets/admin/vendors/styles/style.css" />
 
     <!-- FontAwesome -->
-    <link href="Assets/FontAwesome/css/fontawesome.css" rel="stylesheet">
-    <link href="Assets/FontAwesome/css/brands.css" rel="stylesheet">
-    <link href="Assets/FontAwesome/css/solid.css" rel="stylesheet">
+    <link href="/Assets/FontAwesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/Assets/FontAwesome/css/brands.css" rel="stylesheet">
+    <link href="/Assets/FontAwesome/css/solid.css" rel="stylesheet">
     <!-- FontAwesome -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -66,7 +66,7 @@
     {{-- <div class="pre-loader">
         <div class="pre-loader-box">
             <div class="loader-logo">
-                <img src="Assets/admin/vendors/images/deskapp-logo.svg" alt="" />
+                <img src="/Assets/admin/vendors/images/deskapp-logo.svg" alt="" />
             </div>
             <div class="loader-progress" id="progress_div">
                 <div class="bar" id="bar1"></div>
@@ -136,7 +136,7 @@
                             <ul>
                                 <li>
                                     <a href="#">
-                                        <img src="Assets/admin/src/images/img.jpg" alt="" />
+                                        <img src="/Assets/admin/src/images/img.jpg" alt="" />
                                         <h3>John Doe</h3>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -146,7 +146,7 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="Assets/admin/src/images/photo1.jpg" alt="" />
+                                        <img src="/Assets/admin/src/images/photo1.jpg" alt="" />
                                         <h3>Lea R. Frith</h3>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -156,7 +156,7 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="Assets/admin/src/images/photo2.jpg" alt="" />
+                                        <img src="/Assets/admin/src/images/photo2.jpg" alt="" />
                                         <h3>Erik L. Richards</h3>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -166,7 +166,7 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="Assets/admin/src/images/photo3.jpg" alt="" />
+                                        <img src="/Assets/admin/src/images/photo3.jpg" alt="" />
                                         <h3>John Doe</h3>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -176,7 +176,7 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="Assets/admin/src/images/photo4.jpg" alt="" />
+                                        <img src="/Assets/admin/src/images/photo4.jpg" alt="" />
                                         <h3>Renee I. Hansen</h3>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -186,7 +186,7 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="Assets/admin/src/images/img.jpg" alt="" />
+                                        <img src="/Assets/admin/src/images/img.jpg" alt="" />
                                         <h3>Vicki M. Coleman</h3>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -203,7 +203,7 @@
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
                         <span class="user-icon">
-                            <img src="Assets/admin/src/images/putra.jpg" alt="" />
+                            <img src="/Assets/admin/src/images/putra.jpg" alt="" />
                         </span>
                         <span class="user-name">Putu Putra Eka Persada</span>
                     </a>
@@ -318,8 +318,8 @@
         <div class="brand-logo">
             <a href="/" class="text-dark">
                 KIMIA
-                {{-- <img src="Assets/admin/vendors/images/deskapp-logo.svg" alt="" class="dark-logo" />
-                <img src="Assets/admin/vendors/images/deskapp-logo-white.svg" alt="" class="light-logo" /> --}}
+                {{-- <img src="/Assets/admin/vendors/images/deskapp-logo.svg" alt="" class="dark-logo" />
+                <img src="/Assets/admin/vendors/images/deskapp-logo-white.svg" alt="" class="light-logo" /> --}}
             </a>
             <div class="close-sidebar" data-toggle="left-sidebar-close">
                 <i class="ion-close-round"></i>
@@ -515,16 +515,36 @@
     @yield('admin')
 
     <!-- js -->
-    <script src="Assets/admin/vendors/scripts/core.js"></script>
-    <script src="Assets/admin/vendors/scripts/script.min.js"></script>
-    <script src="Assets/admin/vendors/scripts/process.js"></script>
-    <script src="Assets/admin/vendors/scripts/layout-settings.js"></script>
-    <script src="Assets/admin/src/plugins/apexcharts/apexcharts.min.js"></script>
-    <script src="Assets/admin/src/plugins/datatables/js/jquery.dataTables.min.js"></script>
-    <script src="Assets/admin/src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
-    <script src="Assets/admin/src/plugins/datatables/js/dataTables.responsive.min.js"></script>
-    <script src="Assets/admin/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
-    <script src="Assets/admin/vendors/scripts/dashboard3.js"></script>
+    <script src="/Assets/admin/vendors/scripts/core.js"></script>
+    <script src="/Assets/admin/vendors/scripts/script.min.js"></script>
+    <script src="/Assets/admin/vendors/scripts/process.js"></script>
+    <script src="/Assets/admin/vendors/scripts/layout-settings.js"></script>
+    <script src="/Assets/admin/src/plugins/apexcharts/apexcharts.min.js"></script>
+    <script src="/Assets/admin/src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/Assets/admin/src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/Assets/admin/src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+    <script src="/Assets/admin/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+    <!-- buttons for Export datatable -->
+    <script src="/Assets/admin/src/plugins/datatables/js/dataTables.buttons.min.js"></script>
+    <script src="/Assets/admin/src/plugins/datatables/js/buttons.bootstrap4.min.js"></script>
+    <script src="/Assets/admin/src/plugins/datatables/js/buttons.print.min.js"></script>
+    <script src="/Assets/admin/src/plugins/datatables/js/buttons.html5.min.js"></script>
+    <script src="/Assets/admin/src/plugins/datatables/js/buttons.flash.min.js"></script>
+    <script src="/Assets/admin/src/plugins/datatables/js/pdfmake.min.js"></script>
+    <script src="/Assets/admin/src/plugins/datatables/js/vfs_fonts.js"></script>
+    <!-- Datatable Setting js -->
+    <script src="vendors/scripts/datatable-setting.js"></script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+        ><iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS"
+            height="0"
+            width="0"
+            style="display: none; visibility: hidden"
+        ></iframe
+    ></noscript>
+
+    <script src="/Assets/admin/vendors/scripts/dashboard3.js"></script>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS" height="0" width="0"
             style="display: none; visibility: hidden"></iframe></noscript>

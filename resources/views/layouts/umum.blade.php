@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="Assets/src/img/unila.png" rel="icon">
+    <link href="/Assets/src/img/unila.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,22 +23,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="Assets/src/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="Assets/src/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="Assets/src/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="/Assets/src/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/Assets/src/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/Assets/src/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- FontAwesome -->
-    <link href="Assets/FontAwesome/css/fontawesome.css" rel="stylesheet">
-    <link href="Assets/FontAwesome/css/brands.css" rel="stylesheet">
-    <link href="Assets/FontAwesome/css/solid.css" rel="stylesheet">
+    <link href="/Assets/FontAwesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/Assets/FontAwesome/css/brands.css" rel="stylesheet">
+    <link href="/Assets/FontAwesome/css/solid.css" rel="stylesheet">
     <!-- FontAwesome -->
 
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="Assets/src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Assets/src/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="Assets/src/css/style.css" rel="stylesheet">
+    <link href="/Assets/src/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -213,14 +213,14 @@
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="Assets/src/lib/wow/wow.min.js"></script>
-    <script src="Assets/src/lib/easing/easing.min.js"></script>
-    <script src="Assets/src/lib/waypoints/waypoints.min.js"></script>
-    <script src="Assets/src/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="Assets/src/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="/Assets/src/lib/wow/wow.min.js"></script>
+    <script src="/Assets/src/lib/easing/easing.min.js"></script>
+    <script src="/Assets/src/lib/waypoints/waypoints.min.js"></script>
+    <script src="/Assets/src/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/Assets/src/lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="Assets/src/js/main.js"></script>
+    <script src="/Assets/src/js/main.js"></script>
 </body>
 
 </html>

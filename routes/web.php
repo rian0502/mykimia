@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ForgotPassword;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,24 +74,38 @@ Route::post('/kategori/edit/{id}', function ($id) {
 
 //MODEL BARANG
 Route::get('/model', function () {
-    return view('admin/model');
+    return view('admin/model/model');
 })->name('model');
 //create model
 Route::get('/model/create', function () {
-    return view('admin/createmodel');
-})->name('createmodel');
+    return view('admin/model/createModel');
+})->name('createModel');
+
 //action create model
-Route::post('/model/create', function () {
-    return view('admin/createmodel');
-})->name('createmodel');
+Route::post('/model/create/action', function (Request $request) {
+
+    $validatedData = $request->validate([
+        'nama_model' => 'required|max:100',
+        'merk' => 'required|max:100',
+    ], [
+        'nama_model.required' => 'Nama harus diisi.',
+        'nama_model.max' => 'Nama tidak boleh lebih dari :max karakter.',
+        'merk.required' => 'Merek harus diisi.',
+        'merk.max' => 'Merek tidak boleh lebih dari :max karakter.',
+    ]);
+
+    return redirect()->route('model');
+})->name('createModelAction');
+
 //edit model
 Route::get('/model/edit/{id}', function ($id) {
-    return view('admin/editmodel', ['id' => $id]);
-})->name('editmodel');
+    return view('admin/model/editModel', ['id' => $id]);
+})->name('editModel');
+
 //action edit model
 Route::post('/model/edit/{id}', function ($id) {
-    return view('admin/editmodel', ['id' => $id]);
-})->name('editmodel');
+    return view('admin/model/editModel', ['id' => $id]);
+})->name('editModelAction');
 
 
 
