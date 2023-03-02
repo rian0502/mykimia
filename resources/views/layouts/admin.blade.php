@@ -329,8 +329,28 @@
             <div class="sidebar-menu">
                 <ul id="accordion-menu">
                     <li>
-                        <a href="/beranda" class="dropdown-toggle no-arrow">
+                        <a href="{{ route('beranda') }}" class="dropdown-toggle no-arrow {{ Request::is('beranda') ? 'active' : '' }}">
                             <span class="micon bi bi-house"></span><span class="mtext">Beranda</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('barang') }}" class="dropdown-toggle no-arrow {{ Request::is('barang/*') ? 'active' : '' }}">
+                            <span class="micon bi bi-box"></span><span class="mtext">Barang</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('kategori') }}" class="dropdown-toggle no-arrow {{ Request::is('kategori/*') ? 'active' : '' }}">
+                            <span class="micon bi bi-collection"></span><span class="mtext">Kategori</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('model') }}" class="dropdown-toggle no-arrow {{ Request::is('model/*') ? 'active' : '' }}">
+                            <span class="micon bi bi-circle-square"></span><span class="mtext">Model</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('lokasi') }}" class="dropdown-toggle no-arrow {{ Request::is('lokasi/*') ? 'active' : '' }}">
+                            <span class="micon bi bi-pin-map"></span><span class="mtext">Lokasi</span>
                         </a>
                     </li>
                     <li class="dropdown">
@@ -358,11 +378,7 @@
                             <li><a href="datatable.html">DataTables</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="calendar.html" class="dropdown-toggle no-arrow">
-                            <span class="micon bi bi-calendar4-week"></span><span class="mtext">Calendar</span>
-                        </a>
-                    </li>
+
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
                             <span class="micon bi bi-archive"></span><span class="mtext"> UI Elements </span>
