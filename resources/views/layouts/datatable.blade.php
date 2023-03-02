@@ -534,6 +534,7 @@
     <script src="/Assets/admin/src/plugins/apexcharts/apexcharts.min.js"></script>
     <script src="/Assets/admin/src/plugins/datatables/js/jquery.dataTables.min.js"></script>
     <script src="/Assets/admin/src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/Assets/admin/src/plugins/datatables/js/table.js"></script>
     <script src="/Assets/admin/src/plugins/datatables/js/dataTables.responsive.min.js"></script>
     <script src="/Assets/admin/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
     <script src="/Assets/admin/vendors/scripts/dashboard3.js"></script>
@@ -549,9 +550,14 @@
     <script src="/Assets/admin/src/plugins/datatables/js/buttons.html5.min.js"></script>
     <script src="/Assets/admin/src/plugins/datatables/js/buttons.flash.min.js"></script>
     <script src="/Assets/admin/src/plugins/datatables/js/pdfmake.min.js"></script>
+    <script src="/Assets/admin/src/plugins/datatables/js/excel.js"></script>
     <script src="/Assets/admin/src/plugins/datatables/js/vfs_fonts.js"></script>
     <!-- Datatable Setting js -->
     <script src="/Assets/admin/vendors/scripts/datatable-setting.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
+    {{-- <script type="text/javascript"
+        src="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.11.3/b-2.0.1/b-colvis-2.0.1/b-html5-2.0.1/datatables.min.js">
+    </script> --}}
 </body>
 
 </html>
