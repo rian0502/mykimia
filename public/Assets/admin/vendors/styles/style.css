@@ -2,6 +2,14 @@
 Version: 3.0.0
 Author: Ankit Hingarajiya - DeskApp
 */
+
+:root {
+    --primary: #1818d7;
+    --secondary: #555555;
+    --light: #f1f3fa;
+    --dark: #1c2035;
+    --warning: #ffc107;
+}
 body,
 html {
     -webkit-font-smoothing: antialiased;
@@ -611,8 +619,7 @@ p {
 }
 .dropdown-item:focus,
 .dropdown-item:hover {
-    background: #ffc107;
-    /* background: #ecf0f4; */
+    background: #ecf0f4;
     color: #1b00ff;
 }
 .form-group {
@@ -1432,11 +1439,10 @@ table.dataTable.dtr-inline.collapsed
     font-weight: 500;
     padding-top: 2px;
 }
-
-//sidebar ho
 .header-dark .header,
 .header-dark .header-left .header-search {
-    background: #ffc107;
+    background: #00008b;
+    /* background: #142127; */
 }
 .header-dark .header .user-info-dropdown .dropdown-toggle,
 .header-dark .header .user-info-dropdown .dropdown-toggle .user-name,
@@ -1564,11 +1570,11 @@ table.dataTable.dtr-inline.collapsed
 .left-side-bar {
     width: 280px;
     z-index: 1000;
-    background: #ffc107;
+    background: #00008b;
+    /* background: #142127; */
 }
 .left-side-bar .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-    /* background: #00000; */
-    background: #ffc107;
+    background: #ecf0f4;
 }
 .left-side-bar:before {
     content: "";
@@ -1795,7 +1801,7 @@ table.dataTable.dtr-inline.collapsed
     background-color: rgba(236, 240, 244, 0.19);
 }
 .sidebar-light .sidebar-menu > ul > li > .dropdown-toggle.active {
-    background-color: #ffc107;
+    background-color: var(--primary);
     color: #fff;
 }
 .sidebar-light .sidebar-menu .dropdown-toggle:hover .micon,
@@ -1839,10 +1845,10 @@ table.dataTable.dtr-inline.collapsed
 .sidebar-light .sidebar-menu .submenu li a.active,
 .sidebar-light .sidebar-menu .submenu li a:hover {
     color: #fff;
-    background-color: #ffc107;
+    background-color: var(--primary);
 }
 .sidebar-light .menu-block .mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail {
-    background-color: #000000;
+    background-color: #0e132b;
 }
 .sidebar-menu .dropdown-divider {
     margin: 20px 0;
@@ -3799,7 +3805,7 @@ body.IE .register-page-wrap .container {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background: #ffc107;
+    background: var(--primary);
     color: #fff;
 }
 .right-sidebar {
