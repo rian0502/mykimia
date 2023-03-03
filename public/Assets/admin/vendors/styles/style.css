@@ -1588,8 +1588,10 @@ table.dataTable.dtr-inline.collapsed
     background: #00008b;
     /* background: #142127; */
 }
+
+//scroll dalam
 .left-side-bar .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-    background: #ecf0f4;
+    background: #000;
 }
 .left-side-bar:before {
     content: "";
@@ -1862,8 +1864,10 @@ table.dataTable.dtr-inline.collapsed
     color: #fff;
     background-color: var(--primary);
 }
+
+//scroll atas bawah
 .sidebar-light .menu-block .mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail {
-    background-color: #0e132b;
+    background-color: #b2b8d3;
 }
 .sidebar-menu .dropdown-divider {
     margin: 20px 0;
