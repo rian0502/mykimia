@@ -33,6 +33,7 @@ body {
     color: #031e23;
     background: #ecf0f4;
 }
+
 a {
     text-decoration: none;
     color: #555;
@@ -4020,6 +4021,7 @@ body.IE .register-page-wrap .container {
 .welcome-modal-btn i {
     margin-top: 6px;
 }
+
 @media (min-width: 1301px) and (max-width: 1400px) {
     .header {
         width: calc(100% - 250px);
@@ -4151,6 +4153,9 @@ body.IE .register-page-wrap .container {
     }
 }
 @media (max-width: 767px) {
+    .nama-model {
+        margin-right: 0px;
+    }
     .header {
         position: fixed;
         left: 0;

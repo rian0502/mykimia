@@ -6,117 +6,152 @@
 
                 <div class="card-box mb-30">
                     <div class="pd-20">
-                        <h4 class="text-blue h4">Data Table with Export Buttons</h4>
+                        <h4 class="text-blue h4">Model</h4>
+                        <a href="/model/create">
+                            <button class="btn btn-success mt-3">
+                                <i class="icon-copy fi-page-add"></i>
+                                Tambah Data
+                            </button>
+                        </a>
                     </div>
                     <div class="pb-20">
-                        <table class="table data-table-responsive hover stripe data-table-export nowrap ">
+                        <table class="table data-table-responsive stripe data-table-export nowrap ">
                             <thead>
                                 <tr>
-                                    <th class="table-plus datatable-nosort">Name</th>
-                                    <th>Age</th>
-                                    <th>Office</th>
-                                    <th>Address</th>
-                                    <th>Start Date</th>
-                                    <th>Salart</th>
+                                    <th>#</th>
+                                    <th>Nama Model</th>
+                                    <th>Merek</th>
+                                    <th class="table-plus datatable-nosort">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
+
+                                @php
+                                    $count = 1;
+                                @endphp
+
                                 <tr>
-                                    <td class="table-plus">Gloria F. Mead</td>
-                                    <td>25</td>
-                                    <td>Sagittarius</td>
-                                    <td>2829 Trainer Avenue Peoria, IL 61602</td>
-                                    <td>29-03-2018</td>
-                                    <td>$162,700</td>
+                                    <td>{{ $count++ }}</td>
+                                    <td>Piala</td>
+                                    <td>Piala</td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                            <a href="#" data-color="#e95959"><i
+                                                    class="icon-copy dw dw-delete-3"></i></a>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">Andrea J. Cagle</td>
-                                    <td>30</td>
-                                    <td>Gemini</td>
-                                    <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
-                                    <td>29-03-2018</td>
-                                    <td>$162,700</td>
+                                    <td>{{ $count++ }}</td>
+                                    <td>Piala</td>
+                                    <td>Piala</td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                            <a href="#" data-color="#e95959"><i
+                                                    class="icon-copy dw dw-delete-3"></i></a>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">Andrea J. Cagle</td>
-                                    <td>20</td>
-                                    <td>Gemini</td>
-                                    <td>2829 Trainer Avenue Peoria, IL 61602</td>
-                                    <td>29-03-2018</td>
-                                    <td>$162,700</td>
+                                    <td>{{ $count++ }}</td>
+                                    <td>Piala</td>
+                                    <td>Piala</td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                            <a href="#" data-color="#e95959"><i
+                                                    class="icon-copy dw dw-delete-3"></i></a>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">Andrea J. Cagle</td>
-                                    <td>30</td>
-                                    <td>Sagittarius</td>
-                                    <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
-                                    <td>29-03-2018</td>
-                                    <td>$162,700</td>
+                                    <td>{{ $count++ }}</td>
+                                    <td>Piala</td>
+                                    <td>Piala</td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                            <a href="#" data-color="#e95959"><i
+                                                    class="icon-copy dw dw-delete-3"></i></a>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">Andrea J. Cagle</td>
-                                    <td>25</td>
-                                    <td>Gemini</td>
-                                    <td>2829 Trainer Avenue Peoria, IL 61602</td>
-                                    <td>29-03-2018</td>
-                                    <td>$162,700</td>
+                                    <td>{{ $count++ }}</td>
+                                    <td>Piala</td>
+                                    <td>Piala</td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                            <a href="#" data-color="#e95959"><i
+                                                    class="icon-copy dw dw-delete-3"></i></a>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">Andrea J. Cagle</td>
-                                    <td>20</td>
-                                    <td>Sagittarius</td>
-                                    <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
-                                    <td>29-03-2018</td>
-                                    <td>$162,700</td>
+                                    <td>{{ $count++ }}</td>
+                                    <td>Piala</td>
+                                    <td>Piala</td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                            <a href="#" data-color="#e95959"><i
+                                                    class="icon-copy dw dw-delete-3"></i></a>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">Andrea J. Cagle</td>
-                                    <td>18</td>
-                                    <td>Gemini</td>
-                                    <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
-                                    <td>29-03-2018</td>
-                                    <td>$162,700</td>
+                                    <td>{{ $count++ }}</td>
+                                    <td>Piala</td>
+                                    <td>Piala</td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                            <a href="#" data-color="#e95959"><i
+                                                    class="icon-copy dw dw-delete-3"></i></a>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">Andrea J. Cagle</td>
-                                    <td>30</td>
-                                    <td>Sagittarius</td>
-                                    <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
-                                    <td>29-03-2018</td>
-                                    <td>$162,700</td>
+                                    <td>{{ $count++ }}</td>
+                                    <td>Piala</td>
+                                    <td>Piala</td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                            <a href="#" data-color="#e95959"><i
+                                                    class="icon-copy dw dw-delete-3"></i></a>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">Andrea J. Cagle</td>
-                                    <td>30</td>
-                                    <td>Sagittarius</td>
-                                    <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
-                                    <td>29-03-2018</td>
-                                    <td>$162,700</td>
+                                    <td>{{ $count++ }}</td>
+                                    <td>Piala</td>
+                                    <td>Piala</td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                            <a href="#" data-color="#e95959"><i
+                                                    class="icon-copy dw dw-delete-3"></i></a>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">Andrea J. Cagle</td>
-                                    <td>30</td>
-                                    <td>Gemini</td>
-                                    <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
-                                    <td>29-03-2018</td>
-                                    <td>$162,700</td>
+                                    <td>{{ $count++ }}</td>
+                                    <td>Piala</td>
+                                    <td>Piala</td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                            <a href="#" data-color="#e95959"><i
+                                                    class="icon-copy dw dw-delete-3"></i></a>
+                                        </div>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td class="table-plus">Andrea J. Cagle</td>
-                                    <td>30</td>
-                                    <td>Gemini</td>
-                                    <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
-                                    <td>29-03-2018</td>
-                                    <td>$162,700</td>
-                                </tr>
-                                <tr>
-                                    <td class="table-plus">Andrea J. Cagle</td>
-                                    <td>30</td>
-                                    <td>Gemini</td>
-                                    <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
-                                    <td>29-03-2018</td>
-                                    <td>$162,700</td>
-                                </tr>
+
+
                             </tbody>
                         </table>
                     </div>
