@@ -45,13 +45,13 @@
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-warning" role="status" style="width: 3rem; height: 3rem;"></div>
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
     <!-- Spinner End -->
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-warning text-white d-none d-lg-flex">
+    <div class="container-fluid bg-primary text-white d-none d-lg-flex">
         <div class="container py-3">
             <div class="d-flex align-items-center">
                 <a href="index.html">
@@ -63,11 +63,11 @@
                     <small class="ms-4"><i class="fa fa-envelope me-3"></i>chemistry@fmipa.unila.ac.id</small>
                     <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>0721-704625</small>
                     {{-- <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-warning rounded-circle ms-2" href=""><i
+                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
                                 class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-sm-square btn-light text-warning rounded-circle ms-2" href=""><i
+                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
                                 class="fab fa-twitter"></i></a>
-                        <a class="btn btn-sm-square btn-light text-warning rounded-circle ms-2" href=""><i
+                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
                                 class="fab fa-linkedin-in"></i></a>
                     </div> --}}
                 </div>
@@ -107,7 +107,7 @@
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="ms-auto d-none d-lg-block">
-                        <a href="/beranda" class="btn btn-warning rounded-pill py-2 px-3">Masuk</a>
+                        <a href="/beranda" class="btn btn-primary rounded-pill py-2 px-3">Masuk</a>
                     </div>
                 </div>
             </nav>
@@ -206,7 +206,7 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-warning btn-lg-square rounded-circle back-to-top"><i
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
 
 
