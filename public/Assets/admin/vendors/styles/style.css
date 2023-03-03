@@ -24,6 +24,21 @@ html {
 input[type="submit"] {
     -webkit-appearance: none;
 }
+
+/* table */
+
+td,
+tr {
+    text-align: center;
+}
+.nama-model {
+    margin-right: 20px;
+}
+.batal {
+    margin-left: 100px;
+    margin-top: -110px;
+}
+
 *,
 :after,
 :before {
@@ -3955,6 +3970,8 @@ body.IE .register-page-wrap .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .table-actions a {
     display: inline-block;
@@ -4028,6 +4045,7 @@ body.IE .register-page-wrap .container {
 .welcome-modal-btn i {
     margin-top: 6px;
 }
+
 @media (min-width: 1301px) and (max-width: 1400px) {
     .header {
         width: calc(100% - 250px);
@@ -4159,6 +4177,12 @@ body.IE .register-page-wrap .container {
     }
 }
 @media (max-width: 767px) {
+    .nama-model {
+        margin-right: 0px;
+    }
+    .submit {
+        margin-top: 30px;
+    }
     .header {
         position: fixed;
         left: 0;

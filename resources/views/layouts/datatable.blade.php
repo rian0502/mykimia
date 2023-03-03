@@ -13,10 +13,14 @@
             display: inline-block;
 
         }
+
         div.dataTables_wrapper div.dataTables_length {
             width: auto;
             display: inline-block;
             margin-top: 20px;
+
+
+
         }
     </style>
 
@@ -349,19 +353,27 @@
                     </li>
                     <li>
                         <a href="{{ route('lokasi') }}"
-                            class="dropdown-toggle no-arrow {{ Request::is('lokasi/*') ||Request::is('lokasi')? 'active' : '' }}">
+                            class="dropdown-toggle no-arrow {{ Request::is('lokasi/*') || Request::is('lokasi') ? 'active' : '' }}">
                             <span class="micon bi bi-pin-map"></span><span class="mtext">Lokasi</span>
                         </a>
                     </li>
-                    <li class="dropdown {{Request::is('barang/*')||Request::is('barang')||Request::is('kategori/*')||Request::is('kategori')||Request::is('model/*')||Request::is('model') ? 'show' : '' }}">
-                        <a href="javascript:;" class="dropdown-toggle" data-option="{{Request::is('barang/*')||Request::is('barang')||Request::is('kategori/*')||Request::is('kategori')||Request::is('model/*')||Request::is('model') ? 'on' : '' }}">
+                    <li
+                        class="dropdown {{ Request::is('barang/*') || Request::is('barang') || Request::is('kategori/*') || Request::is('kategori') || Request::is('model/*') || Request::is('model') ? 'show' : '' }}">
+                        <a href="javascript:;" class="dropdown-toggle"
+                            data-option="{{ Request::is('barang/*') || Request::is('barang') || Request::is('kategori/*') || Request::is('kategori') || Request::is('model/*') || Request::is('model') ? 'on' : '' }}">
 
-                        <span class="micon bi bi-box"></span><span class="mtext">Inventaris</span>
+                            <span class="micon bi bi-box"></span><span class="mtext">Inventaris</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="{{ route('barang') }}" class="{{Request::is('barang/*')||Request::is('barang')? 'active' : ''}}">Barang</a></li>
-                            <li><a href="{{ route('kategori') }}" class="{{Request::is('kategori/*')||Request::is('kategori')? 'active' : ''}}">Kategori</a></li>
-                            <li><a href="{{ route('model') }}" class="{{Request::is('model/*')||Request::is('model') ? 'active' : ''}}">Model</a></li>
+                            <li><a href="{{ route('barang') }}"
+                                    class="{{ Request::is('barang/*') || Request::is('barang') ? 'active' : '' }}">Barang</a>
+                            </li>
+                            <li><a href="{{ route('kategori') }}"
+                                    class="{{ Request::is('kategori/*') || Request::is('kategori') ? 'active' : '' }}">Kategori</a>
+                            </li>
+                            <li><a href="{{ route('model') }}"
+                                    class="{{ Request::is('model/*') || Request::is('model') ? 'active' : '' }}">Model</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="dropdown">
