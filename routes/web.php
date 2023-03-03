@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('index');
 });
 Route::get('/beranda', function () {
-    return view('admin/beranda');
+    return view('admin.beranda');
 })->name('beranda');
 
 /* @
@@ -27,58 +27,58 @@ Route::get('/beranda', function () {
 */
 //BARANG
 Route::get('/barang', function () {
-    return view('admin/barang');
+    return view('admin.barang');
 })->name('barang');
 //create barang
 Route::get('/barang/create', function () {
-    return view('admin/createbarang');
+    return view('admin.createbarang');
 })->name('createbarang');
 //action create barang
 Route::post('/barang/create', function () {
-    return view('admin/createbarang');
+    return view('admin.createbarang');
 })->name('createbarang');
 //edit barang
 Route::get('/barang/edit/{id}', function ($id) {
-    return view('admin/editbarang', ['id' => $id]);
+    return view('admin.editbarang', ['id' => $id]);
 })->name('editbarang');
 //action edit barang
 Route::post('/barang/edit/{id}', function ($id) {
-    return view('admin/editbarang', ['id' => $id]);
+    return view('admin.editbarang', ['id' => $id]);
 })->name('editbarang');
 //detail barang dengan parameter
 Route::get('/barang/{id}', function ($id) {
-    return view('admin/detailbarang', ['id' => $id]);
+    return view('admin.detailbarang', ['id' => $id]);
 })->name('detailbarang');
 
 //KATEGORI
 Route::get('/kategori', function () {
-    return view('admin/kategori');
+    return view('admin.kategori');
 })->name('kategori');
 //create kategori
 Route::get('/kategori/create', function () {
-    return view('admin/createkategori');
+    return view('admin.createkategori');
 })->name('createkategori');
 //action create kategori
 Route::post('/kategori/create', function () {
-    return view('admin/createkategori');
+    return view('admin.createkategori');
 })->name('createkategori');
 //edit kategori
 Route::get('/kategori/edit/{id}', function ($id) {
-    return view('admin/editkategori', ['id' => $id]);
+    return view('admin.editkategori', ['id' => $id]);
 })->name('editkategori');
 //action edit kategori
 Route::post('/kategori/edit/{id}', function ($id) {
-    return view('admin/editkategori', ['id' => $id]);
+    return view('admin.editkategori', ['id' => $id]);
 })->name('editkategori');
 
 
 //MODEL BARANG
 Route::get('/model', function () {
-    return view('admin/model/model');
+    return view('admin.model.model');
 })->name('model');
 //create model
 Route::get('/model/create', function () {
-    return view('admin/model/createModel');
+    return view('admin.model.createModel');
 })->name('createModel');
 
 //action create model
@@ -99,12 +99,12 @@ Route::post('/model/create/action', function (Request $request) {
 
 //edit model
 Route::get('/model/edit/{id}', function ($id) {
-    return view('admin/model/editModel', ['id' => $id]);
+    return view('admin.model/editModel', ['id' => $id]);
 })->name('editModel');
 
 //action edit model
 Route::post('/model/edit/{id}', function ($id) {
-    return view('admin/model/editModel', ['id' => $id]);
+    return view('admin.model/editModel', ['id' => $id]);
 })->name('editModelAction');
 
 
