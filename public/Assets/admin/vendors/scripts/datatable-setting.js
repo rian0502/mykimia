@@ -11,11 +11,11 @@ $("document").ready(function () {
         ],
         lengthMenu: [
             [10, 25, 50, -1],
-            [10, 25, 50, "All"],
+            [10, 20, 50, "All"],
         ],
         language: {
             info: "_START_-_END_ of _TOTAL_ entries",
-            searchPlaceholder: "Search",
+            searchPlaceholder: "Pencarian",
             paginate: {
                 next: '<i class="ion-chevron-right"></i>',
                 previous: '<i class="ion-chevron-left"></i>',
@@ -38,8 +38,8 @@ $("document").ready(function () {
             [10, 25, 50, "All"],
         ],
         language: {
-            info: "_START_-_END_ of _TOTAL_ entries",
-            searchPlaceholder: "Search",
+            info: "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
+            searchPlaceholder: "Pencarian",
             paginate: {
                 next: '<i class="ion-chevron-right"></i>',
                 previous: '<i class="ion-chevron-left"></i>',
