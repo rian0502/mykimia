@@ -7,6 +7,13 @@
     <title>KIMIA</title>
 
     <!-- Favicon -->
+    <style>
+        div.dataTables_wrapper div.dataTables_length select {
+            width: auto;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
     <link href="/Assets/src/img/unila.png" rel="icon">
 
     <!-- Mobile Specific Metas -->
@@ -335,38 +342,20 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('barang') }}"
-                            class="dropdown-toggle no-arrow {{ Request::is('barang/*') ? 'active' : '' }}">
-                            <span class="micon bi bi-box"></span><span class="mtext">Barang</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('kategori') }}"
-                            class="dropdown-toggle no-arrow {{ Request::is('kategori/*') ? 'active' : '' }}">
-                            <span class="micon bi bi-collection"></span><span class="mtext">Kategori</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('model') }}"
-                            class="dropdown-toggle no-arrow {{ Request::is('model/*') ? 'active' : '' }}">
-                            <span class="micon bi bi-circle-square"></span><span class="mtext">Model</span>
-                        </a>
-                    </li>
-                    <li>
                         <a href="{{ route('lokasi') }}"
-                            class="dropdown-toggle no-arrow {{ Request::is('lokasi/*') ? 'active' : '' }}">
+                            class="dropdown-toggle no-arrow {{ Request::is('lokasi/*') ||Request::is('lokasi')? 'active' : '' }}">
                             <span class="micon bi bi-pin-map"></span><span class="mtext">Lokasi</span>
                         </a>
                     </li>
-                    <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon bi bi-box"></span><span class="mtext">Inventaris</span>
+                    <li class="dropdown {{Request::is('barang/*')||Request::is('barang')||Request::is('kategori/*')||Request::is('kategori')||Request::is('model/*')||Request::is('model') ? 'show' : '' }}">
+                        <a href="javascript:;" class="dropdown-toggle" data-option="{{Request::is('barang/*')||Request::is('barang')||Request::is('kategori/*')||Request::is('kategori')||Request::is('model/*')||Request::is('model') ? 'on' : '' }}">
+
+                        <span class="micon bi bi-box"></span><span class="mtext">Inventaris</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="{{ route('barang') }}">Barang</a></li>
-                            <li><a href="{{ route('kategori') }}">Kategori</a></li>
-                            <li><a href="{{ route('model') }}">Model</a></li>
-                            <li><a href="{{ route('lokasi') }}">lokasi</a></li>
+                            <li><a href="{{ route('barang') }}" class="{{Request::is('barang/*')||Request::is('barang')? 'active' : ''}}">Barang</a></li>
+                            <li><a href="{{ route('kategori') }}" class="{{Request::is('kategori/*')||Request::is('kategori')? 'active' : ''}}">Kategori</a></li>
+                            <li><a href="{{ route('model') }}" class="{{Request::is('model/*')||Request::is('model') ? 'active' : ''}}">Model</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
