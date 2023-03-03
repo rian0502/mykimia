@@ -35,7 +35,7 @@
                         </div>
                         <div class="form-group">
 
-                            <button type="submit" class="btn btn-warning">Submit</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
 
                     </form>
@@ -44,5 +44,5 @@
         </div>
         <!-- Input Validation End -->
     </div>
-    
+
 @endsection

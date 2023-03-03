@@ -9,7 +9,7 @@
                         <h4 class="text-blue h4">Data Table with Export Buttons</h4>
                     </div>
                     <div class="pb-20">
-                        <table class="table multiple-select-row data-table-export nowrap ">
+                        <table class="table hover stripe data-table-export nowrap ">
                             <thead>
                                 <tr>
                                     <th class="table-plus datatable-nosort">Name</th>
