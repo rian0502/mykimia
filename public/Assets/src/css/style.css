@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #4761ff;
+    --primary: #1818d7;
     --secondary: #555555;
     --light: #f1f3fa;
     --dark: #1c2035;
@@ -91,7 +91,7 @@
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: var(--warning);
+    color: var(--primary);
 }
 
 .navbar .dropdown-toggle::after {
@@ -156,8 +156,8 @@
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 3.5rem;
-    background-color: var(--warning);
-    border: 15px solid var(--warning);
+    background-color: var(--primary);
+    border: 15px solid var(--primary);
 }
 
 @media (max-width: 768px) {
@@ -216,7 +216,7 @@
     border: none;
     outline: none !important;
     padding: 18px 20px 20px 28px;
-    background: var(--warning);
+    background: var(--primary);
 }
 
 .btn-play:before {
@@ -244,7 +244,7 @@
     display: block;
     width: 90px;
     height: 90px;
-    background: var(--warning);
+    background: var(--primary);
     border-radius: 100%;
     transition: all 200ms;
 }
@@ -320,7 +320,7 @@
 }
 
 .service-item:hover .service-text h5 {
-    color: var(--warning);
+    color: var(--primary);
 }
 
 .service-item .service-btn {
@@ -394,7 +394,7 @@
 
 .project-carousel .owl-nav .owl-prev:hover,
 .project-carousel .owl-nav .owl-next:hover {
-    background: var(--warning);
+    background: var(--primary);
     color: #ffffff;
 }
 
@@ -445,14 +445,14 @@
 
 .team-item .team-social li .btn {
     background: #ffffff;
-    color: var(--varning);
+    color: var(--primary);
     border-radius: 40px;
     transition: 0.5s;
 }
 
 .team-item .team-social li .btn:hover {
     color: #ffffff;
-    background: var(--warning);
+    background: var(--primary);
 }
 
 .team-item .team-social li:nth-child(1) {
@@ -488,7 +488,7 @@
 
 .owl-item.center .testimonial-item,
 .testimonial-item:hover {
-    background: var(--warning);
+    background: var(--primary);
 }
 
 .owl-item.center .testimonial-item *,
@@ -526,7 +526,7 @@
 
 .testimonial-carousel .owl-nav .owl-prev:hover,
 .testimonial-carousel .owl-nav .owl-next:hover {
-    background: var(--warning);
+    background: var(--primary);
     color: #ffffff;
 }
 
@@ -586,5 +586,5 @@
 }
 
 .copyright a:hover {
-    color: var(--warning) !important;
+    color: var(--primary) !important;
 }
