@@ -11,7 +11,7 @@
         div.dataTables_wrapper div.dataTables_length select {
             width: auto;
             display: inline-block;
-            
+
         }
         div.dataTables_wrapper div.dataTables_length {
             width: auto;
@@ -76,7 +76,7 @@
 </head>
 
 <body>
-    {{-- <div class="pre-loader">
+    <div class="pre-loader">
         <div class="pre-loader-box">
             <div class="loader-logo">
                 <img src="/Assets/admin/vendors/images/deskapp-logo.svg" alt="" />
@@ -87,7 +87,7 @@
             <div class="percent" id="percent1">0%</div>
             <div class="loading-text">Loading...</div>
         </div>
-    </div> --}}
+    </div>
 
     <div class="header">
         <div class="header-left">
@@ -553,6 +553,7 @@
     {{-- <script type="text/javascript"
         src="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.11.3/b-2.0.1/b-colvis-2.0.1/b-html5-2.0.1/datatables.min.js">
     </script> --}}
+
 </body>
 
 </html>
