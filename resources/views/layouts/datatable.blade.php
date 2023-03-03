@@ -11,9 +11,15 @@
         div.dataTables_wrapper div.dataTables_length select {
             width: auto;
             display: inline-block;
-            margin-top: 10px;
+            
+        }
+        div.dataTables_wrapper div.dataTables_length {
+            width: auto;
+            display: inline-block;
+            margin-top: 20px;
         }
     </style>
+
     <link href="/Assets/src/img/unila.png" rel="icon">
 
     <!-- Mobile Specific Metas -->
