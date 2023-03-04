@@ -8,7 +8,7 @@
                 <div class="card-box mb-30">
                     <div class="pd-20">
                         <h4 class="text-blue h4">Kategori</h4>
-                        <a href="/kategori/create">
+                        <a href="{{route('admin.kategori.create')}}">
                             <button class="btn btn-success mt-3">
                                 <i class="icon-copy fi-page-add"></i>
                                 Tambah Data
@@ -32,22 +32,21 @@
                                         <td>
 
                                             <div class="table-actions">
-                                                <a class="edit" href="/kategori/{{ $item->encrypt_id }}/edit">
+                                                <a class="edit" href="{{ route('admin.kategori.edit',$item->encrypt_id) }}">
                                                     <button class="btn btn-warning">
                                                         <i class="icon-copy fi-page-edit"></i>
                                                         Edit
                                                     </button>
                                                 </a>
-                                                <form action="/kategori/{{ $item->encrypt_id }}" method="POST">
+                                                <form action="{{ route('admin.kategori.destroy', $item->encrypt_id) }}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger"
-                                                        onclick="return confirm('Apakah Anda yakin ingin menghapus kategori ini?')">
-                                                        <i class="icon-copy dw dw-delete-3"></i>
-                                                        Hapus
+                                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus kategori ini?')">
+                                                      <i class="icon-copy dw dw-delete-3"></i>
+                                                      Hapus
                                                     </button>
+                                                  </form>
 
-                                                </form>
                                             </div>
 
 

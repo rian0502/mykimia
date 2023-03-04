@@ -13,7 +13,7 @@
                         </div>
 
                     </div>
-                    <form action="{{ route('storekategori') }}" method="POST">
+                    <form action="{{ route('admin.kategori.store') }}" method="POST">
                         @csrf
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}
@@ -45,7 +45,7 @@
                         </div>
 
                     </form>
-                    <a href="/kategori">
+                    <a href="{{route('admin.kategori.index')}}">
 
                         <button class="batal btn btn-secondary">Batal</button>
                     </a>
