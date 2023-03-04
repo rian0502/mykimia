@@ -18,23 +18,54 @@
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}
                             <div class="weight-500 col-md-6">
-                                <label>Nama Barang</label>
-                                <input autofocus name="nama_barang" id="nama_barang"
-                                    class="form-control @error('nama_barang') form-control-danger @enderror" type="text"
-                                    placeholder="Nama Model">
-                                @error('nama_barang')
-                                    <div class="form-control-feedback has-danger">{{ $message }}</div>
-                                @enderror
+                                <div class="form-group">
+                                    <label>Nama Barang</label>
+                                    <input autofocus name="nama_barang" id="nama_barang"
+                                        class="form-control @error('nama_barang') form-control-danger @enderror"
+                                        type="text" placeholder="Nama Model">
+                                    @error('nama_barang')
+                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label>Jumlah Akhir</label>
+                                    <input autofocus name="nama_barang" id="nama_barang"
+                                        class="form-control @error('nama_barang') form-control-danger @enderror"
+                                        type="text" placeholder="Nama Model">
+                                    @error('nama_barang')
+                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label>ID Lokasi :</label>
+                                    <select class="custom-select form-control">
+                                        <option value="">Select City</option>
+                                        <option value="Amsterdam">India</option>
+                                        <option value="Berlin">UK</option>
+                                        <option value="Frankfurt">US</option>
+                                    </select>
+                                </div>
                             </div>
                             {{-- form untuk sebelah kanan --}}
-                            <div class="merek weight-500 col-md-6">
-                                {{-- <label>Merek</label>
-                                <input autofocus name="merk" id="merk"
-                                    class="form-control @error('merk') form-control-danger @enderror" type="text"
-                                    placeholder="Merek">
-                                @error('merk')
-                                    <div class="form-control-feedback has-danger">{{ $message }}</div>
-                                @enderror --}}
+                            <div class="kanan weight-500 col-md-6">
+                                <div class="form-group">
+                                    <label>ID Kategori :</label>
+                                    <select class="custom-select form-control">
+                                        <option value="">Select City</option>
+                                        <option value="Amsterdam">India</option>
+                                        <option value="Berlin">UK</option>
+                                        <option value="Frankfurt">US</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>ID Model :</label>
+                                    <select class="custom-select form-control">
+                                        <option value="">Select City</option>
+                                        <option value="Amsterdam">India</option>
+                                        <option value="Berlin">UK</option>
+                                        <option value="Frankfurt">US</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
 

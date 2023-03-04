@@ -19,8 +19,11 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Nama Model</th>
-                                    <th>Merek</th>
+                                    <th>Nama Barang</th>
+                                    <th>Kategori</th>
+                                    <th>Model</th>
+                                    <th>Lokasi</th>
+                                    <th>Jumlah Akhir</th>
                                     <th class="table-plus datatable-nosort">Aksi</th>
                                 </tr>
                             </thead>
@@ -34,112 +37,7 @@
                                     <td>{{ $count++ }}</td>
                                     <td>Piala</td>
                                     <td>Piala</td>
-                                    <td>
-                                        <div class="table-actions">
-                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
-                                            <a href="#" data-color="#e95959"><i
-                                                    class="icon-copy dw dw-delete-3"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>{{ $count++ }}</td>
                                     <td>Piala</td>
-                                    <td>Piala</td>
-                                    <td>
-                                        <div class="table-actions">
-                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
-                                            <a href="#" data-color="#e95959"><i
-                                                    class="icon-copy dw dw-delete-3"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>{{ $count++ }}</td>
-                                    <td>Piala</td>
-                                    <td>Piala</td>
-                                    <td>
-                                        <div class="table-actions">
-                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
-                                            <a href="#" data-color="#e95959"><i
-                                                    class="icon-copy dw dw-delete-3"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>{{ $count++ }}</td>
-                                    <td>Piala</td>
-                                    <td>Piala</td>
-                                    <td>
-                                        <div class="table-actions">
-                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
-                                            <a href="#" data-color="#e95959"><i
-                                                    class="icon-copy dw dw-delete-3"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>{{ $count++ }}</td>
-                                    <td>Piala</td>
-                                    <td>Piala</td>
-                                    <td>
-                                        <div class="table-actions">
-                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
-                                            <a href="#" data-color="#e95959"><i
-                                                    class="icon-copy dw dw-delete-3"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>{{ $count++ }}</td>
-                                    <td>Piala</td>
-                                    <td>Piala</td>
-                                    <td>
-                                        <div class="table-actions">
-                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
-                                            <a href="#" data-color="#e95959"><i
-                                                    class="icon-copy dw dw-delete-3"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>{{ $count++ }}</td>
-                                    <td>Piala</td>
-                                    <td>Piala</td>
-                                    <td>
-                                        <div class="table-actions">
-                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
-                                            <a href="#" data-color="#e95959"><i
-                                                    class="icon-copy dw dw-delete-3"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>{{ $count++ }}</td>
-                                    <td>Piala</td>
-                                    <td>Piala</td>
-                                    <td>
-                                        <div class="table-actions">
-                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
-                                            <a href="#" data-color="#e95959"><i
-                                                    class="icon-copy dw dw-delete-3"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>{{ $count++ }}</td>
-                                    <td>Piala</td>
-                                    <td>Piala</td>
-                                    <td>
-                                        <div class="table-actions">
-                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
-                                            <a href="#" data-color="#e95959"><i
-                                                    class="icon-copy dw dw-delete-3"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>{{ $count++ }}</td>
                                     <td>Piala</td>
                                     <td>Piala</td>
                                     <td>
