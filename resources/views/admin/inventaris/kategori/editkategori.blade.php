@@ -8,7 +8,7 @@
                 <div class="pd-20 card-box mb-30">
                     <div class="clearfix">
                         <div class="pull-left">
-                            <h4 class="text-dark h4">Tambah Kategori</h4>
+                            <h4 class="text-dark h4">Edit Kategori</h4>
                             <p class="mb-30">Isi data dengan benar</p>
                         </div>
 
@@ -21,20 +21,20 @@
                                 <label>Nama Kategori</label>
                                 <input autofocus name="nama_kategori" id="nama_kategori"
                                     class="form-control @error('nama_kategori') form-control-danger @enderror"
-                                    type="text" placeholder="Nama Model">
+                                    type="text" placeholder="Nama Kategori">
                                 @error('nama_kategori')
                                     <div class="form-control-feedback has-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             {{-- form untuk sebelah kanan --}}
                             <div class="merek weight-500 col-md-6">
-                                <label>Merek</label>
+                                {{-- <label>Merek</label>
                                 <input autofocus name="merk" id="merk"
                                     class="form-control @error('merk') form-control-danger @enderror" type="text"
                                     placeholder="Merek">
                                 @error('merk')
                                     <div class="form-control-feedback has-danger">{{ $message }}</div>
-                                @enderror
+                                @enderror --}}
                             </div>
                         </div>
 
