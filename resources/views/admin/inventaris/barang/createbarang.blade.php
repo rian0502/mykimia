@@ -22,7 +22,7 @@
                                     <label>Nama Barang</label>
                                     <input autofocus name="nama_barang" id="nama_barang"
                                         class="form-control @error('nama_barang') form-control-danger @enderror"
-                                        type="text" placeholder="Nama Model">
+                                        type="text" placeholder="Nama Barang">
                                     @error('nama_barang')
                                         <div class="form-control-feedback has-danger">{{ $message }}</div>
                                     @enderror
@@ -31,7 +31,7 @@
                                     <label>Jumlah Akhir</label>
                                     <input autofocus name="nama_barang" id="nama_barang"
                                         class="form-control @error('nama_barang') form-control-danger @enderror"
-                                        type="text" placeholder="Nama Model">
+                                        type="text" placeholder="Jumlah Akhir">
                                     @error('nama_barang')
                                         <div class="form-control-feedback has-danger">{{ $message }}</div>
                                     @enderror

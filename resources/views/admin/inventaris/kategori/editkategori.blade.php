@@ -21,7 +21,7 @@
                                 <label>Nama Kategori</label>
                                 <input autofocus name="nama_kategori" id="nama_kategori"
                                     class="form-control @error('nama_kategori') form-control-danger @enderror"
-                                    type="text" placeholder="Nama Model">
+                                    type="text" placeholder="Nama Kategori">
                                 @error('nama_kategori')
                                     <div class="form-control-feedback has-danger">{{ $message }}</div>
                                 @enderror
