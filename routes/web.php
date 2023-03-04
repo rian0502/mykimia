@@ -181,8 +181,6 @@ Route::post('/lokasi/create/action', function (Request $request) {
 })->name('createLokasiAction');
 
 
-
-
 Route::get('/forgot-password', [ForgotPassword::class, 'index'])
     ->name('password.request');
 Route::post('/forgot-password', [ForgotPassword::class, 'sendResetLinkEmail'])
