@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>KIMIA</title>
+    <title>Chemistry Program Data Center</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -55,7 +55,7 @@
         <div class="container py-3">
             <div class="d-flex align-items-center">
                 <a href="index.html">
-                    <h2 class="text-white fw-bold m-0">KIMIA</h2>
+                    <h2 class="text-white fw-bold m-0">C P D C</h2>
                 </a>
                 <div class="ms-auto d-flex align-items-center">
                     <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>Jl. Prof. Dr. Ir.
@@ -82,7 +82,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
                 <a href="index.html" class="navbar-brand d-lg-none">
-                    <h1 class="fw-bold m-0">KIMIA</h1>
+                    <h1 class="fw-bold m-0">Chemistry Program Data Center</h1>
                 </a>
                 <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">

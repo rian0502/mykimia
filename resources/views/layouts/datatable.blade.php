@@ -4,7 +4,7 @@
 <head>
     <!-- Basic Page Info -->
     <meta charset="utf-8" />
-    <title>KIMIA</title>
+    <title>Chemistry Program Data Center</title>
 
     <!-- Favicon -->
     <style>
@@ -333,8 +333,11 @@
 
     <div class="left-side-bar">
         <div class="brand-logo">
-            <a href="/" class="text-dark">
-                KIMIA
+            <a href="/" class="text-dark text-bold">
+                {{-- C P D C --}}
+                <h6>
+                    Chemistry Program Data Center
+                </h6>
                 {{-- <img src="/Assets/admin/vendors/images/deskapp-logo.svg" alt="" class="dark-logo" />
                 <img src="/Assets/admin/vendors/images/deskapp-logo-white.svg" alt="" class="light-logo" /> --}}
             </a>

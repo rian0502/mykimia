@@ -4,7 +4,7 @@
 <head>
     <!-- Basic Page Info -->
     <meta charset="utf-8" />
-    <title>KIMIA</title>
+    <title>Chemistry Program Data Center</title>
 
     <!-- Favicon -->
     <link href="/Assets/src/img/unila.png" rel="icon">
@@ -317,7 +317,7 @@
     <div class="left-side-bar">
         <div class="brand-logo">
             <a href="/" class="text-dark">
-                KIMIA
+                C P D C
                 {{-- <img src="/Assets/admin/vendors/images/deskapp-logo.svg" alt="" class="dark-logo" />
                 <img src="/Assets/admin/vendors/images/deskapp-logo-white.svg" alt="" class="light-logo" /> --}}
             </a>
@@ -336,19 +336,27 @@
                     </li>
                     <li>
                         <a href="{{ route('lokasi') }}"
-                            class="dropdown-toggle no-arrow {{ Request::is('lokasi/*') ||Request::is('lokasi')? 'active' : '' }}">
+                            class="dropdown-toggle no-arrow {{ Request::is('lokasi/*') || Request::is('lokasi') ? 'active' : '' }}">
                             <span class="micon bi bi-pin-map"></span><span class="mtext">Lokasi</span>
                         </a>
                     </li>
-                    <li class="dropdown {{Request::is('barang/*')||Request::is('barang')||Request::is('kategori/*')||Request::is('kategori')||Request::is('model/*')||Request::is('model') ? 'show' : '' }}">
-                        <a href="javascript:;" class="dropdown-toggle" data-option="{{Request::is('barang/*')||Request::is('barang')||Request::is('kategori/*')||Request::is('kategori')||Request::is('model/*')||Request::is('model') ? 'on' : '' }}">
+                    <li
+                        class="dropdown {{ Request::is('barang/*') || Request::is('barang') || Request::is('kategori/*') || Request::is('kategori') || Request::is('model/*') || Request::is('model') ? 'show' : '' }}">
+                        <a href="javascript:;" class="dropdown-toggle"
+                            data-option="{{ Request::is('barang/*') || Request::is('barang') || Request::is('kategori/*') || Request::is('kategori') || Request::is('model/*') || Request::is('model') ? 'on' : '' }}">
 
-                        <span class="micon bi bi-box"></span><span class="mtext">Inventaris</span>
+                            <span class="micon bi bi-box"></span><span class="mtext">Inventaris</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="{{ route('barang') }}" class="{{Request::is('barang/*')||Request::is('barang')? 'active' : ''}}">Barang</a></li>
-                            <li><a href="{{ route('kategori') }}" class="{{Request::is('kategori/*')||Request::is('kategori')? 'active' : ''}}">Kategori</a></li>
-                            <li><a href="{{ route('model') }}" class="{{Request::is('model/*')||Request::is('model') ? 'active' : ''}}">Model</a></li>
+                            <li><a href="{{ route('barang') }}"
+                                    class="{{ Request::is('barang/*') || Request::is('barang') ? 'active' : '' }}">Barang</a>
+                            </li>
+                            <li><a href="{{ route('kategori') }}"
+                                    class="{{ Request::is('kategori/*') || Request::is('kategori') ? 'active' : '' }}">Kategori</a>
+                            </li>
+                            <li><a href="{{ route('model') }}"
+                                    class="{{ Request::is('model/*') || Request::is('model') ? 'active' : '' }}">Model</a>
+                            </li>
 
                         </ul>
                     </li>
