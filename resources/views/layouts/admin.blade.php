@@ -204,7 +204,7 @@
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
                         <span class="user-icon">
-                            <img src="/Assets/images/putra.jpg" alt="" />
+                            <img src="/Assets/images/profile_picture/putra.jpg" alt="" />
                         </span>
                         <span class="user-name">Putu Putra Eka Persada</span>
                     </a>
