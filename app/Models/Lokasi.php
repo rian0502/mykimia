@@ -10,6 +10,7 @@ class Lokasi extends Model
     use HasFactory;
     protected $table = 'lokasi';
     protected $fillable = [
+        'encrypt_id',
         'nama_lokasi', 
         'lantai_tingkat',
         'nama_gedung',

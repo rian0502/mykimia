@@ -1,4 +1,5 @@
 @extends('layouts.datatable')
+
 @section('datatable')
     <div class="main-container">
         <div class="pd-ltr-20 xs-pd-20-10">
@@ -18,31 +19,27 @@
                         <table class="table data-table-responsive stripe data-table-export nowrap ">
                             <thead>
                                 <tr>
-                                    <th>#</th>
+                                    <th>No</th>
                                     <th>Nama Kategori</th>
                                     <th class="table-plus datatable-nosort">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($kategori as $item)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $item->nama_kategori }}</td>
+                                        <td>
 
-                                @php
-                                    $count = 1;
-                                @endphp
-
-                                <tr>
-                                    <td>{{ $count++ }}</td>
-                                    <td>Piala</td>
-                                    <td>
-                                        <div class="table-actions">
-                                            <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
-                                            <a href="#" data-color="#e95959"><i
-                                                    class="icon-copy dw dw-delete-3"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-
-
-
+                                            <div class="table-actions">
+                                                <a href="/kategori/{{ $item->encrypt_id }}/edit" data-color="#265ed7"><i
+                                                        class="icon-copy dw dw-edit2"></i></a>
+                                                <a href="/kategori/{{ $item->encrypt_id }}" data-color="#e95959"><i
+                                                        class="icon-copy dw dw-delete-3"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

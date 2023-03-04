@@ -16,7 +16,7 @@ return new class extends Migration
         //
         Schema::create('lokasi', function (Blueprint $table) {
             $table->id();
-
+            $table->string('encrypt_id')->unique()->nullable();
             $table->string('nama_lokasi');
             $table->string('lantai_tingkat');
             $table->string('nama_gedung');

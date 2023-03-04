@@ -39,7 +39,7 @@
                                 <div class="form-group">
                                     <label>ID Lokasi :</label>
                                     <select class="custom-select form-control">
-                                        <option value="">Select City</option>
+                                        <option label="Pilih Lokasi"></option>
                                         <option value="Amsterdam">India</option>
                                         <option value="Berlin">UK</option>
                                         <option value="Frankfurt">US</option>
@@ -51,7 +51,7 @@
                                 <div class="form-group">
                                     <label>ID Kategori :</label>
                                     <select class="custom-select form-control">
-                                        <option value="">Select City</option>
+                                        <option label="Pilih Kategori"></option>
                                         <option value="Amsterdam">India</option>
                                         <option value="Berlin">UK</option>
                                         <option value="Frankfurt">US</option>
@@ -60,7 +60,7 @@
                                 <div class="form-group">
                                     <label>ID Model :</label>
                                     <select class="custom-select form-control">
-                                        <option value="">Select City</option>
+                                        <option label="Pilih Model"></option>
                                         <option value="Amsterdam">India</option>
                                         <option value="Berlin">UK</option>
                                         <option value="Frankfurt">US</option>

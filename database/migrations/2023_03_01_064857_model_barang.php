@@ -16,6 +16,7 @@ return new class extends Migration
         //
         Schema::create('model_barang', function (Blueprint $table) {
             $table->id();
+            $table->string('encrypt_id')->unique()->nullable();
             $table->string('nama_model');
             $table->string('merk');
             $table->timestamps();

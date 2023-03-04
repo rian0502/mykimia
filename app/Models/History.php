@@ -12,6 +12,7 @@ class History extends Model
     protected $fillable = [
         'id_barang', 
         'junlah_awal',
+        'encrypt_id',
         'ket',
         'created_at',
         'updated_at'

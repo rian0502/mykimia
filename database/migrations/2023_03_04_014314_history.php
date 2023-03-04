@@ -16,6 +16,7 @@ return new class extends Migration
         //
         Schema::create('history', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('encrypt_id')->unique()->nullable();
             $table->bigInteger('jumlah_awal')->unsigned();
             $table->string('ket');
             $table->foreignId('id_barang')->constrained('barang')->onDelete('cascade')->onUpdate('cascade');
