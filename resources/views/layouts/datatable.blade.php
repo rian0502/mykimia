@@ -334,10 +334,8 @@
     <div class="left-side-bar">
         <div class="brand-logo">
             <a href="/" class="text-dark text-bold">
-                {{-- C P D C --}}
-                <h6>
-                    Chemistry Program Data Center
-                </h6>
+                C P D C
+
                 {{-- <img src="/Assets/admin/vendors/images/deskapp-logo.svg" alt="" class="dark-logo" />
                 <img src="/Assets/admin/vendors/images/deskapp-logo-white.svg" alt="" class="light-logo" /> --}}
             </a>
