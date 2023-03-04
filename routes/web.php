@@ -3,8 +3,12 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ForgotPassword;
-use App\Http\Controllers\KategoriController;
 use App\Models\Kategori;
+use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\ModelController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +20,49 @@ use App\Models\Kategori;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// route BE
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    //sudah ada view
+    Route::resource('model', ModelController::class);
+    Route::resource('kategori', KategoriController::class);
+    Route::resource('barang/history', HistoryController::class)->names(
+        [
+            'index' => 'barang.history.index',
+            'create' => 'barang.history.create',
+            'store' => 'barang.history.store',
+            'show' => 'barang.history.show',
+            'edit' => 'barang.history.edit',
+            'update' => 'barang.history.update',
+            'destroy' => 'barang.history.destroy',
+        ]
+    );
+    Route::resource('barang', BarangController::class);
+
+    // Route::resource('history', HistoryController::class)->prefix('barang')->names(
+    //     [
+    //         'index' => 'barang.history.index',
+    //         'create' => 'barang.history.create',
+    //         'store' => 'barang.history.store',
+    //         'show' => 'barang.history.show',
+    //         'edit' => 'barang.history.edit',
+    //         'update' => 'barang.history.update',
+    //         'destroy' => 'barang.history.destroy',
+    //     ]
+    // );
+
+
+    // belum ada view
+    // Route::prefix('berkas')->name('berkas')->group(function () {
+    //     Route::resource('berkas', BerkasController::class);
+    // });
+
+});
+
+
+
+
+
 // route FE
 Route::get('/', function () {
     return view('index');
@@ -70,18 +117,18 @@ Route::post('/barang/create/action', function (Request $request) {
 
 
 //KATEGORI
+// make route resource
 
 
-Route::get('/kategori', [KategoriController::class,'index'])->name('kategori');
-
-//create kategori
-Route::get('/kategori/create', [KategoriController::class, 'create'])->name('createkategori');
-//action create kategori
-Route::post('/kategori/store', [KategoriController::class, 'store'])->name('storekategori');
-//edit kategori
-Route::get('/kategori/{id}/edit', [KategoriController::class, 'edit'])->name('editkategori');
-//action edit kategori
-Route::put('/kategori/update/{id}', [KategoriController::class, 'update'])->name('updatekategori');
+// Route::get('/kategori', [KategoriController::class,'index'])->name('kategori');
+// //create kategori
+// Route::get('/kategori/create', [KategoriController::class, 'create'])->name('createkategori');
+// //action create kategori
+// Route::post('/kategori/store', [KategoriController::class, 'store'])->name('storekategori');
+// //edit kategori
+// Route::get('/kategori/{id}/edit', [KategoriController::class, 'edit'])->name('editkategori');
+// //action edit kategori
+// Route::put('/kategori/update/{id}', [KategoriController::class, 'update'])->name('updatekategori');
 
 
 
