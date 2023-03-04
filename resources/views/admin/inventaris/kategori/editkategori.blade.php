@@ -13,13 +13,14 @@
                         </div>
 
                     </div>
-                    <form action="{{ route('createKategoriAction') }}" method="POST">
+                    <form action="{{ route('updatekategori',$kategori->encrypt_id) }}" method="POST">
+                        @method('PUT')
                         @csrf
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}
                             <div class="weight-500 col-md-6">
                                 <label>Nama Kategori</label>
-                                <input autofocus name="nama_kategori" id="nama_kategori"
+                                <input autofocus name="nama_kategori" id="nama_kategori" value="{{ $kategori->nama_kategori }}"
                                     class="form-control @error('nama_kategori') form-control-danger @enderror"
                                     type="text" placeholder="Nama Kategori">
                                 @error('nama_kategori')

@@ -16,6 +16,7 @@ return new class extends Migration
         //
         Schema::create('barang', function (Blueprint $table) {
             $table->id();
+            $table->string('encrypt_id')->unique()->nullable();
             $table->string('nama_barang');
             $table->integer('jumlah_akhir');
             $table->foreignId('id_kategori')->references('id')->on('kategori')->onUpdate('cascade')->onDelete('cascade');
