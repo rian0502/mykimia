@@ -24,6 +24,21 @@ html {
 input[type="submit"] {
     -webkit-appearance: none;
 }
+
+/* table */
+
+td,
+tr {
+    text-align: center;
+}
+.nama-model {
+    margin-right: 20px;
+}
+.batal {
+    margin-left: 100px;
+    margin-top: -110px;
+}
+
 *,
 :after,
 :before {
@@ -1573,8 +1588,10 @@ table.dataTable.dtr-inline.collapsed
     background: #00008b;
     /* background: #142127; */
 }
+
+//scroll dalam
 .left-side-bar .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-    background: #ecf0f4;
+    background: #000;
 }
 .left-side-bar:before {
     content: "";
@@ -1847,8 +1864,10 @@ table.dataTable.dtr-inline.collapsed
     color: #fff;
     background-color: var(--primary);
 }
+
+//scroll atas bawah
 .sidebar-light .menu-block .mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail {
-    background-color: #0e132b;
+    background-color: #b2b8d3;
 }
 .sidebar-menu .dropdown-divider {
     margin: 20px 0;
@@ -3955,6 +3974,8 @@ body.IE .register-page-wrap .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .table-actions a {
     display: inline-block;
@@ -4028,6 +4049,7 @@ body.IE .register-page-wrap .container {
 .welcome-modal-btn i {
     margin-top: 6px;
 }
+
 @media (min-width: 1301px) and (max-width: 1400px) {
     .header {
         width: calc(100% - 250px);
@@ -4158,7 +4180,19 @@ body.IE .register-page-wrap .container {
         width: 100%;
     }
 }
+.submit {
+    margin-top: 30px;
+}
 @media (max-width: 767px) {
+    .nama-model {
+        margin-right: 0px;
+    }
+    .submit {
+        margin-top: 30px;
+    }
+    .merek {
+        margin-top: 15px;
+    }
     .header {
         position: fixed;
         left: 0;

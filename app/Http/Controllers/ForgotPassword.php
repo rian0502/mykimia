@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\Password;
 
 class ForgotPassword extends Controller
 {
-    //
 
     public function index(){
         return view('formemail');
