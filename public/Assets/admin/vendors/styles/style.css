@@ -4180,12 +4180,18 @@ body.IE .register-page-wrap .container {
         width: 100%;
     }
 }
+.submit {
+    margin-top: 30px;
+}
 @media (max-width: 767px) {
     .nama-model {
         margin-right: 0px;
     }
     .submit {
         margin-top: 30px;
+    }
+    .merek {
+        margin-top: 15px;
     }
     .header {
         position: fixed;

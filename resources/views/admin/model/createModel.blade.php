@@ -15,32 +15,30 @@
                     </div>
                     <form action="{{ route('createModelAction') }}" method="POST">
                         @csrf
-                        <div class="wd-300">
-                            <div class="d-md-flex mg-b-30">
-
-                                <div class="nama-model form-group mg-b-0">
-                                    <label>Nama Model</label>
-                                    <input autofocus name="nama_model" id="nama_model"
-                                        class="form-control @error('nama_model') form-control-danger @enderror"
-                                        type="text" placeholder="Nama Model">
-                                    @error('nama_model')
-                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-
-                                <div class=" mg-b-0 mg-md-l-20 mg-t-20 mg-md-t-0">
-                                    <label>Merek</label>
-                                    <input autofocus name="merk" id="merk"
-                                        class="form-control @error('merk') form-control-danger @enderror" type="text"
-                                        placeholder="Merek">
-                                    @error('merk')
-                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
+                        <div class="profile-edit-list row">
+                            {{-- form untuk sebelah kiri --}}
+                            <div class="weight-500 col-md-6">
+                                <label>Nama Model</label>
+                                <input autofocus name="nama_model" id="nama_model"
+                                    class="form-control @error('nama_model') form-control-danger @enderror" type="text"
+                                    placeholder="Nama Model">
+                                @error('nama_model')
+                                    <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                @enderror
                             </div>
-
-
+                            {{-- form untuk sebelah kanan --}}
+                            <div class="merek weight-500 col-md-6">
+                                <label>Merek</label>
+                                <input autofocus name="merk" id="merk"
+                                    class="form-control @error('merk') form-control-danger @enderror" type="text"
+                                    placeholder="Merek">
+                                @error('merk')
+                                    <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
                         </div>
+
+
                         <div class="form-group">
 
                             <button type="submit" class="submit btn btn-primary">Submit</button>
