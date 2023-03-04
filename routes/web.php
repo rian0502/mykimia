@@ -146,23 +146,23 @@ Route::post('/model/edit/{id}', function ($id) {
 */
 //LOKASI
 Route::get('/lokasi', function () {
-    return view('superadmin/lokasi');
+    return view('superadmin.lokasi/lokasi');
 })->name('lokasi');
 //create lokasi
 Route::get('/lokasi/create', function () {
-    return view('superadmin/createlokasi');
+    return view('superadmin.lokasi/createlokasi');
 })->name('createlokasi');
 //action create lokasi
 Route::post('/lokasi/create', function () {
-    return view('superadmin/createlokasi');
+    return view('superadmin.lokasi/createlokasi');
 })->name('createlokasi');
 //edit lokasi
 Route::get('/lokasi/edit/{id}', function ($id) {
-    return view('superadmin/editlokasi', ['id' => $id]);
+    return view('superadmin.lokasi/editlokasi', ['id' => $id]);
 })->name('editlokasi');
 //action edit lokasi
 Route::post('/lokasi/edit/{id}', function ($id) {
-    return view('superadmin/editlokasi', ['id' => $id]);
+    return view('superadmin.lokasi/editlokasi', ['id' => $id]);
 })->name('editlokasi');
 //action create lokasi
 Route::post('/lokasi/create/action', function (Request $request) {

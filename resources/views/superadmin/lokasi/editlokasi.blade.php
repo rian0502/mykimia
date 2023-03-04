@@ -8,21 +8,21 @@
                 <div class="pd-20 card-box mb-30">
                     <div class="clearfix">
                         <div class="pull-left">
-                            {{-- <h4 class="text-dark h4">Tambah Model</h4> --}}
+                            <h4 class="text-dark h4">Tambah Model</h4>
                             <p class="mb-30">Isi data dengan benar</p>
                         </div>
 
                     </div>
-                    <form action="{{ route('createModelAction') }}" method="POST">
+                    <form action="{{ route('createLokasiAction') }}" method="POST">
                         @csrf
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}
                             <div class="weight-500 col-md-6">
                                 <label>Nama Model</label>
-                                <input autofocus name="nama_model" id="nama_model"
-                                    class="form-control @error('nama_model') form-control-danger @enderror" type="text"
+                                <input autofocus name="nama_lokasi" id="nama_lokasi"
+                                    class="form-control @error('nama_lokasi') form-control-danger @enderror" type="text"
                                     placeholder="Nama Model">
-                                @error('nama_model')
+                                @error('nama_lokasi')
                                     <div class="form-control-feedback has-danger">{{ $message }}</div>
                                 @enderror
                             </div>
