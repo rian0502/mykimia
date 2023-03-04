@@ -30,7 +30,7 @@
                             <div class="row justify-content-end">
                                 <div class="col-lg-7 text-end">
                                     <p class="fs-4 text-white animated slideInLeft">Welcome to
-                                        <strong>Chemistry Program Data Center</strong>
+                                        <strong>Chemistry Program Data Center </strong>
                                     </p>
                                     <h1 class="display-1 text-white mb-5 animated slideInLeft">Chemistry is science that
                                         changed the world</h1>
