@@ -342,21 +342,21 @@
                         </a>
                     </li>
                     <li
-                        class="dropdown {{ Request::is('admin/barang/*') || Request::is('admin/kategori/*') || Request::is('admin/model/*') ? 'show' : '' }}">
+                        class="dropdown {{ Request::is('admin/barang*') || Request::is('admin/kategori*') || Request::is('admin/model*') ? 'show' : '' }}">
                         <a href="javascript:;" class="dropdown-toggle"
-                            data-option="{{ Request::is('admin/barang/*') || Request::is('admin/kategori/*') || Request::is('admin/model/*') ? 'on' : '' }}">
+                            data-option="{{ Request::is('admin/barang*') || Request::is('admin/kategori*') || Request::is('admin/model*') ? 'on' : '' }}">
 
                             <span class="micon bi bi-box"></span><span class="mtext">Inventaris</span>
                         </a>
                         <ul class="submenu">
                             <li><a href="{{ route('admin.barang.index') }}"
-                                    class="{{ Request::is('admin/barang/*') ? 'active' : '' }}">Barang</a>
+                                    class="{{ Request::is('admin/barang*') ? 'active' : '' }}">Barang</a>
                             </li>
                             <li><a href="{{ route('admin.kategori.index') }}"
-                                    class="{{ Request::is('admin/kategori/*') ? 'active' : '' }}">Kategori</a>
+                                    class="{{ Request::is('admin/kategori*') ? 'active' : '' }}">Kategori</a>
                             </li>
                             <li><a href="{{ route('admin.model.index') }}"
-                                    class="{{ Request::is('admin/model/*') ? 'active' : '' }}">Model</a>
+                                    class="{{ Request::is('admin/model*') ? 'active' : '' }}">Model</a>
                             </li>
 
                         </ul>

@@ -21,7 +21,9 @@ use App\Http\Controllers\ModelController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::prefix('admin')->name('admin.')->group(function () {
+
+// ADMIN LAB
+Route::prefix('admin/lab')->name('admin.')->group(function () {
     //sudah ada view
     Route::resource('model', ModelController::class);
     Route::resource('kategori', KategoriController::class);
@@ -37,26 +39,40 @@ Route::prefix('admin')->name('admin.')->group(function () {
         ]
     );
     Route::resource('barang', BarangController::class);
-
-    // Route::resource('history', HistoryController::class)->prefix('barang')->names(
-    //     [
-    //         'index' => 'barang.history.index',
-    //         'create' => 'barang.history.create',
-    //         'store' => 'barang.history.store',
-    //         'show' => 'barang.history.show',
-    //         'edit' => 'barang.history.edit',
-    //         'update' => 'barang.history.update',
-    //         'destroy' => 'barang.history.destroy',
-    //     ]
-    // );
+});
 
 
-    // belum ada view
-    // Route::prefix('berkas')->name('berkas')->group(function () {
-    //     Route::resource('berkas', BerkasController::class);
-    // });
+Route::prefix('admin/berkas')->name('admin.')->group(function () {
+});
+
+
+
+
+Route::prefix('jurusan')->name('jurusan.')->group(function () {
+
+    Route::resource('lokasi', BarangController::class);
+});
+
+
+Route::prefix('mahasiswa')->name('mahasiswa.')->group(function () {
 
 });
+
+
+Route::prefix('dosen')->name('dosen.')->group(function () {
+
+
+});
+
+
+Route::prefix('koor')->name('koor.')->group(function () {
+
+});
+
+
+
+
+
 
 
 // route FE
@@ -79,11 +95,11 @@ Route::get('/lokasi/create', [LokasiController::class, 'create'])->name('createl
 Route::post('/lokasi/create',[LokasiController::class, 'store'])->name('createlokasi');
 //edit lokasi
 Route::get('/lokasi/edit/{id}', function ($id) {
-    return view('superadmin.lokasi/editlokasi', ['id' => $id]);
+    return view('jurusan.lokasi/editlokasi', ['id' => $id]);
 })->name('editlokasi');
 //action edit lokasi
 Route::post('/lokasi/edit/{id}', function ($id) {
-    return view('superadmin.lokasi/editlokasi', ['id' => $id]);
+    return view('jurusan.lokasi/editlokasi', ['id' => $id]);
 })->name('editlokasi');
 //action create lokasi
 Route::post('/lokasi/create/action', )->name('createLokasiAction');
