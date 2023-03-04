@@ -8,7 +8,7 @@
                 <div class="pd-20 card-box mb-30">
                     <div class="clearfix">
                         <div class="pull-left">
-                            <h4 class="text-dark h4">Tambah Model</h4>
+                            <h4 class="text-dark h4">Tambah Lokasi</h4>
                             <p class="mb-30">Isi data dengan benar</p>
                         </div>
 
@@ -18,23 +18,36 @@
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}
                             <div class="weight-500 col-md-6">
-                                <label>Nama Model</label>
-                                <input autofocus name="nama_lokasi" id="nama_lokasi"
-                                    class="form-control @error('nama_lokasi') form-control-danger @enderror" type="text"
-                                    placeholder="Nama Model">
-                                @error('nama_lokasi')
-                                    <div class="form-control-feedback has-danger">{{ $message }}</div>
-                                @enderror
+                                <div class="form-group">
+                                    <label>Nama Lokasi</label>
+                                    <input autofocus name="nama_lokasi" id="nama_lokasi"
+                                        class="form-control @error('nama_lokasi') form-control-danger @enderror"
+                                        type="text" placeholder="Nama Lokasi">
+                                    @error('nama_lokasi')
+                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label>Nama Gedung</label>
+                                    <input autofocus name="nama_gedung" id="nama_gedung"
+                                        class="form-control @error('nama_gedung') form-control-danger @enderror"
+                                        type="text" placeholder="Nama Gedung">
+                                    @error('nama_gedung')
+                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
                             </div>
                             {{-- form untuk sebelah kanan --}}
                             <div class="merek weight-500 col-md-6">
-                                <label>Merek</label>
-                                <input autofocus name="merk" id="merk"
-                                    class="form-control @error('merk') form-control-danger @enderror" type="text"
-                                    placeholder="Merek">
-                                @error('merk')
-                                    <div class="form-control-feedback has-danger">{{ $message }}</div>
-                                @enderror
+                                <div class="form-group">
+                                    <label>Lantai Tingkat</label>
+                                    <input autofocus name="lantai_tingkat" id="lantai_tingkat"
+                                        class="form-control @error('lantai_tingkat') form-control-danger @enderror"
+                                        type="text" placeholder="Lantai Tingkat">
+                                    @error('lantai_tingkat')
+                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
                             </div>
                         </div>
 
@@ -45,7 +58,7 @@
                         </div>
 
                     </form>
-                    <a href="/model">
+                    <a href="/lokasi">
 
                         <button class="batal btn btn-secondary">Batal</button>
                     </a>
