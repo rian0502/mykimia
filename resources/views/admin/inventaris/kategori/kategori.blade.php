@@ -32,7 +32,7 @@
                                         <td>
 
                                             <div class="table-actions">
-                                                <a href="/kategori/{{ $item->encrypt_id }}/edit">
+                                                <a class="edit" href="/kategori/{{ $item->encrypt_id }}/edit">
                                                     <button class="btn btn-warning">
                                                         <i class="icon-copy fi-page-edit"></i>
                                                         Edit
