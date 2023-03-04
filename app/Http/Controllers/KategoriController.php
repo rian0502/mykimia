@@ -101,9 +101,9 @@ class KategoriController extends Controller
         ];
         $simpan = Kategori::where('id', Crypt::decrypt($id))->update($data);
         if ($simpan) {
-            return redirect()->route('kategori')->with('success', 'Data berhasil disimpan');
+            return redirect()->route('admin.kategori.index')->with('success', 'Data berhasil disimpan');
         } else {
-            return redirect()->route('kategori')->with('error', 'Data gagal disimpan');
+            return redirect()->route('admin.kategori.index')->with('error', 'Data gagal disimpan');
         }
     }
 

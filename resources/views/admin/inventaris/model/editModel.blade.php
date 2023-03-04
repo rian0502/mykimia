@@ -13,13 +13,14 @@
                         </div>
 
                     </div>
-                    <form action="{{ route('admin.model.update', ) }}" method="POST">
+                    <form action="{{ route('admin.model.update', $model->encrypt_id) }}" method="POST">
+                        @method('PUT')
                         @csrf
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}
                             <div class="weight-500 col-md-6">
                                 <label>Nama Model</label>
-                                <input autofocus name="nama_model" id="nama_model"
+                                <input autofocus name="nama_model" id="nama_model" value="{{ $model->nama_model }}"
                                     class="form-control @error('nama_model') form-control-danger @enderror" type="text"
                                     placeholder="Nama Model">
                                 @error('nama_model')
@@ -29,7 +30,7 @@
                             {{-- form untuk sebelah kanan --}}
                             <div class="merek weight-500 col-md-6">
                                 <label>Merek</label>
-                                <input autofocus name="merk" id="merk"
+                                <input autofocus name="merk" id="merk" value="{{ $model->merk }}"
                                     class="form-control @error('merk') form-control-danger @enderror" type="text"
                                     placeholder="Merek">
                                 @error('merk')

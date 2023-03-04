@@ -10,8 +10,8 @@ class ModelBarang extends Model
     use HasFactory;
     protected $table = 'model_barang';
     protected $fillable = [
-        'nama_model',
         'encrypt_id', 
+        'nama_model',
         'merk', 
         'created_at',
         'updated_at'
