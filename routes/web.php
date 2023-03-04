@@ -1,8 +1,10 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ForgotPassword;
-use Illuminate\Http\Request;
+use App\Http\Controllers\KategoriController;
+use App\Models\Kategori;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,42 +68,21 @@ Route::post('/barang/create/action', function (Request $request) {
     return redirect()->route('barang');
 })->name('createBarangAction');
 
+
 //KATEGORI
-Route::get('/kategori', function () {
-    return view('admin.inventaris.kategori.kategori');
-})->name('kategori');
+
+
+Route::get('/kategori', [KategoriController::class,'index'])->name('kategori');
+
 //create kategori
-Route::get('/kategori/create', function () {
-    return view('admin.inventaris.kategori.createkategori');
-})->name('createkategori');
+Route::get('/kategori/create', [KategoriController::class, 'create'])->name('createkategori');
 //action create kategori
-Route::post('/kategori/create', function () {
-    return view('admin.inventaris.kategori.createkategori');
-})->name('createkategori');
+Route::post('/kategori/store', [KategoriController::class, 'store'])->name('storekategori');
 //edit kategori
-Route::get('/kategori/edit/{id}', function ($id) {
-    return view('admin.kategori.editkategori', ['id' => $id]);
-})->name('editkategori');
+Route::get('/kategori/{id}/edit', [KategoriController::class, 'edit'])->name('editkategori');
 //action edit kategori
-Route::post('/kategori/edit/{id}', function ($id) {
-    return view('admin.inventaris.kategori.editkategori', ['id' => $id]);
-})->name('editkategori');
+Route::put('/kategori/update/{id}', [KategoriController::class, 'update'])->name('updatekategori');
 
-//action create kategori
-Route::post('/kategori/create/action', function (Request $request) {
-
-    $validatedData = $request->validate([
-        'nama_kategori' => 'required|max:100',
-        'merk' => 'required|max:100',
-    ], [
-        'nama_kategori.required' => 'Nama harus diisi.',
-        'nama_kategori.max' => 'Nama tidak boleh lebih dari :max karakter.',
-        'merk.required' => 'Merek harus diisi.',
-        'merk.max' => 'Merek tidak boleh lebih dari :max karakter.',
-    ]);
-
-    return redirect()->route('kategori');
-})->name('createKategoriAction');
 
 
 //MODEL BARANG

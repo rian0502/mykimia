@@ -17,7 +17,7 @@ return new class extends Migration
         //
         Schema::create('kategori', function (Blueprint $table) {
             $table->id();
-
+            $table->string('encrypt_id')->unique()->nullable();
             $table->string('nama_kategori');
             $table->timestamps();
         });
