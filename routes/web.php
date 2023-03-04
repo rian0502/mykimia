@@ -159,9 +159,7 @@ Route::post('/lokasi/create/action', function (Request $request) {
     ]);
 
     return redirect()->route('model');
-})->name('createModelAction');
-
-
+})->name('createLokasiAction');
 
 
 Route::get('/forgot-password', [ForgotPassword::class, 'index'])

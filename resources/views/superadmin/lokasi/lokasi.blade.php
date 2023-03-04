@@ -7,7 +7,7 @@
                 <div class="card-box mb-30">
                     <div class="pd-20">
                         <h4 class="text-blue h4">Lokasi</h4>
-                        <a href="/barang/create">
+                        <a href="/lokasi/create">
                             <button class="btn btn-success mt-3">
                                 <i class="icon-copy fi-page-add"></i>
                                 Tambah Data
