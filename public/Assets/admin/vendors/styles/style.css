@@ -4183,7 +4183,13 @@ body.IE .register-page-wrap .container {
 .submit {
     margin-top: 30px;
 }
+.edit {
+    margin-right: 20px;
+}
 @media (max-width: 767px) {
+    .table-actions {
+        margin-top: 20px;
+    }
     .nama-model {
         margin-right: 0px;
     }

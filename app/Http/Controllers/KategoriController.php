@@ -115,6 +115,11 @@ class KategoriController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $kategori = Kategori::where('encrypt_id', $id)->first();
+        if (!$kategori) {
+            return redirect()->route('kategori.index')->with('error', 'Kategori tidak ditemukan!');
+        }
+        $kategori->delete();
+        return redirect()->route('kategori.index')->with('success', 'Kategori berhasil dihapus!');
     }
 }
