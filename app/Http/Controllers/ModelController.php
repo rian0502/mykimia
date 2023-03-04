@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreModelBarangRequest;
+use App\Models\ModelBarang;
 
 class ModelController extends Controller
 {
@@ -13,8 +14,10 @@ class ModelController extends Controller
      */
     public function index()
     {
-        //
-        return view('admin.inventaris.model.model');
+        $data = [
+            'models' => ModelBarang::all()
+        ];
+        return view('admin.inventaris.model.model', $data);
     }
 
     /**
@@ -33,9 +36,9 @@ class ModelController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreModelBarangRequest $request)
     {
-        //
+
     }
 
     /**
@@ -67,7 +70,7 @@ class ModelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreModelBarangRequest $request, $id)
     {
         //
     }
