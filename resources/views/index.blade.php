@@ -11,7 +11,7 @@
                             <div class="row justify-content-start">
                                 <div class="col-lg-7 text-start">
                                     <p class="fs-4 text-white animated slideInRight">Welcome to
-                                        <strong>Chemistry Program Data Center</strong>
+                                        <strong>Chemistry Program Data Cente</strong>
                                     </p>
                                     <h1 class="display-1 text-white mb-4 animated slideInRight">Chemistry is the bridge
                                         between physics and biology</h1>
