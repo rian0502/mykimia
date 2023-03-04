@@ -51,3 +51,21 @@
 
     <!-- Input Validation End -->
 @endsection
+
+
+{{-- <a href="">
+    <button class="btn btn-warning">
+        <i class="icon-copy fi-page-edit"></i>
+        Edit
+    </button>
+</a>
+<form action="" method="POST" class="d-inline">
+    @method('delete')
+    @csrf
+    <button class="btn btn-danger">
+        <i class="icon-copy fi-page-delete"></i>
+        Delete
+    </button>
+</form>
+
+@endsection --}}
