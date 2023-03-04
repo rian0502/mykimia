@@ -27,49 +27,81 @@ Route::get('/beranda', function () {
 */
 //BARANG
 Route::get('/barang', function () {
-    return view('admin.barang');
+    return view('admin.barang.barang');
 })->name('barang');
 //create barang
 Route::get('/barang/create', function () {
-    return view('admin.createbarang');
+    return view('admin.barang.createbarang');
 })->name('createbarang');
 //action create barang
 Route::post('/barang/create', function () {
-    return view('admin.createbarang');
+    return view('admin.barang.createbarang');
 })->name('createbarang');
 //edit barang
 Route::get('/barang/edit/{id}', function ($id) {
-    return view('admin.editbarang', ['id' => $id]);
+    return view('admin.barang.editbarang', ['id' => $id]);
 })->name('editbarang');
 //action edit barang
 Route::post('/barang/edit/{id}', function ($id) {
-    return view('admin.editbarang', ['id' => $id]);
+    return view('admin.barang.editbarang', ['id' => $id]);
 })->name('editbarang');
 //detail barang dengan parameter
 Route::get('/barang/{id}', function ($id) {
-    return view('admin.detailbarang', ['id' => $id]);
+    return view('admin.barang.detailbarang', ['id' => $id]);
 })->name('detailbarang');
+
+//action create barang
+Route::post('/barang/create/action', function (Request $request) {
+
+    $validatedData = $request->validate([
+        'nama_barang' => 'required|max:100',
+        'merk' => 'required|max:100',
+    ], [
+        'nama_barang.required' => 'Nama harus diisi.',
+        'nama_barang.max' => 'Nama tidak boleh lebih dari :max karakter.',
+        'merk.required' => 'Merek harus diisi.',
+        'merk.max' => 'Merek tidak boleh lebih dari :max karakter.',
+    ]);
+
+    return redirect()->route('barang');
+})->name('createBarangAction');
 
 //KATEGORI
 Route::get('/kategori', function () {
-    return view('admin.kategori');
+    return view('admin.kategori.kategori');
 })->name('kategori');
 //create kategori
 Route::get('/kategori/create', function () {
-    return view('admin.createkategori');
+    return view('admin.kategori.createkategori');
 })->name('createkategori');
 //action create kategori
 Route::post('/kategori/create', function () {
-    return view('admin.createkategori');
+    return view('admin.kategori.createkategori');
 })->name('createkategori');
 //edit kategori
 Route::get('/kategori/edit/{id}', function ($id) {
-    return view('admin.editkategori', ['id' => $id]);
+    return view('admin.kategori.editkategori', ['id' => $id]);
 })->name('editkategori');
 //action edit kategori
 Route::post('/kategori/edit/{id}', function ($id) {
-    return view('admin.editkategori', ['id' => $id]);
+    return view('admin.kategori.editkategori', ['id' => $id]);
 })->name('editkategori');
+
+//action create kategori
+Route::post('/kategori/create/action', function (Request $request) {
+
+    $validatedData = $request->validate([
+        'nama_kategori' => 'required|max:100',
+        'merk' => 'required|max:100',
+    ], [
+        'nama_kategori.required' => 'Nama harus diisi.',
+        'nama_kategori.max' => 'Nama tidak boleh lebih dari :max karakter.',
+        'merk.required' => 'Merek harus diisi.',
+        'merk.max' => 'Merek tidak boleh lebih dari :max karakter.',
+    ]);
+
+    return redirect()->route('kategori');
+})->name('createKategoriAction');
 
 
 //MODEL BARANG

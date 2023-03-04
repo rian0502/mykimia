@@ -10,11 +10,11 @@
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-lg-7 text-start">
-                                    <p class="fs-4 text-white animated slideInRight">Selamat Datang di
-                                        <strong>KIMIA</strong>
+                                    <p class="fs-4 text-white animated slideInRight">Welcome to
+                                        <strong>Chemistry Program Data Center</strong>
                                     </p>
-                                    <h1 class="display-1 text-white mb-4 animated slideInRight">Kimia adalah jembatan
-                                        antara alam dan teknologi</h1>
+                                    <h1 class="display-1 text-white mb-4 animated slideInRight">Chemistry is the bridge
+                                        between physics and biology</h1>
                                     {{-- <a href=""
                                         class="btn btn-primary rounded-pill py-3 px-5 animated slideInRight">Explore
                                         More</a> --}}
@@ -29,11 +29,11 @@
                         <div class="container">
                             <div class="row justify-content-end">
                                 <div class="col-lg-7 text-end">
-                                    <p class="fs-4 text-white animated slideInLeft">Selamat Datang di
-                                        <strong>KIMIA</strong>
+                                    <p class="fs-4 text-white animated slideInLeft">Welcome to
+                                        <strong>Chemistry Program Data Center </strong>
                                     </p>
-                                    <h1 class="display-1 text-white mb-5 animated slideInLeft">Kimia adalah ilmu yang
-                                        mengubah dunia</h1>
+                                    <h1 class="display-1 text-white mb-5 animated slideInLeft">Chemistry is science that
+                                        changed the world</h1>
                                     {{-- <a href=""
                                         class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Explore
                                         More</a> --}}
