@@ -178,7 +178,7 @@ Route::post('/lokasi/create/action', function (Request $request) {
     ]);
 
     return redirect()->route('model');
-})->name('createModelAction');
+})->name('createLokasiAction');
 
 
 
