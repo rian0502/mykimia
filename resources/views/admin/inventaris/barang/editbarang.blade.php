@@ -28,13 +28,13 @@
                             </div>
                             {{-- form untuk sebelah kanan --}}
                             <div class="merek weight-500 col-md-6">
-                                <label>Merek</label>
+                                {{-- <label>Merek</label>
                                 <input autofocus name="merk" id="merk"
                                     class="form-control @error('merk') form-control-danger @enderror" type="text"
                                     placeholder="Merek">
                                 @error('merk')
                                     <div class="form-control-feedback has-danger">{{ $message }}</div>
-                                @enderror
+                                @enderror --}}
                             </div>
                         </div>
 
