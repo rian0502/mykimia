@@ -32,11 +32,26 @@
                                         <td>
 
                                             <div class="table-actions">
-                                                <a href="/kategori/{{ $item->encrypt_id }}/edit" data-color="#265ed7"><i
-                                                        class="icon-copy dw dw-edit2"></i></a>
-                                                <a href="/kategori/{{ $item->encrypt_id }}" data-color="#e95959"><i
-                                                        class="icon-copy dw dw-delete-3"></i></a>
+                                                <a class="edit" href="/kategori/{{ $item->encrypt_id }}/edit">
+                                                    <button class="btn btn-warning">
+                                                        <i class="icon-copy fi-page-edit"></i>
+                                                        Edit
+                                                    </button>
+                                                </a>
+                                                <form action="/kategori/{{ $item->encrypt_id }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger"
+                                                        onclick="return confirm('Apakah Anda yakin ingin menghapus kategori ini?')">
+                                                        <i class="icon-copy dw dw-delete-3"></i>
+                                                        Hapus
+                                                    </button>
+
+                                                </form>
                                             </div>
+
+
+
                                         </td>
                                     </tr>
                                 @endforeach
