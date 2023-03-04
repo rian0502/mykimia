@@ -36,7 +36,7 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \Illuminate\Routing\Middleware\ThrottleRequests::class. ':5,1',
+            \Illuminate\Routing\Middleware\ThrottleRequests::class. ':10,1',
         ],
 
         'api' => [
@@ -44,6 +44,7 @@ class Kernel extends HttpKernel
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+        
     ];
 
     /**
