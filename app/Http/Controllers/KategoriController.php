@@ -49,9 +49,9 @@ class KategoriController extends Controller
             'updated_at' => now()
         ];
         $simpan = Kategori::create($data);
-        //enrkripsi id
         $id = Crypt::encrypt($simpan->id);
         $simpan = Kategori::where('id', $simpan->id)->update(['encrypt_id' => $id]);
+
         if ($simpan) {
             return redirect()->route('kategori')->with('success', 'Data berhasil disimpan');
         } else {
