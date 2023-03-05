@@ -1,18 +1,17 @@
 @extends('layouts.admin')
 @section('admin')
-    <div class="main-container">
-        <div class="pd-ltr-20 xs-pd-20-10">
-            <div class="min-height-200px">
+<div class="main-container">
+    <div class="pd-ltr-20 xs-pd-20-10">
+        <div class="min-height-200px">
 
-                <!-- Default Basic Forms Start -->
-                <div class="pd-20 card-box mb-30">
-                    <div class="clearfix">
-                        <div class="pull-left">
-                            <h4 class="text-dark h4">Edit Barang</h4>
-                            <p class="mb-30">Isi data dengan benar</p>
-                        </div>
-
+            <!-- Default Basic Forms Start -->
+            <div class="pd-20 card-box mb-30">
+                <div class="clearfix">
+                    <div class="pull-left">
+                        <h4 class="text-dark h4">Edit Barang</h4>
+                        <p class="mb-30">Isi data dengan benar</p>
                     </div>
+
                     <form action="{{ route('lab.barang.edit', $id) }}" method="POST">
                         @csrf
                         <div class="profile-edit-list row">
@@ -71,25 +70,58 @@
                                         <option value="Frankfurt">US</option>
                                     </select>
                                 </div>
+            </div>
+                        </div>
+                        {{-- form untuk sebelah kanan --}}
+                        <div class="kanan weight-500 col-md-6">
+                            <div class="form-group">
+                                <label>Kategori</label>
+                                <select class="custom-select2 form-control" name="id_kategori">
+                                    @foreach ($categories as $item)
+                                    <option value="{{ $item->encrypt_id }}" @if ($item->id == $barang->id_kategori)
+                                        selected @endif>{{ $item->nama_kategori }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Jumlah Akhir</label>
+                                <input autofocus name="jumlah_akhir" id="nama_barang"
+                                    class="form-control @error('nama_barang') form-control-danger @enderror"
+                                    type="number" placeholder="Jumlah Akhir">
+                                @error('nama_barang')
+                                <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label>Model</label>
+                                <select class="custom-select2 form-control" name="id_model">
+                                    @foreach ($models as $item)
+                                    <option value="{{ $item->encrypt_id }}" @if ($item->id == $barang->id_model)
+                                        selected @endif>{{ $item->nama_model }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
+                    </div>
 
 
-                        <div class="form-group">
+                    <div class="form-group">
 
-                            <button type="submit" class="submit btn btn-primary">Submit</button>
-                        </div>
+                        <button type="submit" class="submit btn btn-primary">Submit</button>
+                    </div>
+
 
                     </form>
                     <a href="{{ route('lab.barang.index') }}">
 
-                        <button class="batal btn btn-secondary">Batal</button>
-                    </a>
-                </div>
+
+                    <button class="batal btn btn-secondary">Batal</button>
+                </a>
             </div>
         </div>
-        <!-- Input Validation End -->
-
-
     </div>
+    <!-- Input Validation End -->
+
+
+</div>
 @endsection
