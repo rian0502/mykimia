@@ -29,35 +29,34 @@
                             </thead>
                             <tbody>
 
-                                @php
-                                    $count = 1;
-                                @endphp
+                                @foreach ($barang as $item)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $item->nama_barang }}</td>
+                                        <td>
+                                            <div class="table-actions">
+                                                <a class="edit"
+                                                    href="{{ route('admin.barang.edit', $item->encrypt_id) }}">
+                                                    <button class="btn btn-warning">
+                                                        <i class="icon-copy fi-page-edit"></i>
+                                                        Edit
+                                                    </button>
+                                                </a>
+                                                <form action="{{ route('admin.barang.destroy', $item->encrypt_id) }}"
+                                                    method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger"
+                                                        onclick="return confirm('Apakah Anda yakin ingin menghapus barang ini?')">
+                                                        <i class="icon-copy dw dw-delete-3"></i>
+                                                        Hapus
+                                                    </button>
+                                                </form>
 
-                                <tr>
-                                    <td>{{ $count++ }}</td>
-                                    <td>Piala</td>
-                                    <td>Piala</td>
-                                    <td>Piala</td>
-                                    <td>Piala</td>
-                                    <td>Piala</td>
-                                    <td>
-                                        <div class="table-actions">
-                                            <a class="edit" href="#">
-                                                <button class="btn btn-warning">
-                                                    <i class="icon-copy fi-page-edit"></i>
-                                                    Edit
-                                                </button>
-                                            </a>
-                                            <form action="#" method="POST">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">
-                                                    {{-- onclick="return confirm('Apakah Anda yakin ingin menghapus kategori ini?')"> --}} <i class="icon-copy dw dw-delete-3"></i>
-                                                    Hapus
-                                                </button>
-                                            </form>
-                                    </td>
-                                </tr>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
 
 
                             </tbody>

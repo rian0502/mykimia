@@ -48,7 +48,17 @@ Route::prefix('admin/lab')->name('admin.')->group(function () {
             'destroy' => 'barang.history.destroy',
         ]
     );
-    Route::resource('barang', BarangController::class);
+    Route::resource('barang', BarangController::class)->names(
+        [
+            'index' => 'barang.index',
+            'create' => 'barang.create',
+            'store' => 'barang.store',
+            'show' => 'barang.show',
+            'edit' => 'barang.edit',
+            'update' => 'barang.update',
+            'destroy' => 'barang.destroy',
+        ]
+    );
 });
 
 
