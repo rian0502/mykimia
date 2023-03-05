@@ -336,15 +336,15 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('lokasi') }}"
+                        <a href="{{ route('jurusan.lokasi.index') }}"
                             class="dropdown-toggle no-arrow {{ Request::is('lokasi/*') || Request::is('lokasi') ? 'active' : '' }}">
                             <span class="micon bi bi-pin-map"></span><span class="mtext">Lokasi</span>
                         </a>
                     </li>
                     <li
-                        class="dropdown {{ Request::is('admin/barang*') || Request::is('admin/kategori*') || Request::is('admin/model*') ? 'show' : '' }}">
+                        class="dropdown {{ Request::is('admin/lab/barang*') || Request::is('admin/lab/kategori*') || Request::is('admin/lab/model*') ? 'show' : '' }}">
                         <a href="javascript:;" class="dropdown-toggle"
-                            data-option="{{ Request::is('admin/barang*') || Request::is('admin/kategori*') || Request::is('admin/model*') ? 'on' : '' }}">
+                            data-option="{{ Request::is('admin/lab/barang*') || Request::is('admin/lab/kategori*') || Request::is('admin/lab/model*') ? 'on' : '' }}">
 
                             <span class="micon bi bi-box"></span><span class="mtext">Inventaris</span>
                         </a>
@@ -353,7 +353,7 @@
                                     class="{{ Request::is('admin/barang*') ? 'active' : '' }}">Barang</a>
                             </li>
                             <li><a href="{{ route('admin.kategori.index') }}"
-                                    class="{{ Request::is('admin/kategori*') ? 'active' : '' }}">Kategori</a>
+                                    class="{{ Request::is('admin/lab/kategori*') ? 'active' : '' }}">Kategori</a>
                             </li>
                             <li><a href="{{ route('admin.model.index') }}"
                                     class="{{ Request::is('admin/model*') ? 'active' : '' }}">Model</a>

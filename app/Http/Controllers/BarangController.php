@@ -15,7 +15,7 @@ class BarangController extends Controller
     public function index()
     {
         $barang = Barang::all();
-        return view('admin.inventaris.barang.barang', compact('barang'));
+        return view('admin.inventaris.barang.index', compact('barang'));
     }
 
     /**
@@ -25,7 +25,7 @@ class BarangController extends Controller
      */
     public function create()
     {
-        return view('admin.inventaris.barang.createbarang');
+        return view('admin.inventaris.barang.create');
     }
 
     /**
@@ -56,7 +56,7 @@ class BarangController extends Controller
     public function show($id)
     {
         $barang = Barang::find($id);
-        return view('barang.show', compact('barang'));
+        return view('admin.inventaris.barang.show', compact('barang'));
     }
 
     /**

@@ -353,8 +353,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('lokasi') }}"
-                            class="dropdown-toggle no-arrow {{ Request::is('lokasi/*') || Request::is('lokasi') ? 'active' : '' }}">
+                        <a href="{{ route('jurusan.lokasi.index') }}"
+                            class="dropdown-toggle no-arrow {{ Request::is('jurusan/lokasi*') || Request::is('jurusan/lokasi') ? 'active' : '' }}">
                             <span class="micon bi bi-pin-map"></span><span class="mtext">Lokasi</span>
                         </a>
                     </li>
