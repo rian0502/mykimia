@@ -12,65 +12,44 @@
                         <p class="mb-30">Isi data dengan benar</p>
                     </div>
 
-                    <form action="{{ route('lab.barang.edit', $id) }}" method="POST">
-                        @csrf
-                        <div class="profile-edit-list row">
-                            {{-- form untuk sebelah kiri --}}
-                            <div class="weight-500 col-md-6">
-                                <div class="form-group">
-                                    <label>Nama Barang</label>
-                                    <input autofocus name="nama_barang" id="nama_barang"
-                                        class="form-control @error('nama_barang') form-control-danger @enderror"
-                                        type="text" placeholder="Nama Barang">
-                                    @error('nama_barang')
-                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <label>Jumlah Akhir</label>
-                                    <input autofocus name="nama_barang" id="nama_barang"
-                                        class="form-control @error('nama_barang') form-control-danger @enderror"
-                                        type="text" placeholder="Jumlah Akhir">
-                                    @error('nama_barang')
-                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <label>Keterangan</label>
-                                    <textarea class="form-control"></textarea>
-                                </div>
-
+                </div>
+                <form action="{{ route('lab.barang.edit', $barang->encrypt_id) }}" method="POST">
+                    @csrf
+                    <div class="profile-edit-list row">
+                        {{-- form untuk sebelah kiri --}}
+                        <div class="weight-500 col-md-6">
+                            <div class="form-group">
+                                <label>Nama Barang</label>
+                                <input autofocus name="nama_barang" id="nama_barang" value="{{ $barang->nama_barang }}"
+                                    class="form-control @error('nama_barang') form-control-danger @enderror" type="text"
+                                    placeholder="Nama Barang">
+                                @error('nama_barang')
+                                <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                @enderror
                             </div>
-                            {{-- form untuk sebelah kanan --}}
-                            <div class="kanan weight-500 col-md-6">
-                                <div class="form-group">
-                                    <label>ID Kategori :</label>
-                                    <select class="custom-select form-control">
-                                        <option label="Pilih Kategori"></option>
-                                        <option value="Amsterdam">India</option>
-                                        <option value="Berlin">UK</option>
-                                        <option value="Frankfurt">US</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>ID Model :</label>
-                                    <select class="custom-select form-control">
-                                        <option label="Pilih Model"></option>
-                                        <option value="Amsterdam">India</option>
-                                        <option value="Berlin">UK</option>
-                                        <option value="Frankfurt">US</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>ID Lokasi :</label>
-                                    <select class="custom-select form-control">
-                                        <option label="Pilih Lokasi"></option>
-                                        <option value="Amsterdam">India</option>
-                                        <option value="Berlin">UK</option>
-                                        <option value="Frankfurt">US</option>
-                                    </select>
-                                </div>
-            </div>
+                            <div class="form-group">
+                                <label>Jumlah Awal</label>
+                                <input autofocus name="jumlah_awal" id="nama_barang" disabled
+                                    value="{{ $barang->jumlah_akhir }}"
+                                    class="form-control @error('nama_barang') form-control-danger @enderror"
+                                    type="number">
+                                @error('nama_barang')
+                                <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label>Lokasi</label>
+                                <select class="custom-select2 form-control" name="id_lokasi">
+                                    @foreach ($locations as $item)
+                                    <option value="{{ $item->encrypt_id }}" @if ($item->id == $barang->id_lokasi)
+                                        selected @endif>{{ $item->nama_lokasi.', Lt-'.$item->lantai_tingkat }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Keterangan</label>
+                                <textarea class="form-control" name="ket"></textarea>
+                            </div>
                         </div>
                         {{-- form untuk sebelah kanan --}}
                         <div class="kanan weight-500 col-md-6">
@@ -103,17 +82,12 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div class="form-group">
-
                         <button type="submit" class="submit btn btn-primary">Submit</button>
                     </div>
 
-
-                    </form>
-                    <a href="{{ route('lab.barang.index') }}">
-
+                </form>
+                <a href="/barang">
 
                     <button class="batal btn btn-secondary">Batal</button>
                 </a>
