@@ -20,7 +20,7 @@ class KategoriController extends Controller
         $data = [
             'kategori' => Kategori::all()
         ];
-        return view('admin.inventaris.kategori.kategori', $data);
+        return view('admin.inventaris.kategori.index', $data);
     }
 
     /**
@@ -31,7 +31,7 @@ class KategoriController extends Controller
     public function create()
     {
         //
-        return view('admin.inventaris.kategori.createkategori');
+        return view('admin.inventaris.kategori.create');
     }
 
     /**
@@ -82,7 +82,7 @@ class KategoriController extends Controller
         $data = [
             'kategori' => Kategori::where('id', Crypt::decrypt($id))->first()
         ];
-        return view('admin.inventaris.kategori.editkategori', $data);
+        return view('admin.inventaris.kategori.edit', $data);
     }
 
     /**
