@@ -6,8 +6,8 @@
 
                 <div class="card-box mb-30">
                     <div class="pd-20">
-                        <h4 class="text-blue h4">Lokasi</h4>
-                        <a href="/lokasi/create">
+                        <h4 class="text-blue h4">History</h4>
+                        <a href="{{route('admin.barang.history.create')}}">
                             <button class="btn btn-success mt-3">
                                 <i class="icon-copy fi-page-add"></i>
                                 Tambah Data
@@ -19,9 +19,9 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Nama Lokasi</th>
-                                    <th>Lantai Tingkat</th>
-                                    <th>Nama Gedung</th>
+                                    <th>Jumlah Barang</th>
+                                    <th>ID Barang</th>
+                                    <th>Keterangan</th>
                                     <th class="table-plus datatable-nosort">Aksi</th>
                                 </tr>
                             </thead>

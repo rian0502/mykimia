@@ -101,9 +101,9 @@ class KategoriController extends Controller
         ];
         $simpan = Kategori::where('id', Crypt::decrypt($id))->update($data);
         if ($simpan) {
-            return redirect()->route('kategori')->with('success', 'Data berhasil disimpan');
+            return redirect()->route('admin.kategori.index')->with('success', 'Data berhasil disimpan');
         } else {
-            return redirect()->route('kategori')->with('error', 'Data gagal disimpan');
+            return redirect()->route('admin.kategori.index')->with('error', 'Data gagal disimpan');
         }
     }
 
@@ -115,6 +115,11 @@ class KategoriController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $kategori = Kategori::where('encrypt_id', $id)->first();
+        if (!$kategori) {
+            return redirect()->route('kategori.index')->with('error', 'Kategori tidak ditemukan!');
+        }
+        $kategori->delete();
+        return redirect()->route('kategori.index')->with('success', 'Kategori berhasil dihapus!');
     }
 }
