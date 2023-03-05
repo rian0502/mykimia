@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreBarangRequest;
 use App\Models\Barang;
 use App\Models\Lokasi;
-use App\Models\ModelBarang;
+use App\Models\History;
 use App\Models\Kategori;
-use Illuminate\Http\Request;
+use App\Models\ModelBarang;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Crypt;
+use App\Http\Requests\StoreBarangRequest;
+use App\Http\Requests\UpdateBarangRequest;
 
 class BarangController extends Controller
 {
@@ -105,17 +106,55 @@ class BarangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateBarangRequest $request, $id)
     {
-        
+
+        if ($request->input('ket') || $request->input('jumlah_akhir')) {
+            //proses memasukkan data ke dalam tabel histori
+            $jumlahBarangAwal = Barang::where('id', Crypt::decrypt($id))->first()->jumlah_akhir;
+            $dataHistori = [
+                'jumlah_awal' => $jumlahBarangAwal,
+                'ket' => $request->ket,
+                'id_barang' => Crypt::decrypt($id),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ];
+            $simpanHistori = History::insert($dataHistori);
+            $idHistori = History::latest()->first()->id;
+            $encrypt_id = Crypt::encrypt($idHistori);
+            $updateHistori = History::where('id', $idHistori)->update(['encrypt_id' => $encrypt_id]);
+            //proses update table barang
+            $data = [
+                'nama_barang' => $request->nama_barang,
+                'id_lokasi' => Crypt::decrypt($request->id_lokasi),
+                'id_kategori' => Crypt::decrypt($request->id_kategori),
+                'id_model' => Crypt::decrypt($request->id_model),
+                'jumlah_akhir' => $request->jumlah_akhir,
+                'updated_at' => now(),
+            ];
+            $update = Barang::where('id', Crypt::decrypt($id))->update($data);
+            if ($update && $simpanHistori && $updateHistori) {
+                return redirect()->route('lab.barang.index')->with('success', 'Barang berhasil diubah!');
+            } else {
+                return redirect()->route('lab.barang.index')->with('error', 'Barang gagal diubah!');
+            }
+        } else {
+            $data = [
+                'nama_barang' => $request->nama_barang,
+                'id_lokasi' => Crypt::decrypt($request->id_lokasi),
+                'id_kategori' => Crypt::decrypt($request->id_kategori),
+                'id_model' => Crypt::decrypt($request->id_model),
+                'updated_at' => now(),
+            ];
+            $update = Barang::where('id', Crypt::decrypt($id))->update($data);
+            if ($update) {
+                return redirect()->route('lab.barang.index')->with('success', 'Barang berhasil diubah!');
+            } else {
+                return redirect()->route('lab.barang.index')->with('error', 'Barang gagal diubah!');
+            }
+        }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $deleted = Barang::where('id', Crypt::decrypt($id))->delete();
