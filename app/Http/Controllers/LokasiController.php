@@ -20,7 +20,7 @@ class LokasiController extends Controller
         $data = [
             'locations' => Lokasi::all()
         ];
-        return view('jurusan.lokasi.lokasi', $data);
+        return view('jurusan.lokasi.index', $data);
     }
 
     /**
@@ -31,7 +31,7 @@ class LokasiController extends Controller
     public function create()
     {
         //
-        return view('jurusan.lokasi.createlokasi');
+        return view('jurusan.lokasi.create');
     }
 
     /**
