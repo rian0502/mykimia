@@ -12292,7 +12292,7 @@ $jscomp.polyfill(
     a = c.fn.dataTable;
     c.extend(!0, a.Buttons.defaults, {
         dom: {
-            container: { className: "dt-buttons btn-group flex-wrap" },
+            container: { className: "dt-buttons flex-wrap" },
             button: { className: "btn btn-secondary" },
             collection: {
                 tag: "div",
