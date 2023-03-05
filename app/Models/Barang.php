@@ -31,4 +31,8 @@ class Barang extends Model
     {
         return $this->belongsTo(ModelBarang::class);
     }
+    public function histories()
+    {
+        return $this->hasMany(History::class, 'id_barang');
+    }
 }
