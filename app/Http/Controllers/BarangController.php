@@ -8,6 +8,7 @@ use App\Models\ModelBarang;
 use App\Models\Kategori;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Crypt;
 
 class BarangController extends Controller
 {
@@ -46,14 +47,24 @@ class BarangController extends Controller
      */
     public function store(Request $request)
     {
-        Barang::create([
-            'id_kategori' => $request->id_kategori,
-            'encrypt_id' => $request->encrypt_id,
-            'id_model' => $request->id_model,
-            'id_lokasi' => $request->id_lokasi,
+
+        $id_kategori = Kategori::where('encrypt_id', $request->id_kategori)->first();
+        $id_kategori = $id_kategori->id;
+        $id_model = ModelBarang::where('encrypt_id', $request->id_model)->first();
+        $id_model = $id_model->id;
+        $id_lokasi = Lokasi::where('encrypt_id', $request->id_lokasi)->first();
+        $id_lokasi = $id_lokasi->id;
+        $simpan = Barang::create([
+            'id_kategori' => $id_kategori,
+            // 'encrypt_id' => $encrypt_id,
+            'id_model' => $id_model,
+            'id_lokasi' => $id_lokasi,
             'nama_barang' => $request->nama_barang,
-            'jumlah_akhir' => $request->jumlah_akhir
+            'jumlah_akhir' => $request->jumlah_akhir,
         ]);
+        $id = Crypt::encrypt($simpan->id);
+        $simpan = Barang::where('id', $simpan->id)->update(['encrypt_id' => $id]);
+
         return redirect()->route('lab.barang.index')->with('success', 'Barang berhasil ditambahkan!');
     }
 
