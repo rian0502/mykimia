@@ -37,14 +37,10 @@
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label>ID Lokasi :</label>
-                                    <select class="custom-select form-control">
-                                        <option label="Pilih Lokasi"></option>
-                                        <option value="Amsterdam">India</option>
-                                        <option value="Berlin">UK</option>
-                                        <option value="Frankfurt">US</option>
-                                    </select>
+                                    <label>Keterangan</label>
+                                    <textarea class="form-control"></textarea>
                                 </div>
+
                             </div>
                             {{-- form untuk sebelah kanan --}}
                             <div class="kanan weight-500 col-md-6">
@@ -66,6 +62,15 @@
                                         <option value="Frankfurt">US</option>
                                     </select>
                                 </div>
+                                <div class="form-group">
+                                    <label>ID Lokasi :</label>
+                                    <select class="custom-select form-control">
+                                        <option label="Pilih Lokasi"></option>
+                                        <option value="Amsterdam">India</option>
+                                        <option value="Berlin">UK</option>
+                                        <option value="Frankfurt">US</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
 
@@ -76,7 +81,7 @@
                         </div>
 
                     </form>
-                    <a href="/barang">
+                    <a href="{{ route('lab.barang.index') }}">
 
                         <button class="batal btn btn-secondary">Batal</button>
                     </a>

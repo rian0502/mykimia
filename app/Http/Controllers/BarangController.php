@@ -94,7 +94,7 @@ class BarangController extends Controller
             'id' => 1,
 
         ];
-        return view('admin.inventaris.barang.editbarang', $data);
+        return view('admin.inventaris.barang.edit', $data);
     }
 
     /**
