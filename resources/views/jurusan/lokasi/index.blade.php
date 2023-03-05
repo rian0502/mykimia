@@ -13,7 +13,8 @@
                         </button>
                     </a>
                 </div>
-                <div class="pb-20">
+                <div class="pb-20 p-3">
+
                     <table class="table data-table-responsive stripe data-table-export nowrap ">
                         <thead>
                             <tr>
@@ -32,30 +33,30 @@
                                 <td>{{ $item->lantai_tingkat}}</td>
                                 <td>{{ $item->nama_gedung }}</td>
                                 <td>
-                                    <div class="table-actions">
-                                        <a class="edit" href="{{ route('admin.kategori.edit',$item->encrypt_id) }}">
-                                            <button class="btn btn-warning">
-                                                <i class="icon-copy fi-page-edit"></i>
-                                                Edit
-                                            </button>
+                                    {{-- make dropdown action edit delete view --}}
+                                    <div class="dropdown">
+                                        <a class="btn btn-outline-primary dropdown-toggle" href="#" role="button"
+                                            data-toggle="dropdown">
+                                            <i class="fa fa-ellipsis-h"></i>
                                         </a>
-                                        <form action="{{ route('admin.kategori.destroy', $item->encrypt_id) }}"
-                                            method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-danger"
-                                                onclick="return confirm('Apakah Anda yakin ingin menghapus kategori ini?')">
-                                                <i class="icon-copy dw dw-delete-3"></i>
-                                                Hapus
-                                            </button>
-                                        </form>
-
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="/lokasi/{{ $item->id }}/edit"><i
+                                                    class="fa fa-pencil"></i> Edit</a>
+                                            <form action="/lokasi/{{ $item->id }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="dropdown-item text-danger"><i
+                                                        class="fa fa-trash"></i>
+                                                    Delete</button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
+
                 </div>
             </div>
 
