@@ -34,7 +34,7 @@ class BarangController extends Controller
             'models' => ModelBarang::all(),
             'categories' => Kategori::all(),
         ];
-        
+
         return view('admin.inventaris.barang.create', $data);
     }
 
@@ -54,7 +54,7 @@ class BarangController extends Controller
             'nama_barang' => $request->nama_barang,
             'jumlah_akhir' => $request->jumlah_akhir
         ]);
-        return redirect()->route('barang.index')->with('success', 'Barang berhasil ditambahkan!');
+        return redirect()->route('lab.barang.index')->with('success', 'Barang berhasil ditambahkan!');
     }
 
     /**
@@ -105,7 +105,7 @@ class BarangController extends Controller
             'jumlah_akhir' => $request->jumlah_akhir
         ]);
 
-        return redirect()->route('barang.index')->with('success', 'Barang berhasil diperbarui!');
+        return redirect()->route('lab.barang.index')->with('success', 'Barang berhasil diperbarui!');
     }
 
     /**
@@ -117,6 +117,6 @@ class BarangController extends Controller
     public function destroy($id)
     {
         Barang::destroy($id);
-        return redirect()->route('barang.index')->with('success', 'Barang berhasil dihapus!');
+        return redirect()->route('lab.barang.index')->with('success', 'Barang berhasil dihapus!');
     }
 }

@@ -50,9 +50,9 @@ class ModelController extends Controller
         $id = ModelBarang::latest()->first()->id;
         $update = ModelBarang::where('id', $id)->update(['encrypt_id' => Crypt::encrypt($id)]);
         if ($simpan && $update) {
-            return redirect()->route('admin.model.index')->with('success', 'Data berhasil ditambahkan');
+            return redirect()->route('lab.model.index')->with('success', 'Data berhasil ditambahkan');
         } else {
-            return redirect()->route('admin.model.index')->with('error', 'Data gagal ditambahkan');
+            return redirect()->route('lab.model.index')->with('error', 'Data gagal ditambahkan');
         }
     }
 
@@ -99,9 +99,9 @@ class ModelController extends Controller
         ];
         $update = ModelBarang::where('id', Crypt::decrypt($id))->update($data);
         if ($update) {
-            return redirect()->route('admin.model.index')->with('success', 'Data berhasil disimpan');
+            return redirect()->route('lab.model.index')->with('success', 'Data berhasil disimpan');
         } else {
-            return redirect()->route('admin.model.index')->with('error', 'Data gagal disimpan');
+            return redirect()->route('lab.model.index')->with('error', 'Data gagal disimpan');
         }
     }
 
