@@ -56,7 +56,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Model</label>
-                                <select class="custom-select2 form-control">
+                                <select class="custom-select2 form-control" name="id_model">
                                     @foreach ($models as $item)
                                     <option value="{{ $item->encrypt_id }}">{{ $item->merk.', '.$item->nama_model }}
                                     </option>

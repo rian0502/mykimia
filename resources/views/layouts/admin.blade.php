@@ -24,6 +24,7 @@
     <link rel="stylesheet" type="text/css"
         href="/Assets/admin/src/plugins/datatables/css/responsive.bootstrap4.min.css" />
     <link rel="stylesheet" type="text/css" href="/Assets/admin/vendors/styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="/Assets/src/lib/toastify/src/toastify.css" />
 
     <!-- FontAwesome -->
     <link href="/Assets/FontAwesome/css/fontawesome.css" rel="stylesheet">
@@ -76,7 +77,6 @@
             <div class="loading-text">Loading...</div>
         </div>
     </div>
-
     <div class="header">
         <div class="header-left">
             <div class="menu-icon bi bi-list"></div>
@@ -411,6 +411,7 @@
 
 
     </div>
+    <div id="toast"></div>
     @yield('admin')
 
 
@@ -426,9 +427,37 @@
     <script src="/Assets/admin/src/plugins/datatables/js/dataTables.responsive.min.js"></script>
     <script src="/Assets/admin/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
     <script src="/Assets/admin/vendors/scripts/dashboard3.js"></script>
+    <script src="/Assets/src/lib/toastify/src/toastify.js"></script>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS" height="0" width="0"
             style="display: none; visibility: hidden"></iframe></noscript>
+
+            <!-- Tambahkan HTML untuk menampilkan notifikasi -->
+
+
+<!-- Tambahkan script untuk menampilkan notifikasi -->
+<script>
+    @if (session('success'))
+        Toastify({
+            text: "{{ session('success') }}",
+            duration: 3000,
+            gravity: "bottom",
+            position: "right",
+            backgroundColor: "#1abc9c",
+            stopOnFocus: true,
+        }).showToast();
+    @elseif (session('error'))
+        Toastify({
+            text: "{{ session('error') }}",
+            duration: 3000,
+            gravity: "bottom",
+            position: "right",
+            backgroundColor: "#e74c3c",
+            stopOnFocus: true,
+        }).showToast();
+    @endif
+</script>
+
     <!-- End Google Tag Manager (noscript) -->
 
 

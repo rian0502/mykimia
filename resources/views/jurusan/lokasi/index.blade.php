@@ -33,16 +33,18 @@
                                 <td>{{ $item->lantai_tingkat}}</td>
                                 <td>{{ $item->nama_gedung }}</td>
                                 <td>
-                                    {{-- make dropdown action edit delete view --}}
                                     <div class="dropdown">
                                         <a class="btn btn-outline-primary dropdown-toggle" href="#" role="button"
                                             data-toggle="dropdown">
                                             <i class="fa fa-ellipsis-h"></i>
                                         </a>
+
                                         <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item" href="{{route('jurusan.lokasi.edit', $item->id) }}"><i
+                                            <a class="dropdown-item"
+                                                href="{{route('jurusan.lokasi.edit', $item->encrypt_id ) }}"><i
                                                     class="fa fa-pencil"></i> Edit</a>
-                                            <form action="{{route('jurusan.lokasi.destroy', $item->id)  }}" method="POST">
+                                            <form action="{{route('jurusan.lokasi.destroy', $item->encrypt_id )  }}"
+                                                method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="dropdown-item text-danger"><i

@@ -41,6 +41,7 @@
     <link rel="stylesheet" type="text/css"
         href="/Assets/admin/src/plugins/datatables/css/responsive.bootstrap4.min.css" />
     <link rel="stylesheet" type="text/css" href="/Assets/admin/vendors/styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="/Assets/src/lib/toastify/src/toastify.css" />
 
     <!-- FontAwesome -->
     <link href="/Assets/FontAwesome/css/fontawesome.css" rel="stylesheet">
@@ -92,6 +93,7 @@
             <div class="loading-text">Loading...</div>
         </div>
     </div>
+
 
     <div class="header">
         <div class="header-left">
@@ -428,6 +430,7 @@
 
 
     </div>
+    <div id="toast"></div>
     @yield('datatable')
 
 
@@ -458,8 +461,34 @@
     <script src="/Assets/admin/src/plugins/datatables/js/pdfmake.min.js"></script>
     <script src="/Assets/admin/src/plugins/datatables/js/excel.js"></script>
     <script src="/Assets/admin/src/plugins/datatables/js/vfs_fonts.js"></script>
+    <script src="/Assets/src/lib/toastify/src/toastify.js"></script>
     <!-- Datatable Setting js -->
     <script src="/Assets/admin/vendors/scripts/datatable-setting.js"></script>
+    <!-- Tambahkan HTML untuk menampilkan notifikasi -->
+
+<!-- Tambahkan script untuk menampilkan notifikasi -->
+<script>
+    @if (session('success'))
+        Toastify({
+            text: "{{ session('success') }}",
+            duration: 3000,
+            gravity: "bottom",
+            position: "right",
+            backgroundColor: "#1abc9c",
+            stopOnFocus: true,
+        }).showToast();
+    @elseif (session('error'))
+        Toastify({
+            text: "{{ session('error') }}",
+            duration: 3000,
+            gravity: "bottom",
+            position: "right",
+            backgroundColor: "#e74c3c",
+            stopOnFocus: true,
+        }).showToast();
+    @endif
+</script>
+
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
     {{-- <script type="text/javascript"
         src="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.11.3/b-2.0.1/b-colvis-2.0.1/b-html5-2.0.1/datatables.min.js">

@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreBarangRequest;
 use App\Models\Barang;
 use App\Models\Lokasi;
 use App\Models\ModelBarang;
 use App\Models\Kategori;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Crypt;
 
 class BarangController extends Controller
 {
@@ -34,7 +36,7 @@ class BarangController extends Controller
             'models' => ModelBarang::all(),
             'categories' => Kategori::all(),
         ];
-        
+
         return view('admin.inventaris.barang.create', $data);
     }
 
@@ -44,17 +46,26 @@ class BarangController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreBarangRequest $request)
     {
-        Barang::create([
-            'id_kategori' => $request->id_kategori,
-            'encrypt_id' => $request->encrypt_id,
-            'id_model' => $request->id_model,
-            'id_lokasi' => $request->id_lokasi,
+        $data = [
             'nama_barang' => $request->nama_barang,
-            'jumlah_akhir' => $request->jumlah_akhir
-        ]);
-        return redirect()->route('barang.index')->with('success', 'Barang berhasil ditambahkan!');
+            'jumlah_akhir' => $request->jumlah_akhir,
+            'id_lokasi' => Crypt::decrypt($request->id_lokasi),
+            'id_kategori' => Crypt::decrypt($request->id_kategori),
+            'id_model' => Crypt::decrypt($request->id_model),
+            'created_at' => now(),
+            'updated_at' => now(),
+        ];
+        $simpan = Barang::insert($data);
+        $id = Barang::latest()->first()->id;
+        $encrypt_id = Crypt::encrypt($id);
+        $update = Barang::where('id', $id)->update(['encrypt_id' => $encrypt_id]);
+        if ($simpan && $update) {
+            return redirect()->route('lab.barang.index')->with('success', 'Barang berhasil ditambahkan!');
+        } else {
+            return redirect()->route('lab.barang.index')->with('error', 'Barang gagal ditambahkan!');
+        }
     }
 
     /**
@@ -65,7 +76,7 @@ class BarangController extends Controller
      */
     public function show($id)
     {
-        $barang = Barang::find($id);
+        $barang = Barang::where('id', Crypt::decrypt($id))->first();
         return view('admin.inventaris.barang.show', compact('barang'));
     }
 
@@ -77,13 +88,14 @@ class BarangController extends Controller
      */
     public function edit($id)
     {
-        //
         $data = [
-            'barang' => Barang::find($id),
-            'id' => 1,
-
+            'barang' => Barang::where('id', Crypt::decrypt($id))->first(),
+            'locations' => Lokasi::all(),
+            'models' => ModelBarang::all(),
+            'categories' => Kategori::all(),
         ];
-        return view('admin.inventaris.barang.editbarang', $data);
+
+        return view('admin.inventaris.barang.edit', $data);
     }
 
     /**
@@ -95,17 +107,7 @@ class BarangController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $barang = Barang::find($id);
-        $barang->update([
-            'id_kategori' => $request->id_kategori,
-            'encrypt_id' => $request->encrypt_id,
-            'id_model' => $request->id_model,
-            'id_lokasi' => $request->id_lokasi,
-            'nama_barang' => $request->nama_barang,
-            'jumlah_akhir' => $request->jumlah_akhir
-        ]);
-
-        return redirect()->route('barang.index')->with('success', 'Barang berhasil diperbarui!');
+     
     }
 
     /**
@@ -116,7 +118,11 @@ class BarangController extends Controller
      */
     public function destroy($id)
     {
-        Barang::destroy($id);
-        return redirect()->route('barang.index')->with('success', 'Barang berhasil dihapus!');
+        $deleted = Barang::where('id', Crypt::decrypt($id))->delete();
+        if ($deleted) {
+            return redirect()->route('lab.barang.index')->with('success', 'Barang berhasil dihapus!');
+        } else {
+            return redirect()->route('lab.barang.index')->with('error', 'Barang gagal dihapus!');
+        }
     }
 }

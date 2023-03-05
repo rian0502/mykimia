@@ -21,15 +21,15 @@ class Barang extends Model
     ];
     public function lokasi()
     {
-        return $this->belongsTo(Lokasi::class);
+        return $this->belongsTo(Lokasi::class, 'id_lokasi');
     }
     public function kategori()
     {
-        return $this->belongsTo(Kategori::class);
+        return $this->belongsTo(Kategori::class, 'id_kategori');
     }
     public function modelBarang()
     {
-        return $this->belongsTo(ModelBarang::class);
+        return $this->belongsTo(ModelBarang::class, 'id_model');
     }
     public function histories()
     {
