@@ -34,7 +34,6 @@
                                         <div class="form-control-feedback has-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-
                             </div>
                             {{-- form untuk sebelah kanan --}}
                             <div class="kanan weight-500 col-md-6">
