@@ -14,7 +14,7 @@
                             </button>
                         </a>
                     </div>
-                    <div class="pb-20">
+                    <div class="pb-20 m-3">
                         <table class="table data-table-responsive stripe data-table-export nowrap ">
                             <thead>
                                 <tr>
