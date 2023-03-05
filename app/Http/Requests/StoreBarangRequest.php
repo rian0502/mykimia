@@ -13,7 +13,7 @@ class StoreBarangRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,37 @@ class StoreBarangRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nama_barang' => 'required|max:255',
+            'jumlah_akhir' => 'required|numeric|min:0',
+            'id_model' => 'required|exists:model_barang,encrypt_id',
+            'id_kategori' => 'required|exists:kategori,encrypt_id',
+            'id_lokasi' => 'required|exists:lokasi,encrypt_id',
         ];
     }
+    public function messages()
+    {
+        return [
+            'nama_barang.required' => 'Nama Barang harus diisi',
+            'nama_barang.max' => 'Nama Barang maksimal 255 karakter',
+            'jumlah_akhir.required' => 'Jumlah Barang harus diisi',
+            'jumlah_akhir.numeric' => 'Jumlah Barang harus berupa angka',
+            'jumlah_akhir.min' => 'Jumlah Barang tidak boleh kurang dari 0',
+            'id_model.required' => 'Model Barang harus diisi',
+            'id_model.exists' => 'Model Barang tidak ditemukan',
+            'id_kategori.required' => 'Kategori Barang harus diisi',
+            'id_kategori.exists' => 'Kategori Barang tidak ditemukan',
+            'id_lokasi.required' => 'Lokasi Barang harus diisi',
+        ];
+    }
+    protected function prepareForValidation()
+    {
+        $input = $this->all();
+        foreach ($input as $key => $value) {
+            if (is_string($value)) {
+                $input[$key] = strip_tags($value);
+            }
+        }
+        $this->replace($input);
+    }
+
 }
