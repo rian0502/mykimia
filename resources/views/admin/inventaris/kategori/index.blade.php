@@ -37,7 +37,8 @@
                                                 Edit
                                             </button>
                                         </a>
-                                        <form action="{{ route('lab.kategori.destroy', $item->encrypt_id) }}"
+                                        @if ($item->barangs->count() < 1) <form
+                                            action="{{ route('lab.kategori.destroy', $item->encrypt_id) }}"
                                             method="POST">
                                             @csrf
                                             @method('DELETE')
@@ -46,7 +47,8 @@
                                                 <i class="icon-copy dw dw-delete-3"></i>
                                                 Hapus
                                             </button>
-                                        </form>
+                                            </form>
+                                        @endif
 
                                     </div>
                                 </td>
