@@ -43,14 +43,18 @@
                                                     <a class="dropdown-item"
                                                         href="{{ route('jurusan.lokasi.edit', $item->encrypt_id) }}"><i
                                                             class="fa fa-pencil"></i> Edit</a>
-                                                    <form action="{{ route('jurusan.lokasi.destroy', $item->encrypt_id) }}"
-                                                        method="POST">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit" class="dropdown-item text-danger"><i
-                                                                class="fa fa-trash"></i>
-                                                            Delete</button>
-                                                    </form>
+                                                    @if($item->barangs->count() < 1)
+                                                        <form action="{{ route('jurusan.lokasi.destroy', $item->encrypt_id) }}"
+                                                            method="POST">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" class="dropdown-item"
+                                                                onclick="return confirm('Apakah Anda yakin ingin menghapus lokasi ini?')">
+                                                                <i class="fa fa-trash"></i>
+                                                                Hapus
+                                                            </button>
+                                                        </form>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </td>

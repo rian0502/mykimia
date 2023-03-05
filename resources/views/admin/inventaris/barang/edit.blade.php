@@ -13,7 +13,8 @@
                     </div>
 
                 </div>
-                <form action="{{ route('lab.barang.edit', $barang->encrypt_id) }}" method="POST">
+                <form action="{{ route('lab.barang.update', $barang->encrypt_id) }}" method="POST">
+                    @method('PUT')
                     @csrf
                     <div class="profile-edit-list row">
                         {{-- form untuk sebelah kiri --}}
