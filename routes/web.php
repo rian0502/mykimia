@@ -22,7 +22,6 @@ use App\Http\Controllers\ModelController;
 
 // ADMIN LAB
 Route::prefix('admin/lab')->name('lab.')->group(function () {
-    //sudah ada view
     Route::resource('model', ModelController::class);
     Route::resource('barang', BarangController::class);
     Route::resource('kategori', KategoriController::class);

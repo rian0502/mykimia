@@ -46,6 +46,10 @@
                                     @endforeach
                                 </select>
                             </div>
+                            <div class="form-group">
+                                <label>Keterangan</label>
+                                <textarea class="form-control" name="ket"></textarea>
+                            </div>
                         </div>
                         {{-- form untuk sebelah kanan --}}
                         <div class="kanan weight-500 col-md-6">
@@ -78,7 +82,6 @@
                             </div>
                         </div>
                     </div>
-
 
                     <div class="form-group">
 
