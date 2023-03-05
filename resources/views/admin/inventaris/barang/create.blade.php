@@ -34,6 +34,7 @@
                                         <div class="form-control-feedback has-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
+
                                 <div class="form-group">
                                     <label>Lokasi</label>
                                     <select class="custom-select2 form-control" name="id_lokasi" required>
