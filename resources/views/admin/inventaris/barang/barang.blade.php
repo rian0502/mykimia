@@ -7,7 +7,7 @@
                 <div class="card-box mb-30">
                     <div class="pd-20">
                         <h4 class="text-blue h4">Barang</h4>
-                        <a href="{{route('admin.barang.create')}}">
+                        <a href="{{ route('barang.history.create') }}">
                             <button class="btn btn-success mt-3">
                                 <i class="icon-copy fi-page-add"></i>
                                 Tambah Data
@@ -42,10 +42,20 @@
                                     <td>Piala</td>
                                     <td>
                                         <div class="table-actions">
-                                            {{-- <a href="{{route('admin.barang.update', )}}" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
-                                            <a href="{{route('admin.barang.destroy', )}}" data-color="#e95959"><i
-                                                    class="icon-copy dw dw-delete-3"></i></a> --}}
-                                        </div>
+                                            <a class="edit" href="#">
+                                                <button class="btn btn-warning">
+                                                    <i class="icon-copy fi-page-edit"></i>
+                                                    Edit
+                                                </button>
+                                            </a>
+                                            <form action="#" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger">
+                                                    {{-- onclick="return confirm('Apakah Anda yakin ingin menghapus kategori ini?')"> --}} <i class="icon-copy dw dw-delete-3"></i>
+                                                    Hapus
+                                                </button>
+                                            </form>
                                     </td>
                                 </tr>
 
