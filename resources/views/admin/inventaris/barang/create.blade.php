@@ -34,6 +34,16 @@
                                         <div class="form-control-feedback has-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
+                                <div class="form-group">
+                                    <label>Lokasi</label>
+                                    <select class="custom-select2 form-control" name="id_lokasi" required>
+                                        @foreach ($locations as $item)
+                                            <option value="{{ $item->encrypt_id }}">
+                                                {{ $item->nama_lokasi . ', Lt-' . $item->lantai_tingkat }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
 
                             </div>
                             {{-- form untuk sebelah kanan --}}
@@ -56,16 +66,7 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="form-group">
-                                    <label>Lokasi</label>
-                                    <select class="custom-select2 form-control" name="id_lokasi" required>
-                                        @foreach ($locations as $item)
-                                            <option value="{{ $item->encrypt_id }}">
-                                                {{ $item->nama_lokasi . ', Lt-' . $item->lantai_tingkat }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-                                </div>
+
 
                             </div>
                         </div>
