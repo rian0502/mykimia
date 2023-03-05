@@ -36,6 +36,7 @@ class RolePermision extends Seeder
                 'guard_name' => 'web'
             ]);
         }
+        
         $user->assignRole('jurusan');
         $adminLab->assignRole('admin lab');
         
