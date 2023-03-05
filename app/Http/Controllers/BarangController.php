@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Barang;
 use Illuminate\Http\Request;
 
 class BarangController extends Controller
@@ -13,8 +14,8 @@ class BarangController extends Controller
      */
     public function index()
     {
-        //
-        return view('admin.inventaris.barang.barang');
+        $barang = Barang::all();
+        return view('admin.inventaris.barang.barang', compact('barang'));
     }
 
     /**
@@ -24,7 +25,7 @@ class BarangController extends Controller
      */
     public function create()
     {
-        //
+        return view('barang.create');
     }
 
     /**
@@ -35,7 +36,15 @@ class BarangController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Barang::create([
+            'id_kategori' => $request->id_kategori,
+            'encrypt_id' => $request->encrypt_id,
+            'id_model' => $request->id_model,
+            'id_lokasi' => $request->id_lokasi,
+            'nama_barang' => $request->nama_barang,
+            'jumlah_akhir' => $request->jumlah_akhir
+        ]);
+        return redirect()->route('barang.index')->with('success', 'Barang berhasil ditambahkan!');
     }
 
     /**
@@ -46,7 +55,8 @@ class BarangController extends Controller
      */
     public function show($id)
     {
-        //
+        $barang = Barang::find($id);
+        return view('barang.show', compact('barang'));
     }
 
     /**
@@ -59,6 +69,7 @@ class BarangController extends Controller
     {
         //
         $data = [
+            'barang' => Barang::find($id),
             'id' => 1,
 
         ];
@@ -74,7 +85,17 @@ class BarangController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $barang = Barang::find($id);
+        $barang->update([
+            'id_kategori' => $request->id_kategori,
+            'encrypt_id' => $request->encrypt_id,
+            'id_model' => $request->id_model,
+            'id_lokasi' => $request->id_lokasi,
+            'nama_barang' => $request->nama_barang,
+            'jumlah_akhir' => $request->jumlah_akhir
+        ]);
+
+        return redirect()->route('barang.index')->with('success', 'Barang berhasil diperbarui!');
     }
 
     /**
@@ -85,6 +106,7 @@ class BarangController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Barang::destroy($id);
+        return redirect()->route('barang.index')->with('success', 'Barang berhasil dihapus!');
     }
 }

@@ -26,7 +26,17 @@ use App\Http\Controllers\ModelController;
 Route::prefix('admin/lab')->name('admin.')->group(function () {
     //sudah ada view
     Route::resource('model', ModelController::class);
-    Route::resource('kategori', KategoriController::class);
+    Route::resource('kategori', KategoriController::class)->names(
+        [
+            'index' => 'kategori.index',
+            'create' => 'kategori.create',
+            'store' => 'kategori.store',
+            'show' => 'kategori.show',
+            'edit' => 'kategori.edit',
+            'update' => 'kategori.update',
+            'destroy' => 'kategori.destroy',
+        ]
+    );
     Route::resource('barang/history', HistoryController::class)->names(
         [
             'index' => 'barang.history.index',
@@ -38,7 +48,17 @@ Route::prefix('admin/lab')->name('admin.')->group(function () {
             'destroy' => 'barang.history.destroy',
         ]
     );
-    Route::resource('barang', BarangController::class);
+    Route::resource('barang', BarangController::class)->names(
+        [
+            'index' => 'barang.index',
+            'create' => 'barang.create',
+            'store' => 'barang.store',
+            'show' => 'barang.show',
+            'edit' => 'barang.edit',
+            'update' => 'barang.update',
+            'destroy' => 'barang.destroy',
+        ]
+    );
 });
 
 
@@ -55,18 +75,14 @@ Route::prefix('jurusan')->name('jurusan.')->group(function () {
 
 
 Route::prefix('mahasiswa')->name('mahasiswa.')->group(function () {
-
 });
 
 
 Route::prefix('dosen')->name('dosen.')->group(function () {
-
-
 });
 
 
 Route::prefix('koor')->name('koor.')->group(function () {
-
 });
 
 
@@ -92,7 +108,7 @@ Route::get('/lokasi', [LokasiController::class, 'index'])->name('lokasi');
 //create lokasi
 Route::get('/lokasi/create', [LokasiController::class, 'create'])->name('createlokasi');
 //action create lokasi
-Route::post('/lokasi/create',[LokasiController::class, 'store'])->name('createlokasi');
+Route::post('/lokasi/create', [LokasiController::class, 'store'])->name('createlokasi');
 //edit lokasi
 
 Route::get('/lokasi/edit/{id}', function ($id) {
