@@ -57,7 +57,7 @@
                         </div>
 
                     </form>
-                    <a href="{{ route('lab.lokasi.index') }}">
+                    <a href="{{ route('jurusan.lokasi.index') }}">
 
                         <button class="batal btn btn-secondary">Batal</button>
                     </a>
