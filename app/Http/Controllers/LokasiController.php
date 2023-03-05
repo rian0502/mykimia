@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreLokasiRequest;
 use App\Models\Lokasi;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 
 class LokasiController extends Controller
@@ -78,6 +77,8 @@ class LokasiController extends Controller
     public function edit($id)
     {
         //
+        $lokasi = Lokasi::where('id', Crypt::decrypt($id))->first();
+        return view('jurusan.lokasi.edit', compact('lokasi'));
     }
 
     /**
@@ -90,6 +91,17 @@ class LokasiController extends Controller
     public function update(StoreLokasiRequest $request, $id)
     {
         //
+        $data = [
+            'nama_lokasi' => $request->nama_lokasi,
+            'nama_gedung' => $request->nama_gedung,
+            'lantai_tingkat' => $request->lantai_tingkat,
+        ];
+        $update = Lokasi::where('id', Crypt::decrypt($id))->update($data);
+        if ($update) {
+            return redirect()->route('jurusan.lokasi.index')->with('success', 'Data berhasil diubah');
+        } else {
+            return redirect()->route('jurusan.lokasi.index')->with('error', 'Data gagal diubah');
+        }
     }
 
     /**
@@ -101,5 +113,11 @@ class LokasiController extends Controller
     public function destroy($id)
     {
         //
+        $delete = Lokasi::where('id', Crypt::decrypt($id))->delete();
+        if ($delete) {
+            return redirect()->route('jurusan.lokasi.index')->with('success', 'Data berhasil dihapus');
+        } else {
+            return redirect()->route('jurusan.lokasi.index')->with('error', 'Data gagal dihapus');
+        }
     }
 }
