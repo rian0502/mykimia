@@ -13,7 +13,7 @@
                         </div>
 
                     </div>
-                    <form action="{{ route('admin.barang.history.store') }}" method="POST">
+                    <form action="{{ route('lab.barang.history.store') }}" method="POST">
                         @csrf
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}

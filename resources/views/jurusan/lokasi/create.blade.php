@@ -13,7 +13,7 @@
                         </div>
 
                     </div>
-                    <form action="{{ route('createlokasi') }}" method="POST">
+                    <form action="{{ route('jurusan.lokasi.store') }}" method="POST">
                         @csrf
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}
@@ -58,7 +58,7 @@
                         </div>
 
                     </form>
-                    <a href="/lokasi">
+                    <a href="{{route('jurusan.lokasi.index')}}">
 
                         <button class="batal btn btn-secondary">Batal</button>
                     </a>

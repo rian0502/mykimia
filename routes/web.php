@@ -23,7 +23,7 @@ use App\Http\Controllers\ModelController;
 */
 
 // ADMIN LAB
-Route::prefix('admin/lab')->name('admin.')->group(function () {
+Route::prefix('admin/lab')->name('lab.')->group(function () {
     //sudah ada view
     Route::resource('model', ModelController::class);
     Route::resource('barang', BarangController::class);
@@ -42,7 +42,7 @@ Route::prefix('admin/lab')->name('admin.')->group(function () {
 });
 
 
-Route::prefix('admin/berkas')->name('admin.')->group(function () {
+Route::prefix('admin/berkas')->name('berkas.')->group(function () {
 });
 
 

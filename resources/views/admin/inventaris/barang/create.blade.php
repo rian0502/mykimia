@@ -11,9 +11,8 @@
                             <h4 class="text-dark h4">Tambah Barang</h4>
                             <p class="mb-30">Isi data dengan benar</p>
                         </div>
-
                     </div>
-                    <form action="{{ route('admin.barang.store') }}" method="POST">
+                    <form action="{{ route('lab.barang.store') }}" method="POST">
                         @csrf
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}

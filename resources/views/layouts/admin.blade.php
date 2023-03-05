@@ -337,7 +337,7 @@
                     </li>
                     <li>
                         <a href="{{ route('jurusan.lokasi.index') }}"
-                            class="dropdown-toggle no-arrow {{ Request::is('lokasi/*') || Request::is('lokasi') ? 'active' : '' }}">
+                            class="dropdown-toggle no-arrow {{ Request::is('jurusan/lokasi*') ? 'active' : '' }}">
                             <span class="micon bi bi-pin-map"></span><span class="mtext">Lokasi</span>
                         </a>
                     </li>
@@ -349,14 +349,14 @@
                             <span class="micon bi bi-box"></span><span class="mtext">Inventaris</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="{{ route('admin.barang.index') }}"
-                                    class="{{ Request::is('admin/barang*') ? 'active' : '' }}">Barang</a>
+                            <li><a href="{{ route('lab.barang.index') }}"
+                                    class="{{ Request::is('admin/lab/barang*') ? 'active' : '' }}">Barang</a>
                             </li>
-                            <li><a href="{{ route('admin.kategori.index') }}"
+                            <li><a href="{{ route('lab.kategori.index') }}"
                                     class="{{ Request::is('admin/lab/kategori*') ? 'active' : '' }}">Kategori</a>
                             </li>
-                            <li><a href="{{ route('admin.model.index') }}"
-                                    class="{{ Request::is('admin/model*') ? 'active' : '' }}">Model</a>
+                            <li><a href="{{ route('lab.model.index') }}"
+                                    class="{{ Request::is('admin/lab/model*') ? 'active' : '' }}">Model</a>
                             </li>
 
                         </ul>

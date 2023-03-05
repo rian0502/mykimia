@@ -8,7 +8,7 @@
             <div class="card-box mb-30">
                 <div class="pd-20">
                     <h4 class="text-blue h4">Kategori</h4>
-                    <a href="{{route('admin.kategori.create')}}">
+                    <a href="{{route('lab.kategori.create')}}">
                         <button class="btn btn-success mt-3">
                             <i class="icon-copy fi-page-add"></i>
                             Tambah Data
@@ -31,13 +31,13 @@
                                 <td>{{ $item->nama_kategori }}</td>
                                 <td>
                                     <div class="table-actions">
-                                        <a class="edit" href="{{ route('admin.kategori.edit',$item->encrypt_id) }}">
+                                        <a class="edit" href="{{ route('lab.kategori.edit',$item->encrypt_id) }}">
                                             <button class="btn btn-warning">
                                                 <i class="icon-copy fi-page-edit"></i>
                                                 Edit
                                             </button>
                                         </a>
-                                        <form action="{{ route('admin.kategori.destroy', $item->encrypt_id) }}"
+                                        <form action="{{ route('lab.kategori.destroy', $item->encrypt_id) }}"
                                             method="POST">
                                             @csrf
                                             @method('DELETE')
