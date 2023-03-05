@@ -8,38 +8,38 @@
                 <div class="pd-20 card-box mb-30">
                     <div class="clearfix">
                         <div class="pull-left">
-                            <h4 class="text-dark h4">Tambah Barang</h4>
+                            <h4 class="text-dark h4">Add History</h4>
                             <p class="mb-30">Isi data dengan benar</p>
                         </div>
 
                     </div>
-                    <form action="{{ route('admin.barang.store') }}" method="POST">
+                    <form action="{{ route('lab.barang.history.store') }}" method="POST">
                         @csrf
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}
                             <div class="weight-500 col-md-6">
                                 <div class="form-group">
-                                    <label>Nama Barang</label>
-                                    <input autofocus name="nama_barang" id="nama_barang"
-                                        class="form-control @error('nama_barang') form-control-danger @enderror"
-                                        type="text" placeholder="Nama Barang">
-                                    @error('nama_barang')
+                                    <label>Jumlah Barang</label>
+                                    <input autofocus name="jumlah_barang" id="jumlah_barang"
+                                        class="form-control @error('jumlah_barang') form-control-danger @enderror"
+                                        type="text" placeholder="Jumlah Barang">
+                                    @error('jumlah_barang')
                                         <div class="form-control-feedback has-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="form-group">
                                     <label>Jumlah Akhir</label>
-                                    <input autofocus name="nama_barang" id="nama_barang"
-                                        class="form-control @error('nama_barang') form-control-danger @enderror"
+                                    <input autofocus name="jumlah_barang" id="jumlah_barang"
+                                        class="form-control @error('jumlah_barang') form-control-danger @enderror"
                                         type="text" placeholder="Jumlah Akhir">
-                                    @error('nama_barang')
+                                    @error('jumlah_barang')
                                         <div class="form-control-feedback has-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label>ID Lokasi :</label>
+                                    <label>ID Barang :</label>
                                     <select class="custom-select form-control">
-                                        <option label="Pilih Lokasi"></option>
+                                        <option label="Pilih Barang"></option>
                                         <option value="Amsterdam">India</option>
                                         <option value="Berlin">UK</option>
                                         <option value="Frankfurt">US</option>
@@ -51,7 +51,7 @@
                                 <div class="form-group">
                                     <label>ID Kategori :</label>
                                     <select class="custom-select form-control">
-                                        <option label="Pilih Kategori"></option>
+                                        <option label="Pilih Lokasi"></option>
                                         <option value="Amsterdam">India</option>
                                         <option value="Berlin">UK</option>
                                         <option value="Frankfurt">US</option>
@@ -60,7 +60,7 @@
                                 <div class="form-group">
                                     <label>ID Model :</label>
                                     <select class="custom-select form-control">
-                                        <option label="Pilih Model"></option>
+                                        <option label="Pilih Lokasi"></option>
                                         <option value="Amsterdam">India</option>
                                         <option value="Berlin">UK</option>
                                         <option value="Frankfurt">US</option>

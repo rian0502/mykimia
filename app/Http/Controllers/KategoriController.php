@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreKategoriRequest;
 use App\Models\Kategori;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 
 class KategoriController extends Controller
@@ -20,7 +19,8 @@ class KategoriController extends Controller
         $data = [
             'kategori' => Kategori::all()
         ];
-        return view('admin.inventaris.kategori.kategori', $data);
+
+        return view('admin.inventaris.kategori.index', $data);
     }
 
     /**
@@ -31,7 +31,7 @@ class KategoriController extends Controller
     public function create()
     {
         //
-        return view('admin.inventaris.kategori.createkategori');
+        return view('admin.inventaris.kategori.create');
     }
 
     /**
@@ -49,9 +49,9 @@ class KategoriController extends Controller
             'updated_at' => now()
         ];
         $simpan = Kategori::create($data);
-        //enrkripsi id
         $id = Crypt::encrypt($simpan->id);
         $simpan = Kategori::where('id', $simpan->id)->update(['encrypt_id' => $id]);
+
         if ($simpan) {
             return redirect()->route('kategori')->with('success', 'Data berhasil disimpan');
         } else {
@@ -82,7 +82,7 @@ class KategoriController extends Controller
         $data = [
             'kategori' => Kategori::where('id', Crypt::decrypt($id))->first()
         ];
-        return view('admin.inventaris.kategori.editkategori', $data);
+        return view('admin.inventaris.kategori.edit', $data);
     }
 
     /**

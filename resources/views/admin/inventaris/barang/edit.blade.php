@@ -13,7 +13,7 @@
                         </div>
 
                     </div>
-                    <form action="{{ route('admin.barang.edit', $id) }}" method="POST">
+                    <form action="{{ route('lab.barang.edit', $id) }}" method="POST">
                         @csrf
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}

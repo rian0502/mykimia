@@ -8,34 +8,34 @@
                 <div class="pd-20 card-box mb-30">
                     <div class="clearfix">
                         <div class="pull-left">
-                            <h4 class="text-dark h4">Edit Model</h4>
+                            <h4 class="text-dark h4">Edit Kategori</h4>
                             <p class="mb-30">Isi data dengan benar</p>
                         </div>
 
                     </div>
-                    <form action="{{ route('admin.model.update', $model->encrypt_id) }}" method="POST">
+                    <form action="{{ route('lab.kategori.update',$kategori->encrypt_id) }}" method="POST">
                         @method('PUT')
                         @csrf
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}
                             <div class="weight-500 col-md-6">
-                                <label>Nama Model</label>
-                                <input autofocus name="nama_model" id="nama_model" value="{{ $model->nama_model }}"
-                                    class="form-control @error('nama_model') form-control-danger @enderror" type="text"
-                                    placeholder="Nama Model">
-                                @error('nama_model')
+                                <label>Nama Kategori</label>
+                                <input autofocus name="nama_kategori" id="nama_kategori" value="{{ $kategori->nama_kategori }}"
+                                    class="form-control @error('nama_kategori') form-control-danger @enderror"
+                                    type="text" placeholder="Nama Kategori">
+                                @error('nama_kategori')
                                     <div class="form-control-feedback has-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             {{-- form untuk sebelah kanan --}}
                             <div class="merek weight-500 col-md-6">
-                                <label>Merek</label>
-                                <input autofocus name="merk" id="merk" value="{{ $model->merk }}"
+                                {{-- <label>Merek</label>
+                                <input autofocus name="merk" id="merk"
                                     class="form-control @error('merk') form-control-danger @enderror" type="text"
                                     placeholder="Merek">
                                 @error('merk')
                                     <div class="form-control-feedback has-danger">{{ $message }}</div>
-                                @enderror
+                                @enderror --}}
                             </div>
                         </div>
 
@@ -46,7 +46,7 @@
                         </div>
 
                     </form>
-                    <a href="{{route('admin.model.index')}}">
+                    <a href="{{route('lab.kategori.index')}}">
 
                         <button class="batal btn btn-secondary">Batal</button>
                     </a>

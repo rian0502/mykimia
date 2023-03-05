@@ -8,19 +8,18 @@
                 <div class="pd-20 card-box mb-30">
                     <div class="clearfix">
                         <div class="pull-left">
-                            <h4 class="text-dark h4">Edit Kategori</h4>
+                            <h4 class="text-dark h4">Tambah Kategori</h4>
                             <p class="mb-30">Isi data dengan benar</p>
                         </div>
 
                     </div>
-                    <form action="{{ route('admin.kategori.update',$kategori->encrypt_id) }}" method="POST">
-                        @method('PUT')
+                    <form action="{{ route('lab.kategori.store') }}" method="POST">
                         @csrf
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}
                             <div class="weight-500 col-md-6">
                                 <label>Nama Kategori</label>
-                                <input autofocus name="nama_kategori" id="nama_kategori" value="{{ $kategori->nama_kategori }}"
+                                <input autofocus name="nama_kategori" id="nama_kategori"
                                     class="form-control @error('nama_kategori') form-control-danger @enderror"
                                     type="text" placeholder="Nama Kategori">
                                 @error('nama_kategori')
@@ -46,7 +45,7 @@
                         </div>
 
                     </form>
-                    <a href="{{route('admin.kategori.index')}}">
+                    <a href="{{route('lab.kategori.index')}}">
 
                         <button class="batal btn btn-secondary">Batal</button>
                     </a>

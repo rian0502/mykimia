@@ -7,14 +7,14 @@
                 <div class="card-box mb-30">
                     <div class="pd-20">
                         <h4 class="text-blue h4">Barang</h4>
-                        <a href="{{ route('admin.barang.create') }}">
+                        <a href="{{ route('lab.barang.create') }}">
                             <button class="btn btn-success mt-3">
                                 <i class="icon-copy fi-page-add"></i>
                                 Tambah Data
                             </button>
                         </a>
                     </div>
-                    <div class="pb-20">
+                    <div class="pb-20 m-3">
                         <table class="table data-table-responsive stripe data-table-export nowrap ">
                             <thead>
                                 <tr>
@@ -36,13 +36,13 @@
                                         <td>
                                             <div class="table-actions">
                                                 <a class="edit"
-                                                    href="{{ route('admin.barang.edit', $item->encrypt_id) }}">
+                                                    href="{{ route('lab.barang.edit', $item->encrypt_id) }}">
                                                     <button class="btn btn-warning">
                                                         <i class="icon-copy fi-page-edit"></i>
                                                         Edit
                                                     </button>
                                                 </a>
-                                                <form action="{{ route('admin.barang.destroy', $item->encrypt_id) }}"
+                                                <form action="{{ route('lab.barang.destroy', $item->encrypt_id) }}"
                                                     method="POST">
                                                     @csrf
                                                     @method('DELETE')

@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Barang;
+use App\Models\Lokasi;
+use App\Models\ModelBarang;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class BarangController extends Controller
 {
@@ -15,7 +19,7 @@ class BarangController extends Controller
     public function index()
     {
         $barang = Barang::all();
-        return view('admin.inventaris.barang.barang', compact('barang'));
+        return view('admin.inventaris.barang.index', compact('barang'));
     }
 
     /**
@@ -25,7 +29,13 @@ class BarangController extends Controller
      */
     public function create()
     {
-        return view('barang.create');
+        $data = [
+            'locations' => Lokasi::all(),
+            'models' => ModelBarang::all(),
+            'categories' => Kategori::all(),
+        ];
+        
+        return view('admin.inventaris.barang.create', $data);
     }
 
     /**
@@ -56,7 +66,7 @@ class BarangController extends Controller
     public function show($id)
     {
         $barang = Barang::find($id);
-        return view('barang.show', compact('barang'));
+        return view('admin.inventaris.barang.show', compact('barang'));
     }
 
     /**

@@ -20,7 +20,7 @@ class LokasiController extends Controller
         $data = [
             'locations' => Lokasi::all()
         ];
-        return view('jurusan.lokasi.lokasi', $data);
+        return view('jurusan.lokasi.index', $data);
     }
 
     /**
@@ -31,7 +31,7 @@ class LokasiController extends Controller
     public function create()
     {
         //
-        return view('jurusan.lokasi.createlokasi');
+        return view('jurusan.lokasi.create');
     }
 
     /**
@@ -52,9 +52,9 @@ class LokasiController extends Controller
         $id = Lokasi::latest()->first()->id;
         $update = Lokasi::where('id', $id)->update(['encrypt_id' => Crypt::encrypt($id)]);
         if ($simpan && $update) {
-            return redirect()->route('lokasi')->with('success', 'Data berhasil disimpan');
+            return redirect()->route('jurusan.lokasi.index')->with('success', 'Data berhasil disimpan');
         } else {
-            return redirect()->route('lokasi')->with('error', 'Data gagal disimpan');
+            return redirect()->route('jurusan.lokasi.index')->with('error', 'Data gagal disimpan');
         }
     }
 
