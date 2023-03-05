@@ -29,7 +29,7 @@ class ModelController extends Controller
     public function create()
     {
         //
-        return view('admin.inventaris.model.createModel');
+        return view('admin.inventaris.model.create');
     }
 
     /**
@@ -79,7 +79,7 @@ class ModelController extends Controller
         $data = [
             'model' => ModelBarang::where('id', Crypt::decrypt($id))->first()
         ];
-        return view('admin.inventaris.model.editModel', $data);
+        return view('admin.inventaris.model.edit', $data);
     }
 
     /**

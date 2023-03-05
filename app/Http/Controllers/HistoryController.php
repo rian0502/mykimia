@@ -14,7 +14,7 @@ class HistoryController extends Controller
     public function index()
     {
         //
-        return view('admin.inventaris.history.history');
+        return view('admin.inventaris.history.index');
     }
 
     /**
@@ -25,7 +25,7 @@ class HistoryController extends Controller
     public function create()
     {
         //
-        return view('admin.inventaris.history.createhistory');
+        return view('admin.inventaris.history.create');
     }
 
     /**
