@@ -33,10 +33,13 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->nama_barang }}</td>
+                                        <td>{{ $item->id_kategori }}</td>
+                                        <td>{{ $item->id_model }}</td>
+                                        <td>{{ $item->id_lokasi }}</td>
+                                        <td>{{ $item->jumlah_akhir }}</td>
                                         <td>
                                             <div class="table-actions">
-                                                <a class="edit"
-                                                    href="{{ route('lab.barang.edit', $item->encrypt_id) }}">
+                                                <a class="edit" href="{{ route('lab.barang.edit', $item->encrypt_id) }}">
                                                     <button class="btn btn-warning">
                                                         <i class="icon-copy fi-page-edit"></i>
                                                         Edit
