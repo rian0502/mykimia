@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreLokasiRequest;
 use App\Models\Lokasi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 
 class LokasiController extends Controller
 {
@@ -18,7 +20,7 @@ class LokasiController extends Controller
         $data = [
             'locations' => Lokasi::all()
         ];
-        return view('superadmin.lokasi.lokasi', $data);
+        return view('jurusan.lokasi.lokasi', $data);
     }
 
     /**
@@ -29,7 +31,7 @@ class LokasiController extends Controller
     public function create()
     {
         //
-        return view('superadmin.lokasi.createlokasi');
+        return view('jurusan.lokasi.createlokasi');
     }
 
     /**
@@ -38,9 +40,22 @@ class LokasiController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreLokasiRequest $request)
     {
         //
+        $data = [
+            'nama_lokasi' => $request->nama_lokasi,
+            'nama_gedung' => $request->nama_gedung,
+            'lantai_tingkat' => $request->lantai_tingkat,
+        ];
+        $simpan = Lokasi::create($data);
+        $id = Lokasi::latest()->first()->id;
+        $update = Lokasi::where('id', $id)->update(['encrypt_id' => Crypt::encrypt($id)]);
+        if ($simpan && $update) {
+            return redirect()->route('lokasi')->with('success', 'Data berhasil disimpan');
+        } else {
+            return redirect()->route('lokasi')->with('error', 'Data gagal disimpan');
+        }
     }
 
     /**
@@ -72,7 +87,7 @@ class LokasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreLokasiRequest $request, $id)
     {
         //
     }

@@ -13,7 +13,7 @@ class StoreLokasiRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,30 @@ class StoreLokasiRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nama_lokasi' => 'required|max:100',
+            'nama_gedung' => 'required|max:100',
+            'lantai_tingkat' => 'required|numeric|max:100',
         ];
+    }
+    public function messages()
+    {
+        return [
+            'nama_lokasi.required' => 'Nama Lokasi harus diisi',
+            'nama_lokasi.max' => 'Nama Lokasi maksimal 100 karakter',
+            'nama_gedung.required' => 'Nama Gedung harus diisi',
+            'nama_gedung.max' => 'Nama Gedung maksimal 100 karakter',
+            'lantai_tingkat.required' => 'Lantai/Tingkat harus diisi',
+            'lantai_tingkat.max' => 'Lantai/Tingkat maksimal 100 karakter',
+        ];
+    }
+    protected function prepareForValidation()
+    {
+        $input = $this->all();
+        foreach ($input as $key => $value) {
+            if (is_string($value)) {
+                $input[$key] = strip_tags($value);
+            }
+        }
+        $this->replace($input);
     }
 }

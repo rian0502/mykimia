@@ -94,6 +94,7 @@ Route::get('/lokasi/create', [LokasiController::class, 'create'])->name('createl
 //action create lokasi
 Route::post('/lokasi/create',[LokasiController::class, 'store'])->name('createlokasi');
 //edit lokasi
+
 Route::get('/lokasi/edit/{id}', function ($id) {
     return view('jurusan.lokasi/editlokasi', ['id' => $id]);
 })->name('editlokasi');
@@ -101,8 +102,8 @@ Route::get('/lokasi/edit/{id}', function ($id) {
 Route::post('/lokasi/edit/{id}', function ($id) {
     return view('jurusan.lokasi/editlokasi', ['id' => $id]);
 })->name('editlokasi');
-//action create lokasi
-Route::post('/lokasi/create/action', )->name('createLokasiAction');
+
+
 
 
 Route::get('/forgot-password', [ForgotPassword::class, 'index'])
