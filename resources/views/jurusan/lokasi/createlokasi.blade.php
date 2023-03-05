@@ -13,7 +13,7 @@
                         </div>
 
                     </div>
-                    <form action="{{ route('createLokasiAction') }}" method="POST">
+                    <form action="{{ route('createlokasi') }}" method="POST">
                         @csrf
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}
@@ -43,7 +43,7 @@
                                     <label>Lantai Tingkat</label>
                                     <input autofocus name="lantai_tingkat" id="lantai_tingkat"
                                         class="form-control @error('lantai_tingkat') form-control-danger @enderror"
-                                        type="text" placeholder="Lantai Tingkat">
+                                        type="number" placeholder="Lantai Tingkat">
                                     @error('lantai_tingkat')
                                         <div class="form-control-feedback has-danger">{{ $message }}</div>
                                     @enderror
