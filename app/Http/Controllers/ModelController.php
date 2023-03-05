@@ -18,7 +18,7 @@ class ModelController extends Controller
         $data = [
             'models' => ModelBarang::all()
         ];
-        return view('admin.inventaris.model.model', $data);
+        return view('admin.inventaris.model.index', $data);
     }
 
     /**
