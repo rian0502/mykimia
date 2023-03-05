@@ -1,9 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ForgotPassword;
-use App\Models\Kategori;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\HistoryController;
@@ -48,7 +46,7 @@ Route::prefix('admin/berkas')->name('berkas.')->group(function () {
 
 Route::prefix('jurusan')->name('jurusan.')->group(function () {
 
-    Route::resource('lokasi', BarangController::class);
+    Route::resource('lokasi', LokasiController::class);
 });
 
 

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreKategoriRequest;
 use App\Models\Kategori;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 
 class KategoriController extends Controller
@@ -20,6 +19,7 @@ class KategoriController extends Controller
         $data = [
             'kategori' => Kategori::all()
         ];
+
         return view('admin.inventaris.kategori.index', $data);
     }
 

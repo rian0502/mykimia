@@ -17,9 +17,9 @@ class Lokasi extends Model
         'created_at',
         'updated_at'
     ];
-    public function barang()
+    public function barangs()
     {
-        return $this->hasMany(Barang::class);
+        return $this->hasMany(Barang::class, 'id_lokasi');
     }
 
 }
