@@ -63,6 +63,19 @@ Route::prefix('koor')->name('koor.')->group(function () {
 
 
 // route FE
+
+// CONTOH
+Route::prefix('fe')->name('fe')->group(function () {
+    Route::get('kategori/create', function () {
+        return view('admin.inventaris.kategori.create');
+    })->name('admin.kategori.create');
+
+});
+
+
+
+
+
 Route::get('/', function () {
     return view('index');
 });

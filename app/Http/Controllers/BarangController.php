@@ -75,10 +75,12 @@ class BarangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        $barang = Barang::where('id', Crypt::decrypt($id))->first();
-        return view('admin.inventaris.barang.show', compact('barang'));
+        // $barang = Barang::where('id', Crypt::decrypt($id))->first();
+        // return view('admin.inventaris.barang.show', compact('barang'));
+        return view('admin.inventaris.barang.show');
+
     }
 
     /**
