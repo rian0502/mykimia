@@ -82,9 +82,7 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="form-group">
-
                         <button type="submit" class="submit btn btn-primary">Submit</button>
                     </div>
 
