@@ -13,7 +13,7 @@
                         </div>
 
                     </div>
-                    <form action="{{ route('createLokasiAction') }}" method="POST">
+                    <form action="{{ route('jurusan.lokasi.update') }}" method="POST">
                         @csrf
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}

@@ -13,7 +13,7 @@
                         </div>
 
                     </div>
-                    <form action="{{route('admin.model.store')}}" method="POST">
+                    <form action="{{route('lab.model.store')}}" method="POST">
                         @csrf
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}
@@ -45,7 +45,7 @@
                         </div>
 
                     </form>
-                    <a href="{{route('admin.model.index')}}">
+                    <a href="{{route('lab.model.index')}}">
 
                         <button class="batal btn btn-secondary">Batal</button>
                     </a>

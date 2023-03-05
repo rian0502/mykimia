@@ -6,7 +6,7 @@
             <div class="card-box mb-30">
                 <div class="pd-20">
                     <h4 class="text-blue h4">Lokasi</h4>
-                    <a href="/lokasi/create">
+                    <a href="{{route('jurusan.lokasi.create')}}">
                         <button class="btn btn-success mt-3">
                             <i class="icon-copy fi-page-add"></i>
                             Tambah Data
@@ -40,9 +40,9 @@
                                             <i class="fa fa-ellipsis-h"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item" href="/lokasi/{{ $item->id }}/edit"><i
+                                            <a class="dropdown-item" href="{{route('jurusan.lokasi.edit', $item->id) }}"><i
                                                     class="fa fa-pencil"></i> Edit</a>
-                                            <form action="/lokasi/{{ $item->id }}" method="POST">
+                                            <form action="{{route('jurusan.lokasi.destroy', $item->id)  }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="dropdown-item text-danger"><i

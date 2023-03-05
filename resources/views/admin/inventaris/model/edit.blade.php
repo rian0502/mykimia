@@ -13,7 +13,7 @@
                         </div>
 
                     </div>
-                    <form action="{{ route('admin.model.update', $model->encrypt_id) }}" method="POST">
+                    <form action="{{ route('lab.model.update', $model->encrypt_id) }}" method="POST">
                         @method('PUT')
                         @csrf
                         <div class="profile-edit-list row">
@@ -46,7 +46,7 @@
                         </div>
 
                     </form>
-                    <a href="{{route('admin.model.index')}}">
+                    <a href="{{route('lab.model.index')}}">
 
                         <button class="batal btn btn-secondary">Batal</button>
                     </a>
