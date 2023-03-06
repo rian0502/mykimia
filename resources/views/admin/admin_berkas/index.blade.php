@@ -5,7 +5,7 @@
             <div class="min-height-200px">
                 <div class="card-box mb-30">
                     <div class="pd-20">
-                        <h4 class="text-blue h4">Activity Lab</h4>
+                        <h4 class="text-blue h4">Admin Lab</h4>
                         <a href="#">
                             <button class="btn btn-success mt-3">
                                 <i class="icon-copy fi-page-add"></i>
@@ -19,21 +19,29 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Lokasi</th>
-                                    <th>Tanggal Pakai</th>
-                                    <th>Keperluan</th>
-                                    <th>Keterangan</th>
+                                    <th>NIP</th>
+                                    <th>Nama</th>
+                                    <th>Tempat, Tanggal Lahir</th>
+                                    <th>Tanggal SK</th>
+                                    <th>Berkas SK</th>
+                                    <th>Alamat</th>
+                                    <th>Nomor Telepon</th>
+                                    <th>Role Admin</th>
                                     <th class="table-plus datatable-nosort">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($activity_lab as $item)
+                                @foreach ($ as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->id_lokasi }}</td>
-                                        <td>{{ $item->tanggal_pakai }}</td>
-                                        <td>{{ $item->Keperluan }}</td>
-                                        <td>{{ $item->ket }}</td>
+                                        <td>{{ $item->nip }}</td>
+                                        <td>{{ $item->nama }}</td>
+                                        <td>{{ $item->ttl }}</td>
+                                        <td>{{ $item->tanggal_sk }}</td>
+                                        <td>{{ $item->berkas_sk }}</td>
+                                        <td>{{ $item->alamat }}</td>
+                                        <td>{{ $item->no_tlp }}</td>
+                                        <td>{{ $item->role_admin }}</td>
                                         <td>
                                             <div class="dropdown">
                                                 <a class="btn btn-outline-primary dropdown-toggle" href="#"
