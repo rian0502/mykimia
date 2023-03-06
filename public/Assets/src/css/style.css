@@ -7,7 +7,6 @@
     --warning: #ffc107;
 }
 
-
 .back-to-top {
     position: fixed;
     display: none;
@@ -125,6 +124,10 @@
         opacity: 0;
         visibility: hidden;
         transition: 0.5s;
+    }
+    .login {
+        display: none;
+        /* color: red; */
     }
 
     .navbar .nav-item:hover .dropdown-menu {
