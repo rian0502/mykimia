@@ -19,7 +19,7 @@
                             {{-- form untuk sebelah kiri --}}
                             <div class="weight-500 col-md-6">
                                 <label>Nama Model</label>
-                                <input autofocus name="nama_model" id="nama_model"
+                                <input value="{{old('nama_model')}}" autofocus name="nama_model" id="nama_model"
                                     class="form-control @error('nama_model') form-control-danger @enderror" type="text"
                                     placeholder="Nama Model">
                                 @error('nama_model')
@@ -29,7 +29,7 @@
                             {{-- form untuk sebelah kanan --}}
                             <div class="merek weight-500 col-md-6">
                                 <label>Merek</label>
-                                <input autofocus name="merk" id="merk"
+                                <input value="{{old('merk')}}" autofocus name="merk" id="merk"
                                     class="form-control @error('merk') form-control-danger @enderror" type="text"
                                     placeholder="Merek">
                                 @error('merk')

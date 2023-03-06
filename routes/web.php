@@ -44,7 +44,6 @@ Route::prefix('admin/berkas')->name('berkas.')->group(function () {
 
 
 Route::prefix('jurusan')->name('jurusan.')->group(function () {
-
     Route::resource('lokasi', LokasiController::class);
 });
 
@@ -63,6 +62,19 @@ Route::prefix('koor')->name('koor.')->group(function () {
 
 
 // route FE
+
+// CONTOH
+Route::prefix('fe')->name('fe')->group(function () {
+    Route::get('kategori/create', function () {
+        return view('admin.inventaris.kategori.create');
+    })->name('admin.kategori.create');
+
+});
+
+
+
+
+
 Route::get('/', function () {
     return view('index');
 });

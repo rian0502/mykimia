@@ -18,7 +18,7 @@
                             <div class="weight-500 col-md-6">
                                 <div class="form-group">
                                     <label>Nama Barang</label>
-                                    <input autofocus name="nama_barang" id="nama_barang"
+                                    <input value="{{old('nama_barang')}}" autofocus name="nama_barang" id="nama_barang"
                                         class="form-control @error('nama_barang') form-control-danger @enderror"
                                         type="text" placeholder="Nama Barang">
                                     @error('nama_barang')
@@ -27,7 +27,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Jumlah</label>
-                                    <input autofocus name="jumlah_akhir" id="jumlah_akhir" min="0"
+                                    <input value="{{old('jumlah_akhir')}}" autofocus name="jumlah_akhir" id="jumlah_akhir" min="0"
                                         class="form-control @error('jumlah_akhir') form-control-danger @enderror"
                                         type="number" placeholder="Jumlah">
                                     @error('jumlah_akhir')
@@ -39,7 +39,7 @@
                                     <label>Lokasi</label>
                                     <select class="custom-select2 form-control" name="id_lokasi" required>
                                         @foreach ($locations as $item)
-                                            <option value="{{ $item->encrypt_id }}">
+                                            <option value="{{ $item->encrypt_id }}" {{old('id_lokasi') == $item->encrypt_id ? 'selected' : '' }}>
                                                 {{ $item->nama_lokasi . ', Lt-' . $item->lantai_tingkat }}
                                             </option>
                                         @endforeach
@@ -53,7 +53,7 @@
                                     <label>Kategori</label>
                                     <select class="custom-select2 form-control" name="id_kategori">
                                         @foreach ($categories as $item)
-                                            <option value="{{ $item->encrypt_id }}">{{ $item->nama_kategori }}</option>
+                                            <option value="{{ $item->encrypt_id }}" {{old('id_kategori') == $item->encrypt_id ? 'selected' : '' }}>{{ $item->nama_kategori }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -61,7 +61,7 @@
                                     <label>Model</label>
                                     <select class="custom-select2 form-control" name="id_model">
                                         @foreach ($models as $item)
-                                            <option value="{{ $item->encrypt_id }}">
+                                            <option value="{{ $item->encrypt_id }}" {{old('id_model') == $item->encrypt_id ? 'selected' : '' }}>
                                                 {{ $item->merk . ', ' . $item->nama_model }}
                                             </option>
                                         @endforeach
