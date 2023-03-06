@@ -38,16 +38,17 @@
                                                         Edit
                                                     </button>
                                                 </a>
-                                                <form action="{{ route('lab.model.destroy', $item->encrypt_id) }}"
-                                                    method="POST">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger"
-                                                        onclick="return confirm('Apakah Anda yakin ingin menghapus kategori ini?')">
-                                                        <i class="icon-copy dw dw-delete-3"></i>
-                                                        Hapus
-                                                    </button>
-                                                </form>
+                                                @if ($item->barangs->count() == 0)
+                                                    <form action="{{ route('lab.model.destroy', $item->encrypt_id) }}"
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="btn btn-danger">
+                                                            <i class="icon-copy fi-page-delete"></i>
+                                                            Hapus
+                                                        </button>
+                                                    </form>
+                                                @endif
 
                                             </div>
                                         </td>
