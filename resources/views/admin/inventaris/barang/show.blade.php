@@ -1,15 +1,15 @@
 @extends('layouts.datatable')
 @section('datatable')
-<style>
-    .rounded-div {
-        border-radius: 10px;
-        border: 1px solid #e5e5e5;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
+    <style>
+        .rounded-div {
+            border-radius: 10px;
+            border: 1px solid #e5e5e5;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
 
-    }
-</style>
+        }
+    </style>
     <div class="main-container">
         <div class="pd-ltr-20 xs-pd-20-10">
             <div class="min-height-200px">
@@ -23,26 +23,29 @@
                         <div class="p-3 mb-2 bg-light text-dark rounded-div">
                             <div class="row">
                                 <label class="col-md-3 bold"> <strong> Nama Barang</strong></label>
-                                <div class="col-md-3">2017051062</div>
-                                <label class="col-md-3 bold"><b>Lokasi / Lantai / Gedung</b></label>
-                                <div class="col-md-3">YOGI ANDARU</div>
+                                <div class="col-md-3">{{ $barang->nama_barang }}</div>
+                                <label class="col-md-3 bold"><b>Gedung / Lantai</b></label>
+                                <div class="col-md-3">
+                                    {{ $barang->lokasi->nama_gedung . ' / Lt-' . $barang->lokasi->lantai_tingkat }}</div>
                             </div>
                             <div class="row">
                                 <label class="col-md-3 bold"><b>Kategori</b></label>
-                                <div class="col-md-3">Aktif</div>
-                                <label class="col-md-3 bold"> <strong> Jumlah Barang</strong></label>
-                                <div class="col-md-3">S1-Ilmu Komputer</div>
+                                <div class="col-md-3">{{ $barang->kategori->nama_kategori }}</div>
+                                <label class="col-md-3 bold"> <strong> Lokasi</strong></label>
+                                <div class="col-md-3">{{ $barang->lokasi->nama_lokasi }}</div>
                             </div>
+
                             <div class="row">
                                 <label class="col-md-3 bold"><b>Model</b></label>
-                                <div class="col-md-3">2020</div>
-                                <label class="col-md-3 bold"><b>Diperbarui</b></label>
-                                <div class="col-md-3">BAMBANG</div>
+                                <div class="col-md-3">{{ $barang->modelBarang->nama_model }}</div>
+                                <label class="col-md-3 bold"> <strong> Jumlah Barang</strong></label>
+                                <div class="col-md-3">{{ $barang->jumlah_akhir }}</div>
                             </div>
                             <div class="row">
                                 <label class="col-md-3 bold"> <strong> Merek</strong></label>
-                                <div class="col-md-3">2020</div>
-                                <div class="col-md-3"><br></div>
+                                <div class="col-md-3">{{ $barang->modelBarang->merk }}</div>
+                                <label class="col-md-3 bold"><b>Diperbarui</b></label>
+                                <div class="col-md-3">{{ $carbon::parse($barang->updated_at)->format('d F Y') }}</div>
                             </div>
                         </div>
                         <style type="text/css">
@@ -80,53 +83,20 @@
                             <thead>
                                 <tr>
                                     <th>No.</th>
-                                    <th>Nama Barang</th>
-                                    <th>Kategori</th>
-                                    <th>Model</th>
-                                    <th>Lokasi</th>
+                                    <th>Diubah</th>
                                     <th>Jumlah</th>
-                                    <th class="table-plus datatable-nosort">Aksi</th>
+                                    <th>Keterangan</th>
                                 </tr>
                             </thead>
                             <tbody>
-
-                                {{-- @foreach ($barang as $item)
-                            <tr>
-                                <td>{{ $loop->iteration }}</td>
-                                <td>{{ $item->nama_barang }}</td>
-                                <td>{{ $item->kategori->nama_kategori }}</td>
-                                <td>{{ $item->modelBarang->nama_model }}</td>
-                                <td>{{ $item->lokasi->nama_lokasi }}</td>
-                                <td>{{ $item->jumlah_akhir }}</td>
-                                <td>
-                                    <div class="dropdown">
-                                        <a class="btn btn-outline-primary dropdown-toggle" href="#" role="button"
-                                            data-toggle="dropdown">
-                                            <i class="fa fa-ellipsis-h"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item"
-                                                href="{{route('lab.barang.show', $item->encrypt_id ) }}"><i
-                                                    class="fal fa-eye"></i> Detail</a>
-                                            <a class="dropdown-item"
-                                                href="{{route('lab.barang.edit', $item->encrypt_id ) }}"><i
-                                                    class="fa fa-pencil"></i> Edit</a>
-                                            <form
-                                                action="{{route('lab.barang.destroy', $item->encrypt_id )  }}"
-                                                method="POST">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="dropdown-item text-danger"><i
-                                                        class="fa fa-trash"></i>
-                                                    Delete</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            @endforeach --}}
-
-
+                                @foreach ($histories as $item)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $carbon::parse($item->updated_at)->format('d F Y') }}</td>
+                                        <td>{{ $item->jumlah_awal}}</td>
+                                        <td>{{ $item->ket }}</td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

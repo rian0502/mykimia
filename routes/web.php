@@ -43,8 +43,7 @@ Route::prefix('admin/berkas')->name('berkas.')->group(function () {
 });
 
 
-Route::prefix('jurusan')->name('jurusan.')->group(function () {
-
+Route::prefix('jurusan')->name('jurusan.')->middleware(['role:jurusan'])->group(function () {
     Route::resource('lokasi', LokasiController::class);
 });
 
