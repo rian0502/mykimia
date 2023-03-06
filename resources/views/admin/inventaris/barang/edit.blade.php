@@ -40,17 +40,20 @@
                             <div class="form-group">
                                 <label>Jumlah Akhir</label>
                                 <input autofocus name="jumlah_akhir" id="nama_barang" min="0"
-                                    class="form-control @error('nama_barang') form-control-danger @enderror"
-                                    type="number" placeholder="Jumlah Akhir">
-                                @error('nama_barang')
+                                    class="form-control @error('jumlah_akhir') form-control-danger @enderror"
+                                    type="number" placeholder="Jumlah Akhir" value="{{old('jumlah_akhir')}}">
+                                @error('jumlah_akhir')
                                     <div class="form-control-feedback has-danger">{{ $message }}</div>
                                 @enderror
                             </div>
-                        
+
                             <div class="form-group">
                                 <label>Ket</label>
-                                <textarea class="form-control" name="ket" id="ket" cols="5" rows="3"
-                                    placeholder="Keterangan"></textarea>
+                                <textarea class="form-control @error('ket') form-control-danger @enderror" name="ket" id="ket" cols="5" rows="3"
+                                    placeholder="Keterangan" >{{old('ket')}}</textarea>
+                                    @error('ket')
+                                    <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
                             {{-- form untuk sebelah kanan --}}
@@ -66,8 +69,8 @@
                                         @endforeach
                                     </select>
                                 </div>
-                            
-   
+
+
                                 <div class="form-group">
                                     <label>Lokasi</label>
                                     <select class="custom-select2 form-control" style="width: 100%; height: 38px" name="id_lokasi">
