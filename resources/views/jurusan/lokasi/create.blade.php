@@ -20,7 +20,7 @@
                             <div class="weight-500 col-md-6">
                                 <div class="form-group">
                                     <label>Nama Lokasi</label>
-                                    <input autofocus name="nama_lokasi" id="nama_lokasi"
+                                    <input value="{{old('nama_lokasi')}}" autofocus name="nama_lokasi" id="nama_lokasi"
                                         class="form-control @error('nama_lokasi') form-control-danger @enderror"
                                         type="text" placeholder="Nama Lokasi">
                                     @error('nama_lokasi')
@@ -29,7 +29,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Nama Gedung</label>
-                                    <input autofocus name="nama_gedung" id="nama_gedung"
+                                    <input value="{{old('nama_gedung')}}" autofocus name="nama_gedung" id="nama_gedung"
                                         class="form-control @error('nama_gedung') form-control-danger @enderror"
                                         type="text" placeholder="Nama Gedung">
                                     @error('nama_gedung')
@@ -41,7 +41,7 @@
                             <div class="merek weight-500 col-md-6">
                                 <div class="form-group">
                                     <label>Lantai Tingkat</label>
-                                    <input autofocus name="lantai_tingkat" id="lantai_tingkat"
+                                    <input value="{{old('lantai_tingkat')}}" autofocus name="lantai_tingkat" id="lantai_tingkat"
                                         class="form-control @error('lantai_tingkat') form-control-danger @enderror"
                                         type="number" placeholder="Lantai Tingkat">
                                     @error('lantai_tingkat')
