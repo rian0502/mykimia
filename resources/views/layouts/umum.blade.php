@@ -81,8 +81,8 @@
     <div class="container-fluid bg-white sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
-                <a href="index.html" class="navbar-brand d-lg-none">
-                    <h1 class="fw-bold m-0">Chemistry Program Data Center</h1>
+                <a href="{{ route('beranda') }}" class="navbar-brand d-lg-none">
+                    <h1 class="fw-bold m-0">C P D C</h1>
                 </a>
                 <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -93,7 +93,6 @@
                         <a href="index.html" class="nav-item nav-link active">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="project.html" class="nav-item nav-link">Projects</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
@@ -105,7 +104,13 @@
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        {{-- tampil saat mode mobile --}}
+                        <div class="login">
+                            <a href="/beranda" class="nav-item nav-link">Masuk</a>
+                        </div>
+                        {{-- tampil saat mode mobile --}}
                     </div>
+
                     <div class="ms-auto d-none d-lg-block">
                         <a href="/beranda" class="btn btn-primary rounded-pill py-2 px-3">Masuk</a>
                     </div>
