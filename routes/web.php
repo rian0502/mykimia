@@ -25,6 +25,7 @@ Route::prefix('admin/lab')->name('lab.')->group(function () {
     Route::resource('model', ModelController::class);
     Route::resource('barang', BarangController::class);
     Route::resource('kategori', KategoriController::class);
+    Route::resource('ruang', LabController::class);
     Route::resource('barang/history', HistoryController::class)->names(
         [
             'index' => 'barang.history.index',
