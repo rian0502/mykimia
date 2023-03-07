@@ -82,7 +82,7 @@
             <div class="menu-icon bi bi-list"></div>
             <div class="search-toggle-icon bi bi-search" data-toggle="header_search"></div>
             <div class="header-search">
-  
+
             </div>
         </div>
         <div class="header-right">
@@ -308,6 +308,12 @@
                             <span class="micon bi bi-pin-map"></span><span class="mtext">Lokasi</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ route('lab.ruang.index') }}"
+                            class="dropdown-toggle no-arrow {{ Request::is('admin/lab/ruang*') ? 'active' : '' }}">
+                            <span class="micon bi bi-radioactive"></span><span class="mtext">Laboratorium</span>
+                        </a>
+                    </li>
                     <li
                         class="dropdown {{ Request::is('admin/lab/barang*') || Request::is('admin/lab/kategori*') || Request::is('admin/lab/model*') ? 'show' : '' }}">
                         <a href="javascript:;" class="dropdown-toggle"
@@ -399,31 +405,31 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS" height="0" width="0"
             style="display: none; visibility: hidden"></iframe></noscript>
 
-            <!-- Tambahkan HTML untuk menampilkan notifikasi -->
+    <!-- Tambahkan HTML untuk menampilkan notifikasi -->
 
 
-<!-- Tambahkan script untuk menampilkan notifikasi -->
-<script>
-    @if (session('success'))
-        Toastify({
-            text: "{{ session('success') }}",
-            duration: 3000,
-            gravity: "bottom",
-            position: "right",
-            backgroundColor: "#1abc9c",
-            stopOnFocus: true,
-        }).showToast();
-    @elseif (session('error'))
-        Toastify({
-            text: "{{ session('error') }}",
-            duration: 3000,
-            gravity: "bottom",
-            position: "right",
-            backgroundColor: "#e74c3c",
-            stopOnFocus: true,
-        }).showToast();
-    @endif
-</script>
+    <!-- Tambahkan script untuk menampilkan notifikasi -->
+    <script>
+        @if (session('success'))
+            Toastify({
+                text: "{{ session('success') }}",
+                duration: 3000,
+                gravity: "bottom",
+                position: "right",
+                backgroundColor: "#1abc9c",
+                stopOnFocus: true,
+            }).showToast();
+        @elseif (session('error'))
+            Toastify({
+                text: "{{ session('error') }}",
+                duration: 3000,
+                gravity: "bottom",
+                position: "right",
+                backgroundColor: "#e74c3c",
+                stopOnFocus: true,
+            }).showToast();
+        @endif
+    </script>
 
     <!-- End Google Tag Manager (noscript) -->
 
