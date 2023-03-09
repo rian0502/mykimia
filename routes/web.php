@@ -1,12 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LabController;
 use App\Http\Controllers\ForgotPassword;
-use App\Http\Controllers\KategoriController;
-use App\Http\Controllers\BarangController;
-use App\Http\Controllers\HistoryController;
-use App\Http\Controllers\LokasiController;
 use App\Http\Controllers\ModelController;
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\LokasiController;
+use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\KategoriController;
 
 
 /*

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->id();
             $table->string('encrypt_id')->unique()->nullable();
             $table->string('nama_kategori');
+            $table->string('ket');
             $table->timestamps();
         });
     

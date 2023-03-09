@@ -13,14 +13,35 @@
                         </div>
 
                     </div>
-                    <form action="{{ route('jurusan.lokasi.store') }}" method="POST">
+                    <form action="{{ route('lab.ruang.store') }}" method="POST">
                         @csrf
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}
                             <div class="weight-500 col-md-6">
                                 <div class="form-group">
+                                    <label>Tanggal Kegiatan</label>
+                                    <input type="text" class="form-control date-picker" name="tanggal_kegiatan" placeholder="Tanggal Pakai" readonly/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Keterangan</label>
+                                    <textarea class="form-control" name="ket"></textarea>
+                                </div>
+                            </div>
+                            {{-- form untuk sebelah kanan --}}
+                            <div class="merek weight-500 col-md-6">
+                                <div class="form-group">
+                                    <label>Keperluan</label>
+                                    <select class="custom-select form-control"  style="width: 100%; height: 38px" name="keperluan">
+                                        <option value="Praktikum">Praktikum</option>
+                                        <option value="Seminar">Seminar</option>
+                                        <option value="Ujian">Ujian</option>
+                                        <option value="Penilitian">Penilitian</option>
+                                        <option value="Lainnya">Lainnya</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
                                     <label>Lokasi</label>
-                                    <select class="custom-select2 form-control" name="id_lokasi" required>
+                                    <select class="custom-select2 form-control"  style="width: 100%; height: 38px" name="id_lokasi">
                                         @foreach ($locations as $item)
                                             <option value="{{ $item->encrypt_id }}"
                                                 {{ old('id_lokasi') == $item->encrypt_id ? 'selected' : '' }}>
@@ -29,38 +50,16 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="form-group">
-                                    <label>Tanggal Pakai</label>
-                                    <input type="text" class="form-control date-picker" placeholder="Tanggal Pakai" />
-                                </div>
-
-                            </div>
-                            {{-- form untuk sebelah kanan --}}
-                            <div class="merek weight-500 col-md-6">
-                                <div class="form-group">
-                                    <label>Keperluan</label>
-                                    <input value="" autofocus name="" id=""
-                                        class="form-control @error('') form-control-danger @enderror" type="text"
-                                        placeholder="Keperluan">
-                                    @error('keperluan')
-                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <label>Keterangan</label>
-                                    <textarea class="form-control"></textarea>
-                                </div>
                             </div>
                         </div>
 
 
                         <div class="form-group">
-
                             <button type="submit" class="submit btn btn-primary">Submit</button>
                         </div>
 
                     </form>
-                    <a href="{{ route('jurusan.lokasi.index') }}">
+                    <a href="{{ route('lab.ruang.index') }}">
 
                         <button class="batal btn btn-secondary">Batal</button>
                     </a>
