@@ -12,12 +12,17 @@ class ModelBarang extends Model
     protected $fillable = [
         'encrypt_id', 
         'nama_model',
-        'merk', 
+        'merk',
+        'id_kategori', 
         'created_at',
         'updated_at'
     ];
     public function barangs()
     {
         return $this->hasMany(Barang::class, 'id_model');
+    }
+    public function kategori()
+    {
+        return $this->belongsTo(Kategori::class, 'id_kategori');
     }
 }

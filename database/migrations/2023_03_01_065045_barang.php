@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('encrypt_id')->unique()->nullable();
             $table->string('nama_barang');
             $table->integer('jumlah_akhir');
-            $table->foreignId('id_kategori')->references('id')->on('kategori')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('id_model')->references('id')->on('model_barang')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('id_lokasi')->references('id')->on('lokasi')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

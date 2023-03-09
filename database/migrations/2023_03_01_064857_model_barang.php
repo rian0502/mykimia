@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('encrypt_id')->unique()->nullable();
             $table->string('nama_model');
             $table->string('merk');
+            $table->foreignId('id_kategori')->references('id')->on('kategori')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

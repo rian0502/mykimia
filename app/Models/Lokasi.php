@@ -21,5 +21,9 @@ class Lokasi extends Model
     {
         return $this->hasMany(Barang::class, 'id_lokasi');
     }
+    public function laboratoriums()
+    {
+        return $this->hasMany(Laboratorium::class, 'id_lokasi');
+    }
 
 }

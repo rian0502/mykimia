@@ -6,7 +6,7 @@
                 <div class="card-box mb-30">
                     <div class="pd-20">
                         <h4 class="text-blue h4">Activity Lab</h4>
-                        <a href="#">
+                        <a href="{{ route('lab.ruang.create') }}">
                             <button class="btn btn-success mt-3">
                                 <i class="icon-copy fi-page-add"></i>
                                 Tambah Data
@@ -27,11 +27,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($activity_lab as $item)
+                                @foreach ($activities as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->id_lokasi }}</td>
-                                        <td>{{ $item->tanggal_pakai }}</td>
+                                        <td>{{ $item->lokasi->nama_lokasi }}</td>
+                                        <td>{{ $carbon::parse($item->updated_at)->format('d F Y') }}</td>
                                         <td>{{ $item->Keperluan }}</td>
                                         <td>{{ $item->ket }}</td>
                                         <td>

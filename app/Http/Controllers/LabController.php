@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Laboratorium;
+use App\Models\Lokasi;
 use Illuminate\Http\Request;
 
 class LabController extends Controller
@@ -14,6 +16,10 @@ class LabController extends Controller
     public function index()
     {
         //
+        $data = [
+            'activities' => Laboratorium::all()
+        ];
+        return view('admin.lab.index', $data);
     }
 
     /**
@@ -24,6 +30,10 @@ class LabController extends Controller
     public function create()
     {
         //
+        $data = [
+            'locations' => Lokasi::all()
+        ];
+        return view('admin.lab.create', $data);
     }
 
     /**
@@ -35,6 +45,7 @@ class LabController extends Controller
     public function store(Request $request)
     {
         //
+        dd($request->all());
     }
 
     /**
