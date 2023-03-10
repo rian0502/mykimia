@@ -14,12 +14,11 @@ return new class extends Migration
     public function up()
     {
         //
-        Schema::create('model_barang', function (Blueprint $table) {
+        Schema::create('sop_lab', function (Blueprint $table) {
             $table->id();
             $table->string('encrypt_id')->unique()->nullable();
-            $table->string('nama_model');
-            $table->string('merk');
-            $table->foreignId('id_kategori')->references('id')->on('kategori')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('id_lokasi')->references('id')->on('lokasi')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('file_sop');
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ return new class extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('model_barang');
+        Schema::dropIfExists('sop_lab');
     }
 };

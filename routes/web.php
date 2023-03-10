@@ -1,12 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LabController;
 use App\Http\Controllers\ForgotPassword;
-use App\Http\Controllers\KategoriController;
-use App\Http\Controllers\BarangController;
-use App\Http\Controllers\HistoryController;
-use App\Http\Controllers\LokasiController;
 use App\Http\Controllers\ModelController;
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\LokasiController;
+use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\KategoriController;
 
 
 /*
@@ -25,6 +26,7 @@ Route::prefix('admin/lab')->name('lab.')->group(function () {
     Route::resource('model', ModelController::class);
     Route::resource('barang', BarangController::class);
     Route::resource('kategori', KategoriController::class);
+    Route::resource('ruang', LabController::class);
     Route::resource('barang/history', HistoryController::class)->names(
         [
             'index' => 'barang.history.index',
@@ -68,7 +70,6 @@ Route::prefix('fe')->name('fe')->group(function () {
     Route::get('kategori/create', function () {
         return view('admin.inventaris.kategori.create');
     })->name('admin.kategori.create');
-
 });
 
 
@@ -84,9 +85,25 @@ Route::get('/beranda', function () {
 
 
 
-Route::get('/forgot-password', [ForgotPassword::class, 'index'])
+//auth page
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('register');
+Route::get('/forgot-password', function () {
+    return view('auth.forgot');
+})->name('forgot');
+Route::get('/reset-password', function () {
+    return view('auth.reset');
+})->name('reset');
+
+
+
+Route::get('/forgot', [ForgotPassword::class, 'index'])
     ->name('password.request');
 Route::post('/forgot-password', [ForgotPassword::class, 'sendResetLinkEmail'])
     ->name('password.email');
-Route::get('reset-password/{token}', [ForgotPassword::class, 'showResetPasswordForm'])
+Route::get('reset/{token}', [ForgotPassword::class, 'showResetPasswordForm'])
     ->name('password.reset');

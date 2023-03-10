@@ -326,6 +326,12 @@
                             <span class="micon bi bi-pin-map"></span><span class="mtext">Lokasi</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ route('lab.ruang.index') }}"
+                            class="dropdown-toggle no-arrow {{ Request::is('admin/lab/ruang*') ? 'active' : '' }}">
+                            <span class="micon bi bi-radioactive"></span><span class="mtext">Laboratorium</span>
+                        </a>
+                    </li>
                     <li
                         class="dropdown {{ Request::is('admin/lab/barang*') || Request::is('admin/lab/kategori*') || Request::is('admin/lab/model*') ? 'show' : '' }}">
                         <a href="javascript:;" class="dropdown-toggle"
