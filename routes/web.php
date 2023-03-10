@@ -42,6 +42,12 @@ Route::prefix('admin/lab')->name('lab.')->group(function () {
 });
 
 
+Route::prefix('test')->name('test.')->group(function () {
+    Route::view('sop/create', 'admin.lab.sop.create')->name('sop.create');
+    Route::view('sop/edit', 'admin.lab.sop.edit')->name('sop.edit');
+});
+
+
 Route::prefix('admin/berkas')->name('berkas.')->group(function () {
 });
 
