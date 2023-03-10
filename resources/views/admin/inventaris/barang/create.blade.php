@@ -49,14 +49,7 @@
                             </div>
                             {{-- form untuk sebelah kanan --}}
                             <div class="kanan weight-500 col-md-6">
-                                <div class="form-group">
-                                    <label>Kategori</label>
-                                    <select class="custom-select2 form-control" name="id_kategori">
-                                        @foreach ($categories as $item)
-                                            <option value="{{ $item->encrypt_id }}" {{old('id_kategori') == $item->encrypt_id ? 'selected' : '' }}>{{ $item->nama_kategori }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
+                                
                                 <div class="form-group">
                                     <label>Model</label>
                                     <select class="custom-select2 form-control" name="id_model">
