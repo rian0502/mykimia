@@ -79,7 +79,8 @@
                 <div class="col-md-6 col-lg-5">
                     <div class="register-box bg-white box-shadow border-radius-10">
                         <div class="wizard-content">
-                            <form class="tab-wizard2 wizard-circle wizard">
+                            <form class="tab-wizard2 wizard-circle wizard" action="" method="" enctype="multipart/form-data">
+                                @csrf
                                 <h5>Kredensial Akun Dasar</h5>
                                 <section>
                                     <div class="form-wrap max-width-600 mx-auto">
