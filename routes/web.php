@@ -27,6 +27,7 @@ Route::prefix('admin/lab')->name('lab.')->group(function () {
     Route::resource('barang', BarangController::class);
     Route::resource('kategori', KategoriController::class);
     Route::resource('ruang', LabController::class);
+    Route::resource('sop', SopController::class);
     Route::resource('barang/history', HistoryController::class)->names(
         [
             'index' => 'barang.history.index',
@@ -38,6 +39,12 @@ Route::prefix('admin/lab')->name('lab.')->group(function () {
             'destroy' => 'barang.history.destroy',
         ]
     );
+});
+
+
+Route::prefix('test')->name('test.')->group(function () {
+    Route::view('sop/create', 'admin.lab.sop.create')->name('sop.create');
+    Route::view('sop/edit', 'admin.lab.sop.edit')->name('sop.edit');
 });
 
 
