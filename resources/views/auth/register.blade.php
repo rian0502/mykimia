@@ -72,14 +72,14 @@
             <div class="row align-items-center">
                 <div class="col-md-6 col-lg-7">
                     <div id="picture">
-                        {{-- <img src="/Assets/admin/vendors/images/bg-login.png" /> --}}
                         <img src="/Assets/admin/vendors/images/register-page-img.png" alt="" />
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-5">
                     <div class="register-box bg-white box-shadow border-radius-10">
                         <div class="wizard-content">
-                            <form class="tab-wizard2 wizard-circle wizard">
+                            <form class="tab-wizard2 wizard-circle wizard" action="" method="" enctype="multipart/form-data">
+                                @csrf
                                 <h5>Kredensial Akun Dasar</h5>
                                 <section>
                                     <div class="form-wrap max-width-600 mx-auto">
@@ -89,12 +89,6 @@
                                                 <input type="email" class="form-control" />
                                             </div>
                                         </div>
-                                        {{-- <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Username*</label>
-                                            <div class="col-sm-8">
-                                                <input type="text" class="form-control" />
-                                            </div>
-                                        </div> --}}
                                         <div class="form-group row ">
                                             <label class="col-sm-4 col-form-label">Kata Sandi*</label>
                                             <div class="col-sm-8">
