@@ -205,6 +205,13 @@ jQuery(document).ready(function () {
 		autoClose: true,
 		dateFormat: "MM yyyy",
 	});
+	$(".year-picker").datepicker({
+		language: "en",
+		minView: "years",
+		view: "years",
+		autoClose: true,
+		dateFormat: "yyyy",
+	});
 
 	// only time picker
 	$(".time-picker").timeDropper({
