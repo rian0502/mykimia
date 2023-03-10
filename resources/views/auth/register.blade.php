@@ -72,7 +72,6 @@
             <div class="row align-items-center">
                 <div class="col-md-6 col-lg-7">
                     <div id="picture">
-                        {{-- <img src="/Assets/admin/vendors/images/bg-login.png" /> --}}
                         <img src="/Assets/admin/vendors/images/register-page-img.png" alt="" />
                     </div>
                 </div>
@@ -90,12 +89,6 @@
                                                 <input type="email" class="form-control" />
                                             </div>
                                         </div>
-                                        {{-- <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Username*</label>
-                                            <div class="col-sm-8">
-                                                <input type="text" class="form-control" />
-                                            </div>
-                                        </div> --}}
                                         <div class="form-group row ">
                                             <label class="col-sm-4 col-form-label">Kata Sandi*</label>
                                             <div class="col-sm-8">
