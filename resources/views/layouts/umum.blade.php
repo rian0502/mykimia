@@ -105,15 +105,27 @@
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                         {{-- tampil saat mode mobile --}}
-                        <div class="login">
-                            <a href="{{ route('login') }}" class="nav-item nav-link">Masuk</a>
-                        </div>
+                        @auth
+                            <div class="ms-auto d-none d-lg-block">
+                                <a href="{{ route('logout') }}" class="btn btn-primary rounded-pill py-2 px-3">Keluar</a>
+                            </div>
+                        @else
+                            <div class="ms-auto d-none d-lg-block">
+                                <a href="{{ route('login') }}" class="btn btn-primary rounded-pill py-2 px-3">Masuk</a>
+                            </div>
+                        @endauth
                         {{-- tampil saat mode mobile --}}
                     </div>
 
-                    <div class="ms-auto d-none d-lg-block">
-                        <a href="{{ route('login') }}" class="btn btn-primary rounded-pill py-2 px-3">Masuk</a>
-                    </div>
+                    @auth
+                        <div class="ms-auto d-none d-lg-block">
+                            <a href="{{ route('logout') }}" class="btn btn-primary rounded-pill py-2 px-3">Keluar</a>
+                        </div>
+                    @else
+                        <div class="ms-auto d-none d-lg-block">
+                            <a href="{{ route('login') }}" class="btn btn-primary rounded-pill py-2 px-3">Masuk</a>
+                        </div>
+                    @endauth
                 </div>
             </nav>
         </div>

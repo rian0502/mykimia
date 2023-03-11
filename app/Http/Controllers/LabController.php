@@ -75,7 +75,10 @@ class LabController extends Controller
     public function show($id)
     {
         //
-        return view('admin.lab.show');
+        $data = [
+            'lab' => Laboratorium::where('id', Crypt::decrypt($id))->first(),
+        ];
+        return view('admin.lab.show', $data);
     }
 
     /**

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LabController;
 use App\Http\Controllers\SopController;
@@ -53,7 +54,7 @@ Route::prefix('admin/berkas')->name('berkas.')->group(function () {
 });
 
 
-Route::prefix('jurusan')->name('jurusan.')->group(function () {
+Route::prefix('jurusan')->name('jurusan.')->middleware('auth', 'role:jurusan')->group(function () {
     Route::resource('lokasi', LokasiController::class);
 });
 
@@ -96,7 +97,13 @@ Route::get('/beranda', function () {
 //auth page
 Route::get('/login', function () {
     return view('auth.login');
-})->name('login');
+})->middleware('guest')->name('login');
+
+Route::post('/login', [AuthController::class, 'loginAttempt'])->name('login.post');
+
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+
 Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
