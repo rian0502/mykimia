@@ -81,17 +81,17 @@
                         </div>
                         <h6 class="mb-20" style="text-align: center">Masukkan kata sandi baru Anda, konfirmasi dan
                             kirim</h6>
-                        <form action="" method="" enctype="multipart/form-data">
+                        <form action="/update" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="input-group custom">
-                                <input type="email" class="form-control form-control-lg"
+                                <input type="email" name="email" class="form-control form-control-lg"
                                     placeholder="Email" />
                                 <div class="input-group-append custom">
                                     <span class="input-group-text"><i class="dw dw-email"></i></span>
                                 </div>
                             </div>
                             <div class="input-group custom">
-                                <input type="text" class="form-control form-control-lg"
+                                <input type="text" name="token" value="{{ $token }}" class="form-control form-control-lg"
                                     placeholder="Token" />
                                 <div class="input-group-append custom">
                                     <span class="input-group-text"><i class="dw dw-key"></i></span>
@@ -99,14 +99,14 @@
                             </div>
                             <div class="input-group custom">
                                 <input type="text" class="form-control form-control-lg"
-                                    placeholder="Kata Sandi Baru" />
+                                    placeholder="Kata Sandi Baru" name="password" />
                                 <div class="input-group-append custom">
                                     <span class="input-group-text"><i class="dw dw-padlock1"></i></span>
                                 </div>
                             </div>
                             <div class="input-group custom">
                                 <input type="text" class="form-control form-control-lg"
-                                    placeholder="Konfirmai Kata Sandi Baru" />
+                                    placeholder="Konfirmai Kata Sandi Baru" name="password_confirmation"/>
                                 <div class="input-group-append custom">
                                     <span class="input-group-text"><i class="dw dw-padlock1"></i></span>
                                 </div>
@@ -114,7 +114,7 @@
                             <div class="row align-items-center">
                                 <div class="col-5">
                                     <div class="input-group mb-0">
-                                        <a class="btn btn-primary btn-lg btn-block" href="/login">Kirim</a>
+                                        <input class="btn btn-primary btn-lg btn-block" type="submit" value="Reset">
                                     </div>
                                 </div>
                             </div>

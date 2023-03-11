@@ -105,6 +105,12 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::post('/link-reset', [AuthController::class, 'sendResetLinkEmail']);
 
+Route::post('/update', [AuthController::class, 'resetPassword']);
+
+Route::get('reset/{token}', [AuthController::class, 'showResetPasswordForm'])
+    ->name('password.reset');
+    
+
 Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
@@ -121,5 +127,3 @@ Route::get('/forgot', [ForgotPassword::class, 'index'])
     ->name('password.request');
 Route::post('/forgot-password', [ForgotPassword::class, 'sendResetLinkEmail'])
     ->name('password.email');
-Route::get('reset/{token}', [ForgotPassword::class, 'showResetPasswordForm'])
-    ->name('password.reset');
