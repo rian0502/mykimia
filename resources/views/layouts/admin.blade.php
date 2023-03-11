@@ -314,6 +314,12 @@
                             <span class="micon bi bi-radioactive"></span><span class="mtext">Laboratorium</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ route('lab.sop.index') }}"
+                            class="dropdown-toggle no-arrow {{ Request::is('admin/lab/sop*') ? 'active' : '' }}">
+                            <span class="micon bi bi-file-earmark-ruled"></span><span class="mtext">SOP</span>
+                        </a>
+                    </li>
                     <li
                         class="dropdown {{ Request::is('admin/lab/barang*') || Request::is('admin/lab/kategori*') || Request::is('admin/lab/model*') ? 'show' : '' }}">
                         <a href="javascript:;" class="dropdown-toggle"

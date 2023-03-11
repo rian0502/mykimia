@@ -24,7 +24,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Keterangan</label>
-                                    <textarea class="form-control" name="ket"></textarea>
+                                    <textarea class="form-control textarea" name="ket"></textarea>
                                 </div>
                             </div>
                             {{-- form untuk sebelah kanan --}}
@@ -49,6 +49,24 @@
                                             </option>
                                         @endforeach
                                     </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Jam Mulai</label>
+									<input
+										class="form-control time-picker-default"
+										placeholder="time"
+										type="text"
+                                        name="jam_mulai"
+									/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Jam Selesai</label>
+									<input
+										class="form-control time-picker-default"
+										placeholder="time"
+										type="text"
+                                        name="jam_selesai"
+									/>
                                 </div>
                             </div>
                         </div>

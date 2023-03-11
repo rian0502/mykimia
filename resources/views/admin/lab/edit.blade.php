@@ -39,7 +39,7 @@
                             <div class="merek weight-500 col-md-6">
                                 <div class="form-group">
                                     <label>Keperluan</label>
-                                    <input value="" autofocus name="" id=""
+                                    <input value="{{}}" autofocus name="" id=""
                                         class="form-control @error('') form-control-danger @enderror" type="text"
                                         placeholder="Keperluan">
                                     @error('keperluan')
@@ -50,6 +50,26 @@
                                     <label>Keterangan</label>
                                     <textarea class="form-control"></textarea>
                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Jam Mulai</label>
+                                <input
+                                    class="form-control time-picker-default"
+                                    placeholder="time"
+                                    type="text"
+                                    name="jam_mulai"
+                                    value="{{ }}"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label>Jam Selesai</label>
+                                <input
+                                    class="form-control time-picker-default"
+                                    placeholder="time"
+                                    type="text"
+                                    name="jam_selesai"
+                                    value="{{ }}"
+                                />
                             </div>
                         </div>
 
