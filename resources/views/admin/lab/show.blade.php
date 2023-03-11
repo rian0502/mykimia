@@ -55,8 +55,8 @@
 
                             <div class="row border-bottom">
                                 <label class="col-md-7 bold"><b>Keterangan</b></label>
-                                <div class="col-md-7" style="display:block;word-wrap:break-word;">
-                                    {{-- {{ $barang->modelBarang->nama_model }} --}}
+                                <div class="col" style="display:block;word-wrap:break-word;">
+                                    {{-- {{ $barang->modelBarang->nama_model }} --}}kajdkjwajidljhalsdawdijdijalshjdflkahgfuihalksdhailwflihakhsdfaifhawifiajdfjlasdawdajsidjailwjdijalsdjilajwdiljaisajdilajwijdliajsidjailwjfdilasidjlsihfjiuawfilahslkdfhiawhrfiasjhdfiawijafjihaqw
                                 </div>
 
                             </div>
