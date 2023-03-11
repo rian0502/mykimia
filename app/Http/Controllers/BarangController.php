@@ -53,7 +53,6 @@ class BarangController extends Controller
             'nama_barang' => $request->nama_barang,
             'jumlah_akhir' => $request->jumlah_akhir,
             'id_lokasi' => Crypt::decrypt($request->id_lokasi),
-            'id_kategori' => Crypt::decrypt($request->id_kategori),
             'id_model' => Crypt::decrypt($request->id_model),
             'created_at' => now(),
             'updated_at' => now(),
@@ -131,7 +130,6 @@ class BarangController extends Controller
             $data = [
                 'nama_barang' => $request->nama_barang,
                 'id_lokasi' => Crypt::decrypt($request->id_lokasi),
-                'id_kategori' => Crypt::decrypt($request->id_kategori),
                 'id_model' => Crypt::decrypt($request->id_model),
                 'jumlah_akhir' => $request->jumlah_akhir,
                 'updated_at' => now(),
@@ -146,7 +144,6 @@ class BarangController extends Controller
             $data = [
                 'nama_barang' => $request->nama_barang,
                 'id_lokasi' => Crypt::decrypt($request->id_lokasi),
-                'id_kategori' => Crypt::decrypt($request->id_kategori),
                 'id_model' => Crypt::decrypt($request->id_model),
                 'updated_at' => now(),
             ];

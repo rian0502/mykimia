@@ -196,7 +196,7 @@
                         <a class="dropdown-item" href="/profile"><i class="dw dw-user1"></i> Profil</a>
                         <a class="dropdown-item" href="/pengaturan"><i class="dw dw-settings2"></i> Pengaturan</a>
                         <a class="dropdown-item" href="/bantuan"><i class="dw dw-help"></i> Bantuan</a>
-                        <a class="dropdown-item" href="/"><i class="dw dw-logout"></i> Keluar</a>
+                        <a class="dropdown-item" href="/logout"><i class="dw dw-logout"></i> Keluar</a>
                     </div>
                 </div>
             </div>
@@ -314,50 +314,54 @@
         <div class="menu-block customscroll">
             <div class="sidebar-menu">
                 <ul id="accordion-menu">
-                    <li>
-                        <a href="{{ route('beranda') }}"
-                            class="dropdown-toggle no-arrow {{ Request::is('beranda') ? 'active' : '' }}">
-                            <span class="micon bi bi-house"></span><span class="mtext">Beranda</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('jurusan.lokasi.index') }}"
-                            class="dropdown-toggle no-arrow {{ Request::is('jurusan/lokasi*') ? 'active' : '' }}">
-                            <span class="micon bi bi-pin-map"></span><span class="mtext">Lokasi</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('lab.ruang.index') }}"
-                            class="dropdown-toggle no-arrow {{ Request::is('admin/lab/ruang*') ? 'active' : '' }}">
-                            <span class="micon bi bi-radioactive"></span><span class="mtext">Laboratorium</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('lab.sop.index') }}"
-                            class="dropdown-toggle no-arrow {{ Request::is('admin/lab/sop*') ? 'active' : '' }}">
-                            <span class="micon bi bi-file-earmark-ruled"></span><span class="mtext">SOP</span>
-                        </a>
-                    </li>
-                    <li
-                        class="dropdown {{ Request::is('admin/lab/barang*') || Request::is('admin/lab/kategori*') || Request::is('admin/lab/model*') ? 'show' : '' }}">
-                        <a href="javascript:;" class="dropdown-toggle"
-                            data-option="{{ Request::is('admin/lab/barang*') || Request::is('admin/lab/kategori*') || Request::is('admin/lab/model*') ? 'on' : '' }}">
+                    @role('jurusan')
+                        <li>
+                            <a href="{{ route('beranda') }}"
+                                class="dropdown-toggle no-arrow {{ Request::is('beranda') ? 'active' : '' }}">
+                                <span class="micon bi bi-house"></span><span class="mtext">Beranda</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('jurusan.lokasi.index') }}"
+                                class="dropdown-toggle no-arrow {{ Request::is('jurusan/lokasi*') ? 'active' : '' }}">
+                                <span class="micon bi bi-pin-map"></span><span class="mtext">Lokasi</span>
+                            </a>
+                        </li>
+                    @endrole
+                    @role('admin lab')
+                        <li>
+                            <a href="{{ route('lab.ruang.index') }}"
+                                class="dropdown-toggle no-arrow {{ Request::is('admin/lab/ruang*') ? 'active' : '' }}">
+                                <span class="micon bi bi-radioactive"></span><span class="mtext">Laboratorium</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('lab.sop.index') }}"
+                                class="dropdown-toggle no-arrow {{ Request::is('admin/lab/sop*') ? 'active' : '' }}">
+                                <span class="micon bi bi-file-earmark-ruled"></span><span class="mtext">SOP</span>
+                            </a>
+                        </li>
+                        <li
+                            class="dropdown {{ Request::is('admin/lab/barang*') || Request::is('admin/lab/kategori*') || Request::is('admin/lab/model*') ? 'show' : '' }}">
+                            <a href="javascript:;" class="dropdown-toggle"
+                                data-option="{{ Request::is('admin/lab/barang*') || Request::is('admin/lab/kategori*') || Request::is('admin/lab/model*') ? 'on' : '' }}">
 
-                            <span class="micon bi bi-box"></span><span class="mtext">Inventaris</span>
-                        </a>
-                        <ul class="submenu">
-                            <li><a href="{{ route('lab.barang.index') }}"
-                                    class="{{ Request::is('admin/lab/barang*') ? 'active' : '' }}">Barang</a>
-                            </li>
-                            <li><a href="{{ route('lab.kategori.index') }}"
-                                    class="{{ Request::is('admin/lab/kategori*') ? 'active' : '' }}">Kategori</a>
-                            </li>
-                            <li><a href="{{ route('lab.model.index') }}"
-                                    class="{{ Request::is('admin/lab/model*') ? 'active' : '' }}">Model</a>
-                            </li>
+                                <span class="micon bi bi-box"></span><span class="mtext">Inventaris</span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="{{ route('lab.barang.index') }}"
+                                        class="{{ Request::is('admin/lab/barang*') ? 'active' : '' }}">Barang</a>
+                                </li>
+                                <li><a href="{{ route('lab.kategori.index') }}"
+                                        class="{{ Request::is('admin/lab/kategori*') ? 'active' : '' }}">Kategori</a>
+                                </li>
+                                <li><a href="{{ route('lab.model.index') }}"
+                                        class="{{ Request::is('admin/lab/model*') ? 'active' : '' }}">Model</a>
+                                </li>
 
-                        </ul>
-                    </li>
+                            </ul>
+                        </li>
+                    @endrole
 
 
 
@@ -444,28 +448,28 @@
     <script src="/Assets/admin/vendors/scripts/datatable-setting.js"></script>
     <!-- Tambahkan HTML untuk menampilkan notifikasi -->
 
-<!-- Tambahkan script untuk menampilkan notifikasi -->
-<script>
-    @if (session('success'))
-        Toastify({
-            text: "{{ session('success') }}",
-            duration: 3000,
-            gravity: "bottom",
-            position: "right",
-            backgroundColor: "#1abc9c",
-            stopOnFocus: true,
-        }).showToast();
-    @elseif (session('error'))
-        Toastify({
-            text: "{{ session('error') }}",
-            duration: 3000,
-            gravity: "bottom",
-            position: "right",
-            backgroundColor: "#e74c3c",
-            stopOnFocus: true,
-        }).showToast();
-    @endif
-</script>
+    <!-- Tambahkan script untuk menampilkan notifikasi -->
+    <script>
+        @if (session('success'))
+            Toastify({
+                text: "{{ session('success') }}",
+                duration: 3000,
+                gravity: "bottom",
+                position: "right",
+                backgroundColor: "#1abc9c",
+                stopOnFocus: true,
+            }).showToast();
+        @elseif (session('error'))
+            Toastify({
+                text: "{{ session('error') }}",
+                duration: 3000,
+                gravity: "bottom",
+                position: "right",
+                backgroundColor: "#e74c3c",
+                stopOnFocus: true,
+            }).showToast();
+        @endif
+    </script>
 
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
     {{-- <script type="text/javascript"
