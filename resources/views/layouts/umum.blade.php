@@ -81,7 +81,7 @@
     <div class="container-fluid bg-white sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
-                <a href="{{ route('beranda') }}" class="navbar-brand d-lg-none">
+                <a href="{{ route('dashboard') }}" class="navbar-brand d-lg-none">
                     <h1 class="fw-bold m-0">C P D C</h1>
                 </a>
                 <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
@@ -104,18 +104,18 @@
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
-
-                        {{-- tampil saat mode mobile --}}
                         @auth
+                        <a href="{{ route('dashboard') }}" class="nav-item nav-link">Dashboard</a>
+                        {{-- tampil saat mode mobile --}}
                         <div class="login">
-                            <a href="{{ route('login') }}" class="nav-item nav-link">Masuk</a>
+                            <a href="{{ route('logout') }}" class="nav-item nav-link text-danger">Keluar</a>
                         </div>
                         @else
                         <div class="login">
-                            <a href="{{ route('logout') }}" class="nav-item nav-link">Keluar</a>
+                            <a href="{{ route('login') }}" class="nav-item nav-link text-primary">Masuk</a>
                         </div>
-                        @endauth
                         {{-- tampil saat mode mobile --}}
+                        @endauth
                     </div>
 
                     @auth
