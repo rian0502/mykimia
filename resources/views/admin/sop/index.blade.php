@@ -20,7 +20,6 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Dokumen SOP</th>
                                     <th>Lokasi Penerapan</th>
                                     <th class="table-plus datatable-nosort">Aksi</th>
                                 </tr>
@@ -29,29 +28,18 @@
                                 @foreach ($sop as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td><a href="#">Download</a></td>
-                                        <td>{{ $item->nama_lokasi }}</td>
+                                        <td>{{ $item->lokasi->nama_lokasi }}</td>
                                         <td>
+
                                             <div class="table-actions">
+                                                <a href="{{ url('/uploads/sop/' . $item->file_sop) }}" target="_blank"
+                                                    class="btn btn-primary">View</a>
                                                 <a class="edit" href="{{ route('lab.sop.edit', $item->encrypt_id) }}">
                                                     <button class="btn btn-warning">
                                                         <i class="icon-copy fi-page-edit"></i>
                                                         Edit
                                                     </button>
                                                 </a>
-                                                @if ($item->barangs->count() < 1)
-                                                    <form action="{{ route('lab.sop.destroy', $item->encrypt_id) }}"
-                                                        method="POST">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger"
-                                                            onclick="return confirm('Apakah Anda yakin ingin menghapus sop ini?')">
-                                                            <i class="icon-copy dw dw-delete-3"></i>
-                                                            Hapus
-                                                        </button>
-                                                    </form>
-                                                @endif
-
                                             </div>
                                         </td>
                                     </tr>

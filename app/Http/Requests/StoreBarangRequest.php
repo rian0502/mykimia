@@ -28,7 +28,6 @@ class StoreBarangRequest extends FormRequest
             'jumlah_akhir' => 'required|numeric|min:0',
             'id_model' => 'required|exists:model_barang,encrypt_id',
             'id_kategori' => 'required|exists:kategori,encrypt_id',
-            'id_lokasi' => 'required|exists:lokasi,encrypt_id',
         ];
     }
     public function messages()
@@ -43,7 +42,6 @@ class StoreBarangRequest extends FormRequest
             'id_model.exists' => 'Model Barang tidak ditemukan',
             'id_kategori.required' => 'Kategori Barang harus diisi',
             'id_kategori.exists' => 'Kategori Barang tidak ditemukan',
-            'id_lokasi.required' => 'Lokasi Barang harus diisi',
         ];
     }
     protected function prepareForValidation()
