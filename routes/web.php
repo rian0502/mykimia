@@ -24,7 +24,7 @@ use App\Http\Controllers\KategoriController;
 */
 
 // ADMIN LAB
-Route::prefix('admin/lab')->name('lab.')->group(function () {
+Route::prefix('admin/lab')->name('lab.')->middleware('auth', 'role:admin lab')->group(function () {
     Route::resource('model', ModelController::class);
     Route::resource('barang', BarangController::class);
     Route::resource('kategori', KategoriController::class);
@@ -103,6 +103,13 @@ Route::post('/login', [AuthController::class, 'loginAttempt'])->name('login.post
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
+Route::post('/link-reset', [AuthController::class, 'sendResetLinkEmail']);
+
+Route::post('/update', [AuthController::class, 'resetPassword']);
+
+Route::get('reset/{token}', [AuthController::class, 'showResetPasswordForm'])
+    ->name('password.reset');
+    
 
 Route::get('/register', function () {
     return view('auth.register');
@@ -120,5 +127,3 @@ Route::get('/forgot', [ForgotPassword::class, 'index'])
     ->name('password.request');
 Route::post('/forgot-password', [ForgotPassword::class, 'sendResetLinkEmail'])
     ->name('password.email');
-Route::get('reset/{token}', [ForgotPassword::class, 'showResetPasswordForm'])
-    ->name('password.reset');

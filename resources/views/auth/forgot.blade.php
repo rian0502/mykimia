@@ -82,10 +82,10 @@
                         <h6 class="mb-20" style="text-align: center">
                             Masukkan alamat email Anda untuk mengatur ulang kata sandi Anda
                         </h6>
-                        <form action="" method="" enctype="multipart/form-data">
+                        <form action="link-reset" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="input-group custom">
-                                <input type="text" class="form-control form-control-lg" placeholder="Email" />
+                                <input type="email" name="email" class="form-control form-control-lg" placeholder="Email" />
                                 <div class="input-group-append custom">
                                     <span class="input-group-text"><i class="fa fa-envelope-o"
                                             aria-hidden="true"></i></span>
@@ -94,7 +94,7 @@
                             <div class="row align-items-center">
                                 <div class="col-4">
                                     <div class="input-group mb-0">
-                                        <a class="btn btn-primary btn-lg btn-block" href="/">Kirim</a>
+                                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Kirim" />
                                     </div>
                                 </div>
                                 <div class="col-4">
