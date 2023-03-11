@@ -20,21 +20,21 @@
                             <div class="weight-500 col-md-6">
                                 <div class="form-group">
                                     <label>Nama Kegiatan</label>
-                                    <input value="{{}}" type="text" class="form-control"
+                                    <input value="{{$lab->nama_kegiatan}}" type="text" class="form-control"
                                         name="nama_kegiatan" placeholder="Nama Kegiatan" />
                                 </div>
                                 <div class="form-group">
                                     <label>Keperluan</label>
                                     <select class="custom-select form-control" style="width: 100%; height: 38px"
                                         name="keperluan">
-                                        <option value="Praktikum">Praktikum</option>
-                                        <option value="Penilitian">Penilitian</option>
-                                        <option value="Lainnya">Lainnya</option>
+                                        <option value="Praktikum"{{$lab->keperluan == 'Praktikum' ? 'selected' ; ''}}>Praktikum</option>
+                                        <option value="Penilitian" {{$lab->keperluan == 'Penilitian' ? 'selected' ; ''}}>Penilitian</option>
+                                        <option value="Lainnya" {{$lab->keperluan == 'Lainnya' ? 'selected' ; ''}}>Lainnya</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Keterangan</label>
-                                    <textarea class="form-control textarea" name="ket"></textarea>
+                                    <textarea class="form-control textarea" name="ket" value="{{$lab->keterangan}}"></textarea>
                                 </div>
                             </div>
                             {{-- form untuk sebelah kanan --}}
@@ -45,26 +45,24 @@
                                     <select class="custom-select2 form-control" style="width: 100%; height: 38px"
                                         name="id_lokasi">
                                         @foreach ($locations as $item)
-                                            <option value="{{ $item->encrypt_id }}"
-                                                {{ old('id_lokasi') == $item->encrypt_id ? 'selected' : '' }}>
-                                                {{ $item->nama_lokasi . ', Lt-' . $item->lantai_tingkat }}
-                                            </option>
+                                        <option value="{{ $item->encrypt_id }}" @if ($item->id == $lab->id_lokasi)
+                                            selected @endif>{{ $item->nama_lokasi.', Lt-'.$item->lantai_tingkat }}</option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Tanggal Kegiatan</label>
-                                    <input value="{{}}" type="date" class="form-control"
+                                    <input value="{{$lab->tanggal_kegiatan}}" type="date" class="form-control"
                                         name="tanggal_kegiatan" placeholder="Tanggal Pakai" />
                                 </div>
                                 <div class="form-group">
                                     <label>Jam Mulai</label>
-                                    <input value="{{}}" class="form-control time-picker-default"
+                                    <input value="{{$lab->jam_mulai}}" class="form-control time-picker-default"
                                         placeholder="time" type="text" name="jam_mulai" />
                                 </div>
                                 <div class="form-group">
                                     <label>Jam Selesai</label>
-                                    <input value="{{}}" class="form-control time-picker-default"
+                                    <input value="{{$lab->jam_selesai}}" class="form-control time-picker-default"
                                         placeholder="time" type="text" name="jam_selesai" />
                                 </div>
                             </div>
