@@ -176,6 +176,7 @@
                         <span class="user-name">Putu Putra Eka Persada</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                        <a class="dropdown-item" href="/"><i class="dw dw-home"></i> Beranda</a>
                         <a class="dropdown-item" href="/profile"><i class="dw dw-user1"></i> Profil</a>
                         <a class="dropdown-item" href="/pengaturan"><i class="dw dw-settings2"></i> Pengaturan</a>
                         <a class="dropdown-item" href="/bantuan"><i class="dw dw-help"></i> Bantuan</a>
@@ -298,9 +299,9 @@
                 <ul id="accordion-menu">
                     @role('jurusan')
                         <li>
-                            <a href="{{ route('beranda') }}"
-                                class="dropdown-toggle no-arrow {{ Request::is('beranda') ? 'active' : '' }}">
-                                <span class="micon bi bi-house"></span><span class="mtext">Beranda</span>
+                            <a href="{{ route('dashboard') }}"
+                                class="dropdown-toggle no-arrow {{ Request::is('dashboard') ? 'active' : '' }}">
+                                <span class="micon bi bi-grid-fill"></span><span class="mtext">Dashboard</span>
                             </a>
                         </li>
                         <li>
