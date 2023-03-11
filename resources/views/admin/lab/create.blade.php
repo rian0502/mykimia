@@ -19,8 +19,16 @@
                             {{-- form untuk sebelah kiri --}}
                             <div class="weight-500 col-md-6">
                                 <div class="form-group">
-                                    <label>Tanggal Kegiatan</label>
-                                    <input type="text" class="form-control date-picker" name="tanggal_kegiatan" placeholder="Tanggal Pakai" readonly/>
+                                    <label>Nama Kegiatan</label>
+                                    <input type="text" class="form-control" name="nama_kegiatan" placeholder="Nama Kegiatan"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Keperluan</label>
+                                    <select class="custom-select form-control"  style="width: 100%; height: 38px" name="keperluan">
+                                        <option value="Praktikum">Praktikum</option>
+                                        <option value="Penilitian">Penilitian</option>
+                                        <option value="Lainnya">Lainnya</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Keterangan</label>
@@ -29,16 +37,7 @@
                             </div>
                             {{-- form untuk sebelah kanan --}}
                             <div class="merek weight-500 col-md-6">
-                                <div class="form-group">
-                                    <label>Keperluan</label>
-                                    <select class="custom-select form-control"  style="width: 100%; height: 38px" name="keperluan">
-                                        <option value="Praktikum">Praktikum</option>
-                                        <option value="Seminar">Seminar</option>
-                                        <option value="Ujian">Ujian</option>
-                                        <option value="Penilitian">Penilitian</option>
-                                        <option value="Lainnya">Lainnya</option>
-                                    </select>
-                                </div>
+                                
                                 <div class="form-group">
                                     <label>Lokasi</label>
                                     <select class="custom-select2 form-control"  style="width: 100%; height: 38px" name="id_lokasi">
@@ -49,6 +48,10 @@
                                             </option>
                                         @endforeach
                                     </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tanggal Kegiatan</label>
+                                    <input type="date" class="form-control" name="tanggal_kegiatan" placeholder="Tanggal Pakai"/>
                                 </div>
                                 <div class="form-group">
                                     <label>Jam Mulai</label>
