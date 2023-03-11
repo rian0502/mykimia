@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LabController;
+use App\Http\Controllers\SopController;
 use App\Http\Controllers\ForgotPassword;
 use App\Http\Controllers\ModelController;
 use App\Http\Controllers\BarangController;

@@ -31,10 +31,12 @@
                                 <label>Lokasi Penerapan</label>
                                 <select class="custom-select2 form-control" name="id_lokasi" required>
                                     @foreach ($locations as $item)
-                                        <option value="{{ $item->encrypt_id }}"
-                                            {{ old('id_lokasi') == $item->encrypt_id ? 'selected' : '' }}>
-                                            {{ $item->nama_lokasi . ', Lt-' . $item->lantai_tingkat }}
-                                        </option>
+                                        @if ($item->sopLabs->count() == 0)
+                                            <option value="{{ $item->encrypt_id }}"
+                                                {{ old('id_lokasi') == $item->encrypt_id ? 'selected' : '' }}>
+                                                {{ $item->nama_lokasi . ', Lt-' . $item->lantai_tingkat }}
+                                            </option>
+                                        @endif
                                     @endforeach
                                 </select>
                             </div>
