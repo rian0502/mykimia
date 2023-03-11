@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreActivityLab;
 use App\Models\Laboratorium;
 use App\Models\Lokasi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 
 class LabController extends Controller
 {
@@ -42,10 +44,26 @@ class LabController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreActivityLab $request)
     {
         //
-        dd($request->all());
+        $data = [
+            'nama_kegiatan' => $request->nama_kegiatan,
+            'tanggal_kegiatan' => $request->tanggal_kegiatan,
+            'jam_mulai' => $request->jam_mulai,
+            'jam_selesai' => $request->jam_selesai,
+            'keperluan' => $request->keperluan,
+            'id_lokasi' => Crypt::decrypt($request->id_lokasi),
+            'keterangan' => $request->ket,
+        ];
+        $insert = Laboratorium::create($data);
+        $id = Crypt::encrypt($insert->id);
+        $update = Laboratorium::where('id', $insert->id)->update(['encrypted_id' => $id]);
+        if ($update) {
+            return redirect()->route('lab.ruang.index')->with('success', 'Data berhasil ditambahkan');
+        } else {
+            return redirect()->route('lab.ruang.index')->with('error', 'Data gagal ditambahkan');
+        }
     }
 
     /**

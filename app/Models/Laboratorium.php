@@ -11,8 +11,11 @@ class Laboratorium extends Model
     protected $table = 'activity_lab';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'id',
+        'encrypted_id',
         'nama_kegiatan',
+        'tanggal_kegiatan',
+        'jam_mulai',
+        'jam_selesai',
         'id_lokasi',
         'keperluan',
         'keterangan',
