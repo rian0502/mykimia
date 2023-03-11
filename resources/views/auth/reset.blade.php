@@ -71,7 +71,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div id="picture">
-                    <img src="/Assets/admin/vendors/images/forgot-password.png" alt="" />
+                        <img src="/Assets/admin/vendors/images/forgot-password.png" alt="" />
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -79,11 +79,27 @@
                         <div class="login-title">
                             <h2 class="text-center text-primary">Atur Ulang Kata Sandi</h2>
                         </div>
-                        <h6 class="mb-20" style="text-align: center">Masukkan kata sandi baru Anda, konfirmasi dan kirim</h6>
+                        <h6 class="mb-20" style="text-align: center">Masukkan kata sandi baru Anda, konfirmasi dan
+                            kirim</h6>
                         <form action="" method="" enctype="multipart/form-data">
                             @csrf
                             <div class="input-group custom">
-                                <input type="text" class="form-control form-control-lg" placeholder="Kata Sandi Baru" />
+                                <input type="email" class="form-control form-control-lg"
+                                    placeholder="Email" />
+                                <div class="input-group-append custom">
+                                    <span class="input-group-text"><i class="dw dw-email"></i></span>
+                                </div>
+                            </div>
+                            <div class="input-group custom">
+                                <input type="text" class="form-control form-control-lg"
+                                    placeholder="Token" />
+                                <div class="input-group-append custom">
+                                    <span class="input-group-text"><i class="dw dw-key"></i></span>
+                                </div>
+                            </div>
+                            <div class="input-group custom">
+                                <input type="text" class="form-control form-control-lg"
+                                    placeholder="Kata Sandi Baru" />
                                 <div class="input-group-append custom">
                                     <span class="input-group-text"><i class="dw dw-padlock1"></i></span>
                                 </div>
