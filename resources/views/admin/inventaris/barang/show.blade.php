@@ -53,25 +53,6 @@
                                 cursor: pointer;
                             }
                         </style>
-
-                        <form id="form_repp" method="post">
-                            <input type="hidden" name="nim" value="2017051062">
-                            <input type="hidden" name="idperiode" value="20222">
-                            <input type="hidden" name="idunit" value="7054051">
-                            <input type="hidden" name="noback" value="1">
-                            <input type="hidden" name="iskop" value="1">
-                            <input type="hidden" name="isttd" value="1">
-                            <input type="hidden" name="ismahasiswa" value="1">
-                        </form>
-
-                        <form id="form_angket_layanan" method="post" action="/siakad/set_angketlayananmhs">
-                            <input type="hidden" name="nim" value="2017051062">
-                            <input type="hidden" name="periode" value="20222">
-                        </form>
-
-
-
-
                     </div>
                 </div>
                 <div class="card-box mb-30">
