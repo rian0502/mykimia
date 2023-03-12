@@ -86,44 +86,70 @@
                         </div>
                         <h6 class="mb-20" style="text-align: center">Masukkan kata sandi baru Anda, konfirmasi dan
                             kirim</h6>
-                            @error('email')
+                            {{-- @error('email')
                             <div class="alert alert-danger">
                                 {{ $message }}
                             </div>
-                        @enderror
+                        @enderror --}}
                         <form action="/update" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="input-group custom">
                                 <input type="email" name="email" class="form-control form-control-lg @error('email') form-control-warning @enderror"
                                     placeholder="Email" />
-                                <div class="input-group-append custom">
+                                    <div class="input-group-append custom">
+                                    @error('email')
+
+                                    @else
                                     <span class="input-group-text"><i class="dw dw-email"></i></span>
+                                    @enderror
                                 </div>
                             </div>
+                            @error('email')
+                                        <small class="form-control-feedback has-danger">{{ $message }}</small>
+                            @enderror
                             <div class="input-group custom">
-                                <input type="text" name="token" value="{{ $token }}" class="form-control form-control-lg"
+                                <input type="text" name="token" value="{{ $token }}" class="mt-2 form-control form-control-lg @error('token') form-control-warning @enderror"
                                     placeholder="Token" />
                                 <div class="input-group-append custom">
+                                    @error('token')
+
+                                    @else
                                     <span class="input-group-text"><i class="dw dw-key"></i></span>
+                                    @enderror
                                 </div>
                             </div>
+                            @error('token')
+                                        <small class="form-control-feedback has-danger">{{ $message }}</small>
+                            @enderror
                             <div class="input-group custom">
-                                <input type="password" class="form-control form-control-lg"
+                                <input type="password" class="mt-2 form-control form-control-lg @error('password') form-control-warning @enderror"
                                     placeholder="Kata Sandi Baru" name="password" />
                                 <div class="input-group-append custom">
+                                    @error('password')
+                                    @else
                                     <span class="input-group-text"><i class="dw dw-padlock1"></i></span>
+                                    @enderror
                                 </div>
                             </div>
+                            @error('password')
+                                        <small class="form-control-feedback has-danger">{{ $message }}</small>
+                            @enderror
                             <div class="input-group custom">
-                                <input type="password" class="form-control form-control-lg"
+                                <input type="password" class="mt-2 form-control form-control-lg @error('password_confirmation') form-control-warning @enderror"
                                     placeholder="Konfirmai Kata Sandi Baru" name="password_confirmation"/>
                                 <div class="input-group-append custom">
+                                    @error('password_confirmation')
+                                    @else
                                     <span class="input-group-text"><i class="dw dw-padlock1"></i></span>
+                                    @enderror
                                 </div>
                             </div>
+                            @error('password_confirmation')
+                                        <small class="form-control-feedback has-danger">{{ $message }}</small>
+                            @enderror
                             <div class="row align-items-center">
                                 <div class="col-5">
-                                    <div class="input-group mb-0">
+                                    <div class="input-group mb-0 mt-2">
                                         <input class="btn btn-primary btn-lg btn-block" type="submit" value="Reset">
                                     </div>
                                 </div>
