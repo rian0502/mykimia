@@ -118,14 +118,12 @@
                             {{-- tampil saat mode mobile --}}
                         @endauth
                     </div>
-                </div>
-                @auth
-                    <div class="new navbar-nav">
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle text-black text-bold"
-                                data-bs-toggle="dropdown">Putu Putra Eka
-                                Persada</a>
-                            <div class="dropdown-menu account bg-light rounded-0 rounded-bottom m-0">
+
+                    @auth
+                        <div class="ms-auto d-none d-lg-block">
+                            <div class="nav-item dropdown">
+                            <a href="#" class="name-account dropdown-toggle text-black text-bold" data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>
+                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
                                 <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
                                 <a href="{{ route('auth.logout') }}" class="dropdown-item">Keluar</a>
                             </div>
