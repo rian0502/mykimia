@@ -120,12 +120,12 @@
                     </div>
                 </div>
                 @auth
-                    <div class="navbar-nav">
+                    <div class="new navbar-nav">
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle text-black text-bold"
                                 data-bs-toggle="dropdown">Putu Putra Eka
                                 Persada</a>
-                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                            <div class="dropdown-menu account bg-light rounded-0 rounded-bottom m-0">
                                 <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
                                 <a href="{{ route('logout') }}" class="dropdown-item">Keluar</a>
                             </div>

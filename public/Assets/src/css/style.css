@@ -118,6 +118,9 @@
         margin-right: 0;
         padding: 10px 0;
     }
+    .new {
+        display: none;
+    }
 
     .navbar .navbar-nav {
         margin-top: 15px;
@@ -134,6 +137,9 @@
         opacity: 0;
         visibility: hidden;
         transition: 0.5s;
+    }
+    .account {
+        width: 75%;
     }
     .login {
         display: none;
