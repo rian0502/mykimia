@@ -42,12 +42,23 @@ Route::prefix('admin/lab')->name('lab.')->middleware('auth', 'role:admin lab')->
         ]
     );
 });
+Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth')->name('auth.logout');
+Route::name('auth.')->middleware('guest')->group(function () {
+
+    Route::post('/login', [AuthController::class, 'loginAttempt'])->name('login.post');
+    Route::post('/link-reset', [AuthController::class, 'sendResetLinkEmail'])->name('password.link.post');
+    Route::post('/update', [AuthController::class, 'resetPassword'])->name('password.update.post');
 
 
-Route::prefix('test')->name('test.')->group(function () {
-    Route::view('sop/create', 'admin.lab.sop.create')->name('sop.create');
-    Route::view('sop/edit', 'admin.lab.sop.edit')->name('sop.edit');
+    Route::get('/forgot-password', [AuthController::class, 'forgotPassword'])->name('password.forgot');
+    Route::get('reset/{token}', [AuthController::class, 'showResetPasswordForm'])->name('password.reset');
+    Route::get('/login', [AuthController::class, 'login'])->name('login');
+
+
+    Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
 });
+
+
 
 
 Route::prefix('admin/berkas')->name('berkas.')->group(function () {
@@ -95,35 +106,17 @@ Route::get('/dashboard', function () {
 
 
 //auth page
-Route::get('/login', function () {
-    return view('auth.login');
-})->middleware('guest')->name('login');
 
-Route::post('/login', [AuthController::class, 'loginAttempt'])->name('login.post');
 
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::post('/link-reset', [AuthController::class, 'sendResetLinkEmail']);
 
-Route::post('/update', [AuthController::class, 'resetPassword']);
 
-Route::get('reset/{token}', [AuthController::class, 'showResetPasswordForm'])
-    ->name('password.reset');
-    
-
-Route::get('/register', function () {
-    return view('auth.register');
-})->name('register');
-Route::get('/forgot-password', function () {
-    return view('auth.forgot');
-})->name('forgot');
+// Route::get('/register', function () {
+//     return view('auth.register');
+// })->name('register');
+// Route::get('/forgot-password', function () {
+//     return view('auth.forgot');
+// })->name('forgot');
 Route::get('/reset-password', function () {
     return view('auth.reset');
 })->name('reset');
-
-
-
-Route::get('/forgot', [ForgotPassword::class, 'index'])
-    ->name('password.request');
-Route::post('/forgot-password', [ForgotPassword::class, 'sendResetLinkEmail'])
-    ->name('password.email');

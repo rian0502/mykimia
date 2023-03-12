@@ -67,7 +67,7 @@
     <div class="login-header box-shadow">
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <div class="brand-logo">
-                <a href="login.html">
+                <a href="/">
                     <img src="/Assets/admin/vendors/images/deskapp-logo.svg" alt="" />
                 </a>
             </div>
@@ -96,10 +96,10 @@
                                 {{ $message }}
                             </div>
                         @enderror
-                        <form action="{{route('login.post')}}" method="POST" enctype="multipart/form-data">
+                        <form action="{{route('auth.login.post')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="input-group custom">
-                                <input name="email" type="text" class="form-control form-control-lg @error('email') form-control-warning @enderror" placeholder="Email" />
+                                <input name="email" type="text" class="form-control form-control-lg @error('email') form-control-danger @enderror" placeholder="Email" />
                                 <div class="input-group-append custom">
                                     @error('email')
                                     @else
@@ -112,7 +112,7 @@
                                 <small class="form-control-feedback text-danger">{{ $message }}</small>
                             @enderror
                             <div class="input-group custom mt-2">
-                                <input name="password" type="password" class="form-control form-control-lg @error('password') form-control-warning @enderror" placeholder="Kata Sandi" />
+                                <input name="password" type="password" class="form-control form-control-lg @error('password') form-control-danger @enderror" placeholder="Kata Sandi" />
                                 <div class="input-group-append custom">
                                     @error('email')
                                     @else
@@ -126,7 +126,7 @@
                             <div class="row pb-30">
                                 <div class="col-12">
                                     <div class="forgot-password">
-                                        <a href="/forgot-password">Lupa Kata Sandi?</a>
+                                        <a href="{{route('auth.password.forgot')}}">Lupa Kata Sandi?</a>
                                     </div>
                                 </div>
                             </div>
@@ -141,7 +141,7 @@
                                     </div>
                                     <div class="input-group mb-0">
                                         <a class="btn btn-outline-primary btn-lg btn-block"
-                                            href="{{ route('register') }}">Daftar Akun</a>
+                                            href="{{ route('auth.register') }}">Daftar Akun</a>
                                     </div>
                                 </div>
                             </div>

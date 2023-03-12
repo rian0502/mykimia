@@ -13,7 +13,11 @@ use App\Http\Requests\UpdateResetPasswordRequest;
 class AuthController extends Controller
 {
     //
-    //melakukan login pada user
+    public function login()
+    {
+        return view('auth.login');
+    }
+    
     public function loginAttempt(LoginRequest $request)
     {
         $credentials = $request->only('email', 'password');
@@ -74,5 +78,10 @@ class AuthController extends Controller
         return back()->withErrors([
             'email' => __($status),
         ]);
+    }
+
+    public function forgotPassword()
+    {
+        return view('auth.forgot');
     }
 }
