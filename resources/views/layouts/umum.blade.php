@@ -105,36 +105,37 @@
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                         @auth
-                        
-                        {{-- tampil saat mode mobile --}}
-                        <div class="login">
-                            <a href="{{ route('dashboard') }}" class="nav-item nav-link">Dashboard</a>
-                            <a href="{{ route('logout') }}" class="nav-item nav-link text-danger">Keluar</a>
-                        </div>
+
+                            {{-- tampil saat mode mobile --}}
+                            <div class="login">
+                                <a href="{{ route('dashboard') }}" class="nav-item nav-link">Dashboard</a>
+                                <a href="{{ route('logout') }}" class="nav-item nav-link text-danger">Keluar</a>
+                            </div>
                         @else
-                        <div class="login">
-                            <a href="{{ route('login') }}" class="nav-item nav-link text-primary">Masuk</a>
-                        </div>
-                        {{-- tampil saat mode mobile --}}
+                            <div class="login">
+                                <a href="{{ route('login') }}" class="nav-item nav-link text-primary">Masuk</a>
+                            </div>
+                            {{-- tampil saat mode mobile --}}
                         @endauth
                     </div>
-
-                    @auth
-                        <div class="ms-auto d-none d-lg-block">
-                            <div class="nav-item dropdown">
-                            <a href="#" class="name-account dropdown-toggle text-black text-bold" data-bs-toggle="dropdown">Putu Putra Eka Persada</a>
-                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                </div>
+                @auth
+                    <div class="new navbar-nav">
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle text-black text-bold"
+                                data-bs-toggle="dropdown">Putu Putra Eka
+                                Persada</a>
+                            <div class="dropdown-menu account bg-light rounded-0 rounded-bottom m-0">
                                 <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
                                 <a href="{{ route('logout') }}" class="dropdown-item">Keluar</a>
                             </div>
                         </div>
-                        </div>
-                    @else
-                        <div class="ms-auto d-none d-lg-block">
-                            <a href="{{ route('login') }}" class="btn btn-primary rounded-pill py-2 px-3">Masuk</a>
-                        </div>
-                    @endauth
-                </div>
+                    </div>
+                @else
+                    <div class="ms-auto d-none d-lg-block">
+                        <a href="{{ route('login') }}" class="btn btn-primary rounded-pill py-2 px-3">Masuk</a>
+                    </div>
+                @endauth
             </nav>
         </div>
     </div>

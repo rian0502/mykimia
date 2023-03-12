@@ -18,6 +18,7 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
         if (auth()->attempt($credentials)) {
             $request->session()->regenerate();
+
             if(auth()->user()->hasRole('admin lab')){
                 return redirect()->intended('admin/lab/ruang');
             }else{
