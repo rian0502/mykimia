@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this->call(RolePermision::class);
         $this->call(Locations::class);
+        $this->call(BaseNPMSeeder::class);
     }
 }
