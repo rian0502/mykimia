@@ -80,6 +80,16 @@
     transition: 0.5s;
 }
 
+.account-name {
+    display: block;
+    visibility: hidden;
+    top: 100%;
+    transform: rotateX(-75deg);
+    transform-origin: 0% 0%;
+    transition: 0.5s;
+    opacity: 0;
+}
+
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;
     padding: 25px 0;
@@ -177,11 +187,9 @@
         object-fit: cover;
     }
 }
-.text-black{
+.text-black {
     color: black;
-    
 }
-
 
 .page-header {
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
@@ -546,7 +554,6 @@
         left: 50%;
         transform: translateX(-50%);
     }
-  
 
     .testimonial-carousel .owl-nav .owl-prev,
     .testimonial-carousel .owl-nav .owl-next {
