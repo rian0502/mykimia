@@ -8,6 +8,7 @@ use App\Http\Requests\LoginRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Password;
 use App\Http\Requests\SendEmailResetRequest;
+use App\Http\Requests\UpdateResetPasswordRequest;
 
 class AuthController extends Controller
 {
@@ -39,19 +40,19 @@ class AuthController extends Controller
         $credentials = $request->only('email');
         $status = Password::sendResetLink($credentials);
         if ($status === Password::RESET_LINK_SENT) {
-            return back()->with('status', __($status));
+            return back()->with('success', 'Link reset password telah terkirim');
         }
-        return back()->withErrors([
-            'status' => __($status),
+        return back()->with([
+            'error' => 'Link reset password gagal dikirim',
         ]);
     }
 
     public function showResetPasswordForm($token){
-        
+
         return view('auth.reset', ['token' => $token]);
     }
 
-    public function resetPassword(Request $request){
+    public function resetPassword(UpdateResetPasswordRequest $request){
         $status = Password::reset(
             $request->only('email', 'password', 'password_confirmation', 'token'),
             function ($user, $password) {

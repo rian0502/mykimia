@@ -86,19 +86,28 @@
                                         <div class="form-group row mt-5">
                                             <label class="col-sm-4 col-form-label">Alamat Email*</label>
                                             <div class="col-sm-8">
-                                                <input type="email" class="form-control" />
+                                                <input type="email" class="form-control @error('email') form-control-danger @enderror" />
+                                                @error('email')
+                                                    <small class="text-danger">{{ $message }}</small>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="form-group row ">
                                             <label class="col-sm-4 col-form-label">Kata Sandi*</label>
                                             <div class="col-sm-8">
-                                                <input type="password" class="form-control" />
+                                                <input type="password" name="password" class="form-control @error('password') form-control-danger @enderror" />
+                                                @error('password')
+                                                    <small class="text-danger">{{ $message }}</small>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">Konfirmasi Kata Sandi*</label>
                                             <div class="col-sm-8">
-                                                <input type="password" class="form-control" />
+                                                <input type="password" name="password_confirm" class="form-control @error('password_confirm') form-control-danger @enderror" />
+                                                @error('password_confirm')
+                                                    <small class="text-danger">{{ $message }}</small>
+                                                @enderror
                                             </div>
                                         </div>
                                     </div>
@@ -110,7 +119,10 @@
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">Nama Lengkap*</label>
                                             <div class="col-sm-8">
-                                                <input type="text" class="form-control" />
+                                                <input type="text" name="nama_lengkap" class="form-control @error('nama_lengkap') form-control-danger @enderror" />
+                                                @error('nama_lengkap')
+                                                    <small class="text-danger">{{ $message }}</small>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="form-group row align-items-center">
@@ -131,13 +143,19 @@
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">NPM*</label>
                                             <div class="col-sm-8">
-                                                <input type="text" class="form-control" />
+                                                <input type="text" name="npm" class="form-control @error('npm') form-control-danger @enderror" />
+                                                @error('npm')
+                                                    <small class="text-danger">{{ $message }}</small>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">Angkatan*</label>
                                             <div class="col-sm-8">
-                                                <input class="form-control year-picker" type="text">
+                                                <input name="angkatan" class="form-control year-picker @error('angkatan') form-control-danger @enderror" type="text">
+                                                @error('angkatan')
+                                                    <small class="text-danger">{{ $message }}</small>
+                                                @enderror
                                             </div>
                                         </div>
                                     </div>
