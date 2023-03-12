@@ -94,7 +94,7 @@
                         <form action="{{route('auth.password.update.post')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="input-group custom">
-                                <input type="email" name="email" class="form-control form-control-lg @error('email') form-control-warning @enderror"
+                                <input type="email" name="email" class="form-control form-control-lg @error('email') form-control-danger @enderror"
                                     placeholder="Email" />
                                     <div class="input-group-append custom">
                                     @error('email')
@@ -108,7 +108,7 @@
                                         <small class="form-control-feedback has-danger">{{ $message }}</small>
                             @enderror
                             <div class="input-group custom">
-                                <input type="text" name="token" value="{{ $token }}" class="mt-2 form-control form-control-lg @error('token') form-control-warning @enderror"
+                                <input type="text" name="token" value="{{ $token }}" class="mt-2 form-control form-control-lg @error('token') form-control-danger @enderror"
                                     placeholder="Token" />
                                 <div class="input-group-append custom">
                                     @error('token')
@@ -122,7 +122,7 @@
                                         <small class="form-control-feedback has-danger">{{ $message }}</small>
                             @enderror
                             <div class="input-group custom">
-                                <input type="password" class="mt-2 form-control form-control-lg @error('password') form-control-warning @enderror"
+                                <input type="password" class="mt-2 form-control form-control-lg @error('password') form-control-danger @enderror"
                                     placeholder="Kata Sandi Baru" name="password" />
                                 <div class="input-group-append custom">
                                     @error('password')
@@ -135,7 +135,7 @@
                                         <small class="form-control-feedback has-danger">{{ $message }}</small>
                             @enderror
                             <div class="input-group custom">
-                                <input type="password" class="mt-2 form-control form-control-lg @error('password_confirmation') form-control-warning @enderror"
+                                <input type="password" class="mt-2 form-control form-control-lg @error('password_confirmation') form-control-danger @enderror"
                                     placeholder="Konfirmai Kata Sandi Baru" name="password_confirmation"/>
                                 <div class="input-group-append custom">
                                     @error('password_confirmation')
