@@ -56,7 +56,7 @@
     <div class="login-header box-shadow">
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <div class="brand-logo">
-                <a href="login.html">
+                <a href="/">
                     <img src="/Assets/admin/vendors/images/deskapp-logo.svg" alt="" />
                 </a>
             </div>
@@ -232,7 +232,7 @@
                     Silakan masuk ke akun Anda untuk melanjutkan
                 </div>
                 <div class="modal-footer justify-content-center">
-                    <a href="/login" class="btn btn-primary">Selesai</a>
+                    <a href="{{route('auth.login')}}" class="btn btn-primary">Selesai</a>
                 </div>
             </div>
         </div>
