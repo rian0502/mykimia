@@ -66,7 +66,7 @@
             </div>
             <div class="login-menu">
                 <ul>
-                    <li><a href="/login">Kembali</a></li>
+                    <li><a href="{{route('auth.login')}}">Kembali</a></li>
                 </ul>
             </div>
         </div>
@@ -97,7 +97,7 @@
                             </div>
                         @endif
 
-                        <form action="link-reset" method="POST" enctype="multipart/form-data">
+                        <form action="{{route('auth.password.link.post')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="input-group custom">
                                 <input type="email" name="email" class="form-control form-control-lg @error('email') form-control-danger @enderror" placeholder="Email" />
@@ -128,7 +128,7 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="input-group mb-0">
-                                        <a class="btn btn-outline-primary btn-lg btn-block" href="/login">Masuk</a>
+                                        <a class="btn btn-outline-primary btn-lg btn-block" href="{{route('auth.login')}}">Masuk</a>
                                     </div>
                                 </div>
                             </div>

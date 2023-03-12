@@ -60,7 +60,7 @@
     <div class="login-header box-shadow">
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <div class="brand-logo">
-                <a href="login.html">
+                <a href="/">
                     <img src="/Assets/admin/vendors/images/deskapp-logo.svg" alt="" />
                 </a>
             </div>
@@ -91,7 +91,7 @@
                                 {{ $message }}
                             </div>
                         @enderror --}}
-                        <form action="/update" method="POST" enctype="multipart/form-data">
+                        <form action="{{route('auth.password.update.post')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="input-group custom">
                                 <input type="email" name="email" class="form-control form-control-lg @error('email') form-control-warning @enderror"
