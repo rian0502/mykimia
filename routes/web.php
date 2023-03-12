@@ -111,12 +111,12 @@ Route::get('/dashboard', function () {
 
 
 
-Route::get('/register', function () {
-    return view('auth.register');
-})->name('register');
-Route::get('/forgot-password', function () {
-    return view('auth.forgot');
-})->name('forgot');
+// Route::get('/register', function () {
+//     return view('auth.register');
+// })->name('register');
+// Route::get('/forgot-password', function () {
+//     return view('auth.forgot');
+// })->name('forgot');
 Route::get('/reset-password', function () {
     return view('auth.reset');
 })->name('reset');
