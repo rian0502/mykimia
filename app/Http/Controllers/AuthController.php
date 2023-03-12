@@ -8,7 +8,6 @@ use App\Http\Requests\LoginRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Password;
 use App\Http\Requests\SendEmailResetRequest;
-use App\Http\Requests\UpdateResetPasswordRequest;
 
 class AuthController extends Controller
 {
@@ -19,9 +18,9 @@ class AuthController extends Controller
         if (auth()->attempt($credentials)) {
             $request->session()->regenerate();
             if(auth()->user()->hasRole('admin lab')){
-                return redirect()->route('lab.ruang.index');
+                return redirect()->intended('admin/lab/ruang');
             }else{
-                return redirect()->intended('beranda');
+                return redirect()->intended('jurusan/lokasi');
             }
         }
         return back()->withErrors([
