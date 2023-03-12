@@ -19,36 +19,59 @@
                             {{-- form untuk sebelah kiri --}}
                             <div class="weight-500 col-md-6">
                                 <div class="form-group">
-                                    <label>Tanggal Kegiatan</label>
-                                    <input type="text" class="form-control date-picker" name="tanggal_kegiatan" placeholder="Tanggal Pakai" readonly/>
+                                    <label>Nama Kegiatan</label>
+                                    <input type="text" value="{{old('nama_kegiatan')}}" class="form-control" name="nama_kegiatan" placeholder="Nama Kegiatan"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Keperluan</label>
+                                    <select class="custom-select form-control"  style="width: 100%; height: 38px" name="keperluan">
+                                        <option value="Praktikum"{{old('keperluan')=='Praktikum' ? 'selected' : ''}}>Praktikum</option>
+                                        <option value="Penilitian" {{old('keperluan')=='Penilitian' ? 'selected' : ''}}>Penilitian</option>
+                                        <option value="Lainnya" {{old('keperluan')=='Lainnya' ? 'selected' : ''}}>Lainnya</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Keterangan</label>
-                                    <textarea class="form-control" name="ket"></textarea>
+                                    <textarea class="form-control textarea" name="ket"></textarea>
                                 </div>
                             </div>
                             {{-- form untuk sebelah kanan --}}
                             <div class="merek weight-500 col-md-6">
-                                <div class="form-group">
-                                    <label>Keperluan</label>
-                                    <select class="custom-select form-control"  style="width: 100%; height: 38px" name="keperluan">
-                                        <option value="Praktikum">Praktikum</option>
-                                        <option value="Seminar">Seminar</option>
-                                        <option value="Ujian">Ujian</option>
-                                        <option value="Penilitian">Penilitian</option>
-                                        <option value="Lainnya">Lainnya</option>
-                                    </select>
-                                </div>
+
                                 <div class="form-group">
                                     <label>Lokasi</label>
                                     <select class="custom-select2 form-control"  style="width: 100%; height: 38px" name="id_lokasi">
                                         @foreach ($locations as $item)
                                             <option value="{{ $item->encrypt_id }}"
-                                                {{ old('id_lokasi') == $item->encrypt_id ? 'selected' : '' }}>
+                                                {{ old('id_lokasi') == $item->id_lokasi ? 'selected' : '' }}>
                                                 {{ $item->nama_lokasi . ', Lt-' . $item->lantai_tingkat }}
                                             </option>
                                         @endforeach
                                     </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tanggal Kegiatan</label>
+                                    <input type="date" value="{{old('tanggal_kegiatan')}}" class="form-control" name="tanggal_kegiatan" placeholder="Tanggal Pakai"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Jam Mulai</label>
+									<input
+										class="form-control time-picker-default"
+										placeholder="time"
+										type="text"
+                                        name="jam_mulai"
+                                        value="{{old('jam_mulai')}}"
+									/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Jam Selesai</label>
+									<input
+										class="form-control time-picker-default"
+										placeholder="time"
+										type="text"
+                                        name="jam_selesai"
+                                        value="{{old('jam_selesai')}}"
+									/>
                                 </div>
                             </div>
                         </div>

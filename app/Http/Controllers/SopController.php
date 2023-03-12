@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreActivityLab;
-use App\Models\Laboratorium;
 use App\Models\Lokasi;
+use App\Models\SopLab;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreSopLabRequest;
 use Illuminate\Support\Facades\Crypt;
 
-class LabController extends Controller
+class SopController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,9 +21,9 @@ class LabController extends Controller
     {
         //
         $data = [
-            'activities' => Laboratorium::all()
+            'sop' => SopLab::all(),
         ];
-        return view('admin.lab.index', $data);
+        return view('admin.sop.index', $data);
     }
 
     /**
@@ -33,9 +35,9 @@ class LabController extends Controller
     {
         //
         $data = [
-            'locations' => Lokasi::all()
+            'locations' => Lokasi::all(),
         ];
-        return view('admin.lab.create', $data);
+        return view('admin.sop.create', $data);
     }
 
     /**
@@ -44,25 +46,24 @@ class LabController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreActivityLab $request)
+    public function store(StoreSopLabRequest $request)
     {
-        //
+        $file_sop = $request->file('file_sop');
+        $file_name = Str::random(45) . '.' . $file_sop->getClientOriginalExtension();
+        $file_sop->move(public_path('uploads/sop'), $file_name);
         $data = [
-            'nama_kegiatan' => $request->nama_kegiatan,
-            'tanggal_kegiatan' => $request->tanggal_kegiatan,
-            'jam_mulai' => $request->jam_mulai,
-            'jam_selesai' => $request->jam_selesai,
-            'keperluan' => $request->keperluan,
+            'file_sop' => $file_name,
             'id_lokasi' => Crypt::decrypt($request->id_lokasi),
-            'keterangan' => $request->ket,
         ];
-        $insert = Laboratorium::create($data);
-        $id = Crypt::encrypt($insert->id);
-        $update = Laboratorium::where('id', $insert->id)->update(['encrypted_id' => $id]);
+        $insert = SopLab::create($data);
+        $id = $insert->id;
+        $update = SopLab::where('id', $id)->update([
+            'encrypt_id' => encrypt($id),
+        ]);
         if ($update) {
-            return redirect()->route('lab.ruang.index')->with('success', 'Data berhasil ditambahkan');
+            return redirect()->route('lab.sop.index')->with('success', 'Data berhasil ditambahkan');
         } else {
-            return redirect()->route('lab.ruang.index')->with('error', 'Data gagal ditambahkan');
+            return redirect()->route('lab.sop.index')->with('error', 'Data gagal ditambahkan');
         }
     }
 
@@ -75,10 +76,6 @@ class LabController extends Controller
     public function show($id)
     {
         //
-        $data = [
-            'lab' => Laboratorium::where('id', Crypt::decrypt($id))->first(),
-        ];
-        return view('admin.lab.show', $data);
     }
 
     /**
@@ -90,6 +87,11 @@ class LabController extends Controller
     public function edit($id)
     {
         //
+        $data = [
+            'sop' => SopLab::where('id', Crypt::decrypt($id))->first(),
+            'locations' => Lokasi::all(),
+        ];
+        return view('admin.sop.edit', $data);
     }
 
     /**

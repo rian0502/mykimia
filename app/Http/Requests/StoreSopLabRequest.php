@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreKategoriRequest extends FormRequest
+class StoreSopLabRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,25 +25,19 @@ class StoreKategoriRequest extends FormRequest
     public function rules()
     {
         return [
-            'nama_kategori' => 'required|max:100',
+            'id_lokasi' => 'required|exists:lokasi,encrypt_id',
+            'file_sop' => 'required|file|mimes:pdf|max:1060',
         ];
     }
     public function messages()
     {
         return [
-            'nama_kategori.required' => 'Nama Kategori harus diisi',
-            'nama_kategori.max' => 'Nama Kategori maksimal 100 karakter',
+            'id_lokasi.required' => 'Lokasi harus diisi',
+            'id_lokasi.exists' => 'Lokasi tidak ditemukan',
+            'file_sop.required' => 'File SOP harus diupload',
+            'file_sop.file' => 'File SOP harus berupa file',
+            'file_sop.mimes' => 'File SOP harus berupa file PDF',
+            'file_sop.max' => 'File SOP maksimal 1MB',
         ];
-    }
-
-    protected function prepareForValidation()
-    {
-        $input = $this->all();
-        foreach ($input as $key => $value) {
-            if (is_string($value)) {
-                $input[$key] = strip_tags($value);
-            }
-        }
-        $this->replace($input);
     }
 }

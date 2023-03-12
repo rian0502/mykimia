@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
-class StoreKategoriRequest extends FormRequest
+class SendEmailResetRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -14,7 +14,7 @@ class StoreKategoriRequest extends FormRequest
      */
     public function authorize()
     {
-        return Auth::user()->hasRole('admin lab');;
+        return true;
     }
 
     /**
@@ -25,17 +25,17 @@ class StoreKategoriRequest extends FormRequest
     public function rules()
     {
         return [
-            'nama_kategori' => 'required|max:100',
+            'email' => 'required|email|exists:users,email'
         ];
     }
     public function messages()
     {
         return [
-            'nama_kategori.required' => 'Nama Kategori harus diisi',
-            'nama_kategori.max' => 'Nama Kategori maksimal 100 karakter',
+            'email.required' => 'Email tidak boleh kosong',
+            'email.email' => 'Email tidak valid',
+            'email.exists' => 'Email tidak terdaftar'
         ];
     }
-
     protected function prepareForValidation()
     {
         $input = $this->all();

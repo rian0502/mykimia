@@ -25,5 +25,9 @@ class Lokasi extends Model
     {
         return $this->hasMany(Laboratorium::class, 'id_lokasi');
     }
+    public function sopLabs()
+    {
+        return $this->hasMany(SopLab::class, 'id_lokasi');
+    }
 
 }

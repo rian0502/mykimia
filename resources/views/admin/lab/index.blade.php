@@ -22,7 +22,6 @@
                                     <th>Lokasi</th>
                                     <th>Tanggal Pakai</th>
                                     <th>Keperluan</th>
-                                    <th>Keterangan</th>
                                     <th class="table-plus datatable-nosort">Aksi</th>
                                 </tr>
                             </thead>
@@ -32,8 +31,7 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->lokasi->nama_lokasi }}</td>
                                         <td>{{ $carbon::parse($item->updated_at)->format('d F Y') }}</td>
-                                        <td>{{ $item->Keperluan }}</td>
-                                        <td>{{ $item->ket }}</td>
+                                        <td>{{ $item->keperluan }}</td>
                                         <td>
                                             <div class="dropdown">
                                                 <a class="btn btn-outline-primary dropdown-toggle" href="#"
@@ -43,21 +41,12 @@
 
                                                 <div class="dropdown-menu dropdown-menu-right">
                                                     <a class="dropdown-item"
-                                                        href="{{ route('jurusan.lokasi.edit', $item->encrypt_id) }}"><i
+                                                        href="{{ route('lab.ruang.show', $item->encrypted_id) }}"><i
+                                                            class="fal fa-eye"></i> Detail</a>
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('lab.ruang.edit', $item->encrypted_id) }}"><i
                                                             class="fa fa-pencil"></i> Edit</a>
-                                                    @if ($item->barangs->count() < 1)
-                                                        <form
-                                                            action="{{ route('jurusan.lokasi.destroy', $item->encrypt_id) }}"
-                                                            method="POST">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <button type="submit" class="dropdown-item"
-                                                                onclick="return confirm('Apakah Anda yakin ingin menghapus lokasi ini?')">
-                                                                <i class="fa fa-trash"></i>
-                                                                Hapus
-                                                            </button>
-                                                        </form>
-                                                    @endif
+
                                                 </div>
                                             </div>
                                         </td>

@@ -5,20 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Laboratorium extends Model
+class SopLab extends Model
 {
     use HasFactory;
-    protected $table = 'activity_lab';
-    protected $primaryKey = 'id';
+    protected $table = 'sop_lab';
     protected $fillable = [
-        'encrypted_id',
-        'nama_kegiatan',
-        'tanggal_kegiatan',
-        'jam_mulai',
-        'jam_selesai',
+        'encrypt_id',
         'id_lokasi',
-        'keperluan',
-        'keterangan',
+        'file_sop',
         'created_at',
         'updated_at',
     ];

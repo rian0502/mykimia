@@ -13,54 +13,68 @@
                         </div>
 
                     </div>
-                    <form action="{{ route('jurusan.lokasi.store') }}" method="POST">
+                    <form action="{{ route('lab.ruang.store') }}" method="POST">
                         @csrf
                         <div class="profile-edit-list row">
                             {{-- form untuk sebelah kiri --}}
                             <div class="weight-500 col-md-6">
                                 <div class="form-group">
+                                    <label>Nama Kegiatan</label>
+                                    <input value="{{$lab->nama_kegiatan}}" type="text" class="form-control"
+                                        name="nama_kegiatan" placeholder="Nama Kegiatan" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Keperluan</label>
+                                    <select class="custom-select form-control" style="width: 100%; height: 38px"
+                                        name="keperluan">
+                                        <option value="Praktikum"{{$lab->keperluan == 'Praktikum' ? 'selected' ; ''}}>Praktikum</option>
+                                        <option value="Penilitian" {{$lab->keperluan == 'Penilitian' ? 'selected' ; ''}}>Penilitian</option>
+                                        <option value="Lainnya" {{$lab->keperluan == 'Lainnya' ? 'selected' ; ''}}>Lainnya</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Keterangan</label>
+                                    <textarea class="form-control textarea" name="ket" value="{{$lab->keterangan}}"></textarea>
+                                </div>
+                            </div>
+                            {{-- form untuk sebelah kanan --}}
+                            <div class="merek weight-500 col-md-6">
+
+                                <div class="form-group">
                                     <label>Lokasi</label>
-                                    <select class="custom-select2 form-control" name="id_lokasi" required>
+                                    <select class="custom-select2 form-control" style="width: 100%; height: 38px"
+                                        name="id_lokasi">
                                         @foreach ($locations as $item)
-                                            <option value="{{ $item->encrypt_id }}"
-                                                {{ old('id_lokasi') == $item->encrypt_id ? 'selected' : '' }}>
-                                                {{ $item->nama_lokasi . ', Lt-' . $item->lantai_tingkat }}
-                                            </option>
+                                        <option value="{{ $item->encrypt_id }}" @if ($item->id == $lab->id_lokasi)
+                                            selected @endif>{{ $item->nama_lokasi.', Lt-'.$item->lantai_tingkat }}</option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Tanggal Pakai</label>
-                                    <input type="text" class="form-control date-picker" placeholder="Tanggal Pakai" />
-                                </div>
-
-                            </div>
-                            {{-- form untuk sebelah kanan --}}
-                            <div class="merek weight-500 col-md-6">
-                                <div class="form-group">
-                                    <label>Keperluan</label>
-                                    <input value="" autofocus name="" id=""
-                                        class="form-control @error('') form-control-danger @enderror" type="text"
-                                        placeholder="Keperluan">
-                                    @error('keperluan')
-                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
-                                    @enderror
+                                    <label>Tanggal Kegiatan</label>
+                                    <input value="{{$lab->tanggal_kegiatan}}" type="date" class="form-control"
+                                        name="tanggal_kegiatan" placeholder="Tanggal Pakai" />
                                 </div>
                                 <div class="form-group">
-                                    <label>Keterangan</label>
-                                    <textarea class="form-control"></textarea>
+                                    <label>Jam Mulai</label>
+                                    <input value="{{$lab->jam_mulai}}" class="form-control time-picker-default"
+                                        placeholder="time" type="text" name="jam_mulai" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Jam Selesai</label>
+                                    <input value="{{$lab->jam_selesai}}" class="form-control time-picker-default"
+                                        placeholder="time" type="text" name="jam_selesai" />
                                 </div>
                             </div>
                         </div>
 
 
                         <div class="form-group">
-
                             <button type="submit" class="submit btn btn-primary">Submit</button>
                         </div>
 
                     </form>
-                    <a href="{{ route('jurusan.lokasi.index') }}">
+                    <a href="{{ route('lab.ruang.index') }}">
 
                         <button class="batal btn btn-secondary">Batal</button>
                     </a>

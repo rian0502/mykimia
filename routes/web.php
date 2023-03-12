@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LabController;
+use App\Http\Controllers\SopController;
 use App\Http\Controllers\ForgotPassword;
 use App\Http\Controllers\ModelController;
 use App\Http\Controllers\BarangController;
@@ -22,11 +24,12 @@ use App\Http\Controllers\KategoriController;
 */
 
 // ADMIN LAB
-Route::prefix('admin/lab')->name('lab.')->group(function () {
+Route::prefix('admin/lab')->name('lab.')->middleware('auth', 'role:admin lab')->group(function () {
     Route::resource('model', ModelController::class);
     Route::resource('barang', BarangController::class);
     Route::resource('kategori', KategoriController::class);
     Route::resource('ruang', LabController::class);
+    Route::resource('sop', SopController::class);
     Route::resource('barang/history', HistoryController::class)->names(
         [
             'index' => 'barang.history.index',
@@ -41,11 +44,17 @@ Route::prefix('admin/lab')->name('lab.')->group(function () {
 });
 
 
+Route::prefix('test')->name('test.')->group(function () {
+    Route::view('sop/create', 'admin.lab.sop.create')->name('sop.create');
+    Route::view('sop/edit', 'admin.lab.sop.edit')->name('sop.edit');
+});
+
+
 Route::prefix('admin/berkas')->name('berkas.')->group(function () {
 });
 
 
-Route::prefix('jurusan')->name('jurusan.')->group(function () {
+Route::prefix('jurusan')->name('jurusan.')->middleware('auth', 'role:jurusan')->group(function () {
     Route::resource('lokasi', LokasiController::class);
 });
 
@@ -79,16 +88,29 @@ Route::prefix('fe')->name('fe')->group(function () {
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/beranda', function () {
-    return view('beranda');
-})->name('beranda');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
 
 
 
 //auth page
 Route::get('/login', function () {
     return view('auth.login');
-})->name('login');
+})->middleware('guest')->name('login');
+
+Route::post('/login', [AuthController::class, 'loginAttempt'])->name('login.post');
+
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::post('/link-reset', [AuthController::class, 'sendResetLinkEmail']);
+
+Route::post('/update', [AuthController::class, 'resetPassword']);
+
+Route::get('reset/{token}', [AuthController::class, 'showResetPasswordForm'])
+    ->name('password.reset');
+    
+
 Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
@@ -105,5 +127,3 @@ Route::get('/forgot', [ForgotPassword::class, 'index'])
     ->name('password.request');
 Route::post('/forgot-password', [ForgotPassword::class, 'sendResetLinkEmail'])
     ->name('password.email');
-Route::get('reset/{token}', [ForgotPassword::class, 'showResetPasswordForm'])
-    ->name('password.reset');
