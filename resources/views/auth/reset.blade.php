@@ -49,6 +49,11 @@
         })(window, document, "script", "dataLayer", "GTM-NXZMQSS");
     </script>
     <!-- End Google Tag Manager -->
+    <style>
+        .input-group.custom {
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -81,10 +86,15 @@
                         </div>
                         <h6 class="mb-20" style="text-align: center">Masukkan kata sandi baru Anda, konfirmasi dan
                             kirim</h6>
+                            @error('email')
+                            <div class="alert alert-danger">
+                                {{ $message }}
+                            </div>
+                        @enderror
                         <form action="/update" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="input-group custom">
-                                <input type="email" name="email" class="form-control form-control-lg"
+                                <input type="email" name="email" class="form-control form-control-lg @error('email') form-control-warning @enderror"
                                     placeholder="Email" />
                                 <div class="input-group-append custom">
                                     <span class="input-group-text"><i class="dw dw-email"></i></span>
@@ -98,14 +108,14 @@
                                 </div>
                             </div>
                             <div class="input-group custom">
-                                <input type="text" class="form-control form-control-lg"
+                                <input type="password" class="form-control form-control-lg"
                                     placeholder="Kata Sandi Baru" name="password" />
                                 <div class="input-group-append custom">
                                     <span class="input-group-text"><i class="dw dw-padlock1"></i></span>
                                 </div>
                             </div>
                             <div class="input-group custom">
-                                <input type="text" class="form-control form-control-lg"
+                                <input type="password" class="form-control form-control-lg"
                                     placeholder="Konfirmai Kata Sandi Baru" name="password_confirmation"/>
                                 <div class="input-group-append custom">
                                     <span class="input-group-text"><i class="dw dw-padlock1"></i></span>
