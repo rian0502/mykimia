@@ -43,19 +43,17 @@ Route::prefix('admin/lab')->name('lab.')->middleware('auth', 'role:admin lab')->
     );
 });
 Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth')->name('auth.logout');
+
 Route::name('auth.')->middleware('guest')->group(function () {
 
     Route::post('/login', [AuthController::class, 'loginAttempt'])->name('login.post');
     Route::post('/link-reset', [AuthController::class, 'sendResetLinkEmail'])->name('password.link.post');
     Route::post('/update', [AuthController::class, 'resetPassword'])->name('password.update.post');
-
-
     Route::get('/forgot-password', [AuthController::class, 'forgotPassword'])->name('password.forgot');
     Route::get('reset/{token}', [AuthController::class, 'showResetPasswordForm'])->name('password.reset');
     Route::get('/login', [AuthController::class, 'login'])->name('login');
-
-
-    Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
+    Route::get('/register', [AuthController::class, 'register'])->name('register');
+    Route::post('/register', [AuthController::class, 'attemptRegister'])->name('register.post');
 });
 
 
@@ -93,15 +91,13 @@ Route::prefix('fe')->name('fe')->group(function () {
 });
 
 
-
-
-
 Route::get('/', function () {
     return view('index');
 });
+
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->name('dashboard');
+})->middleware('auth')->name('dashboard');
 
 
 

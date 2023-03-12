@@ -17,18 +17,13 @@ class AuthController extends Controller
     {
         return view('auth.login');
     }
-    
+
     public function loginAttempt(LoginRequest $request)
     {
         $credentials = $request->only('email', 'password');
         if (auth()->attempt($credentials)) {
             $request->session()->regenerate();
-
-            if (auth()->user()->hasRole('admin lab')) {
-                return redirect()->intended('admin/lab/ruang');
-            } else {
-                return redirect()->intended('jurusan/lokasi');
-            }
+            return redirect()->intended('dashboard');
         }
         return back()->withErrors([
             'status' => 'Email dan Password tidak cocok.',
@@ -83,5 +78,13 @@ class AuthController extends Controller
     public function forgotPassword()
     {
         return view('auth.forgot');
+    }
+
+    public function register()
+    {
+        return view('auth.register');
+    }
+    public function attemptRegister(Request $request){
+        return dd($request->all());
     }
 }

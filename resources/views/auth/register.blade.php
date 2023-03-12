@@ -78,7 +78,7 @@
                 <div class="col-md-6 col-lg-5">
                     <div class="register-box bg-white box-shadow border-radius-10">
                         <div class="wizard-content">
-                            <form class="tab-wizard2 wizard-circle wizard" action="" method="" enctype="multipart/form-data">
+                            <form class="tab-wizard2 wizard-circle wizard" action="{{ route('auth.register.post') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <h5>Kredensial Akun Dasar</h5>
                                 <section>
@@ -86,7 +86,7 @@
                                         <div class="form-group row mt-5">
                                             <label class="col-sm-4 col-form-label">Alamat Email*</label>
                                             <div class="col-sm-8">
-                                                <input type="email" class="form-control @error('email') form-control-danger @enderror" />
+                                                <input type="email" class="form-control @error('email') form-control-danger @enderror" name="email"/>
                                                 @error('email')
                                                     <small class="text-danger">{{ $message }}</small>
                                                 @enderror
