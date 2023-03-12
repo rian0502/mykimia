@@ -13,15 +13,16 @@ use App\Http\Requests\UpdateResetPasswordRequest;
 class AuthController extends Controller
 {
     //
-
-    public function loginAttempt(LoginRequest $request){
+    //melakukan login pada user
+    public function loginAttempt(LoginRequest $request)
+    {
         $credentials = $request->only('email', 'password');
         if (auth()->attempt($credentials)) {
             $request->session()->regenerate();
 
-            if(auth()->user()->hasRole('admin lab')){
+            if (auth()->user()->hasRole('admin lab')) {
                 return redirect()->intended('admin/lab/ruang');
-            }else{
+            } else {
                 return redirect()->intended('jurusan/lokasi');
             }
         }
@@ -29,14 +30,17 @@ class AuthController extends Controller
             'status' => 'Email dan Password tidak cocok.',
         ]);
     }
-    public function logout(){
+    //melakukan logout pada user
+    public function logout()
+    {
         auth()->logout();
         request()->session()->invalidate();
         request()->session()->regenerateToken();
         return redirect('/');
     }
-
-    public function sendResetLinkEmail(SendEmailResetRequest $request){
+    //melakukan pengiriman link reset password
+    public function sendResetLinkEmail(SendEmailResetRequest $request)
+    {
         $credentials = $request->only('email');
         $status = Password::sendResetLink($credentials);
         if ($status === Password::RESET_LINK_SENT) {
@@ -46,13 +50,15 @@ class AuthController extends Controller
             'error' => 'Link reset password gagal dikirim',
         ]);
     }
-
-    public function showResetPasswordForm($token){
+    //menampilkan halaman reset password
+    public function showResetPasswordForm($token)
+    {
 
         return view('auth.reset', ['token' => $token]);
     }
-
-    public function resetPassword(UpdateResetPasswordRequest $request){
+    //melakukan reset password
+    public function resetPassword(UpdateResetPasswordRequest $request)
+    {
         $status = Password::reset(
             $request->only('email', 'password', 'password_confirmation', 'token'),
             function ($user, $password) {
