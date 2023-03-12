@@ -23,21 +23,21 @@
                             <div class="row border-bottom">
                                 <label class="col-md-3 bold"> <strong> Nama kegiatan</strong></label>
                                 <div class="col-md-3" style="display:block;word-wrap:break-word;">
-                                    {{-- {{ $lab->nama_kegiatan }} --}}
+                                    {{ $lab->nama_kegiatan }}
                                 </div>
                                 <label class="col-md-3 bold"><b>Tanggal Kegiatan</b></label>
                                 <div class="col-md-3" style="display:block;word-wrap:break-word;">
-                                    {{-- {{ $barang->lokasi->nama_gedung . ' / Lt-' . $barang->lokasi->lantai_tingkat }} --}}
+                                    {{ $carbon::parse($lab->tanggal_kegiatan)->translatedFormat('d F Y') }}
                                 </div>
                             </div>
                             <div class="row border-bottom">
                                 <label class="col-md-3 bold"><b>Keperluan</b></label>
                                 <div class="col-md-3" style="display:block;word-wrap:break-word;">
-                                    {{-- {{ $barang->kategori->nama_kategori }} --}}
+                                    {{ $lab->keperluan }}
                                 </div>
                                 <label class="col-md-3 bold"><strong> Jam Mulai</strong></label>
                                 <div class="col-md-3" style="display:block;word-wrap:break-word;">
-                                    {{-- {{ $barang->lokasi->nama_lokasi }} --}}
+                                    {{ $carbon::createFromFormat('H:i:s',$lab->jam_mulai)->format('h:i A')}}
                                 </div>
                             </div>
 
@@ -45,18 +45,18 @@
 
                                 <label class="col-md-3 bold"> <strong>Lokasi</strong></label>
                                 <div class="col-md-3" style="display:block;word-wrap:break-word;">
-                                    {{-- {{ $barang->jumlah_akhir }} --}}
+                                    {{ $lab->lokasi->nama_lokasi }}
                                 </div>
                                 <label class="col-md-3 bold"> <strong> Jam Selesai</strong></label>
                                 <div class="col-md-3" style="display:block;word-wrap:break-word;">
-                                    {{-- {{ $barang->jumlah_akhir }} --}}
+                                    {{ $carbon::createFromFormat('H:i:s',$lab->jam_selesai)->format('h:i A')}}
                                 </div>
                             </div>
 
                             <div class="row border-bottom">
                                 <label class="col-md-7 bold"><b>Keterangan</b></label>
-                                <div class="col" style="display:block;word-wrap:break-word;">
-                                    {{-- {{ $barang->modelBarang->nama_model }} --}}kajdkjwajidljhalsdawdijdijalshjdflkahgfuihalksdhailwflihakhsdfaifhawifiajdfjlasdawdajsidjailwjdijalsdjilajwdiljaisajdilajwijdliajsidjailwjfdilasidjlsihfjiuawfilahslkdfhiawhrfiasjhdfiawijafjihaqw
+                                <div class="col-md-7" style="display:block;word-wrap:break-word;">
+                                   {{$lab->keterangan}}
                                 </div>
 
                             </div>

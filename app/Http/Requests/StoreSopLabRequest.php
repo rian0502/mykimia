@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreSopLabRequest extends FormRequest
@@ -13,7 +14,7 @@ class StoreSopLabRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return Auth::user()->hasRole('admin lab');;
     }
 
     /**

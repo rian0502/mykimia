@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreModelBarangRequest;
+use App\Models\Kategori;
 use App\Models\ModelBarang;
 use Illuminate\Support\Facades\Crypt;
 
@@ -29,7 +30,10 @@ class ModelController extends Controller
     public function create()
     {
         //
-        return view('admin.inventaris.model.create');
+        $data = [
+            'categories' => Kategori::all()
+        ];
+        return view('admin.inventaris.model.create', $data);
     }
 
     /**

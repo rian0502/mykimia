@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreModelBarangRequest extends FormRequest
@@ -13,7 +14,7 @@ class StoreModelBarangRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return Auth::user()->hasRole('admin lab');;
     }
 
     /**
@@ -26,6 +27,7 @@ class StoreModelBarangRequest extends FormRequest
         return [
             'nama_model' => 'required|max:100',
             'merk' => 'required|max:100',
+            'id_kategori' => 'required|exists:kategori,encrypt_id',
         ];
     }
 
@@ -36,6 +38,8 @@ class StoreModelBarangRequest extends FormRequest
             'nama_model.max' => 'Nama model maksimal 100 karakter',
             'merk.required' => 'Merk harus diisi',
             'merk.max' => 'Merk maksimal 100 karakter',
+            'id_kategori.required' => 'Kategori harus diisi',
+            'id_kategori.exists' => 'Kategori tidak ditemukan',
         ];
     }
     

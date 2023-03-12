@@ -177,7 +177,10 @@
         object-fit: cover;
     }
 }
-
+.text-black{
+    color: black;
+    
+}
 
 
 .page-header {

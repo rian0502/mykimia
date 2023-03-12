@@ -20,12 +20,13 @@ class RolePermision extends Seeder
         //buatkan seeder menggunakan spatie
         $user = User::create([
             'name' => 'Jurusan Kimia',
-            'email' => 'kajur.kimia@mail.com',
+            'email' => 'febrianhasibuan090@gmail.com',
+            'email_verified_at' => now(),
             'password' => bcrypt('kajur'),
         ]);
         $adminLab = User::create([
             'name' => 'Admin Lab Kimia',
-            'email' => 'admin.lab@kimia.com',
+            'email' => 'admin.lab@mail.com',
             'password' =>  bcrypt('kajur'),
         ]);
 

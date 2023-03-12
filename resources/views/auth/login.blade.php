@@ -78,7 +78,7 @@
             <div class="row align-items-center">
                 <div class=" col-md-6 col-lg-7">
                     <div id="picture">
-                    <img  src="/Assets/admin/vendors/images/bg-login.png" />
+                        <img src="/Assets/admin/vendors/images/bg-login.png" />
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-5">
@@ -86,37 +86,32 @@
                         <div class="login-title">
                             <h2 class="text-center text-primary">Masuk Akun</h2>
                         </div>
-                        <form action="" method="" enctype="multipart/form-data">
+                        <form action="{{route('login.post')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="input-group custom">
-                                <input type="text" class="form-control form-control-lg" placeholder="Email" />
+                                <input name="email" type="text" class="form-control form-control-lg" placeholder="Email" />
                                 <div class="input-group-append custom">
                                     <span class="input-group-text"><i class="icon-copy dw dw-email"></i></span>
                                 </div>
                             </div>
                             <div class="input-group custom">
-                                <input type="password" class="form-control form-control-lg" placeholder="Kata Sandi" />
+                                <input name="password" type="password" class="form-control form-control-lg" placeholder="Kata Sandi" />
                                 <div class="input-group-append custom">
                                     <span class="input-group-text"><i class="dw dw-padlock1"></i></span>
                                 </div>
                             </div>
                             <div class="row pb-30">
-                                {{-- <div class="col-6">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck1" />
-                                        <label class="custom-control-label" for="customCheck1">Ingat saya</label>
-                                    </div>
-                                </div> --}}
                                 <div class="col-12">
                                     <div class="forgot-password">
                                         <a href="/forgot-password">Lupa Kata Sandi?</a>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="input-group mb-0">
-                                        <a class="btn btn-primary btn-lg btn-block" href="{{ route('beranda') }}">Masuk</a>
+                                        <button type="submit" class="btn btn-primary btn-lg btn-block">Masuk</button>
                                     </div>
                                     <div class="font-16 weight-600 pt-10 pb-10 text-center" data-color="#707373">
                                         ATAU
