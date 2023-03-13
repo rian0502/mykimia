@@ -87,4 +87,8 @@ class AuthController extends Controller
     public function attemptRegister(Request $request){
         return dd($request->all());
     }
+
+    public function reactivation(){
+        return view('auth.reactivation');
+    }
 }

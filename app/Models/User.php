@@ -44,6 +44,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
+    protected $emailVerifiedAtColumn = 'email_verified_at';
+
     public function dosen()
     {
         return $this->hasMany(Dosen::class, 'user_id');

@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\AuthController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LabController;
 use App\Http\Controllers\SopController;
-use App\Http\Controllers\ForgotPassword;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ModelController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\LokasiController;
@@ -97,8 +97,9 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware('auth')->name('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/email/verify', [AuthController::class, 'reactivation'])->middleware('auth')->name('verification.notice');
 
 
 //auth page
