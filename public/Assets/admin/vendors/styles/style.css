@@ -4174,12 +4174,28 @@ body.IE .register-page-wrap .container {
     .register-page-wrap .wizard-content .wizard .steps {
         width: 300px;
     }
+    #account {
+        /* margin-top: 200px; */
+    }
 }
 @media (max-width: 991px) {
-  
-    .card-boox {
-       width: 100%;
-       height: 100%;
+    #account {
+        justify-content: center;
+    }
+    .col-lg-7{
+        /* display: none; */
+    }
+    /* .boxeds{
+         scale: 1.5;
+         margin-top: 20px;
+         margin-left: 200px;
+    } */
+    #picture {
+        /* display: none; */
+    }
+    .card-box {
+        width: 100%;
+        height: 100%;
     }
     .device-usage-chart .width-50-p {
         width: 100%;
@@ -4197,12 +4213,14 @@ body.IE .register-page-wrap .container {
 .left {
     float: left;
 }
-@media (max-width: 767px) {
-    #register {
-        margin-top: 380px;
-    }
-     
 
+@media (max-width: 767px) {
+    #picture {
+        display: none;
+    }
+    #account {
+        margin-top: 350px;
+    }
     .table-actions {
         margin-top: 20px;
     }
@@ -4317,6 +4335,9 @@ body.IE .register-page-wrap .container {
     .docs-buttons .btn-group-crop {
         display: block;
     }
+    #items-new {
+        margin-top: 20px;
+    }
 
     .select-role .btn-group .btn {
         padding-left: 35px;
@@ -4344,5 +4365,22 @@ body.IE .register-page-wrap .container {
     }
     .register-page-wrap .wizard-content .wizard .steps {
         display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    #items-new {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    #items-new {
+        margin-top: 0px;
+    }
+}
+@media (max-width: 400px) {
+    #items-new {
+        margin-top: 180px;
     }
 }

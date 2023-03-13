@@ -17,9 +17,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet" />
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="/Assets/admin/vendors/styles/core.css" />
-    <link rel="stylesheet" type="text/css" href="/Assets/admin/vendors/styles/icon-font.min.css" />
-    <link rel="stylesheet" type="text/css" href="/Assets/admin/vendors/styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="/Assets/auth/vendors/styles/core.css" />
+    <link rel="stylesheet" type="text/css" href="/Assets/auth/vendors/styles/icon-font.min.css" />
+    <link rel="stylesheet" type="text/css" href="/Assets/auth/vendors/styles/style.css" />
 
     <!-- FontAwesome -->
     <link href="/Assets/FontAwesome/css/fontawesome.css" rel="stylesheet">
@@ -68,7 +68,7 @@
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <div class="brand-logo">
                 <a href="/">
-                    <img src="/Assets/admin/vendors/images/deskapp-logo.svg" alt="" />
+                    <img src="/Assets/auth/vendors/images/deskapp-logo.svg" alt="" />
                 </a>
             </div>
             <div class="login-menu">
@@ -82,7 +82,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class=" col-md-6 col-lg-7">
-                    <div id="picture">
+                    <div id="">
                         <img src="/Assets/admin/vendors/images/bg-login.png" />
                     </div>
                 </div>
@@ -153,10 +153,10 @@
     </div>
 
     <!-- js -->
-    <script src="/Assets/admin/vendors/scripts/core.js"></script>
-    <script src="/Assets/admin/vendors/scripts/script.min.js"></script>
-    <script src="/Assets/admin/vendors/scripts/process.js"></script>
-    <script src="/Assets/admin/vendors/scripts/layout-settings.js"></script>
+    <script src="/Assets/auth/vendors/scripts/core.js"></script>
+    <script src="/Assets/auth/vendors/scripts/script.min.js"></script>
+    <script src="/Assets/auth/vendors/scripts/process.js"></script>
+    <script src="/Assets/auth/vendors/scripts/layout-settings.js"></script>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS" height="0" width="0"
             style="display: none; visibility: hidden"></iframe></noscript>
