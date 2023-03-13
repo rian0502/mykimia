@@ -297,13 +297,15 @@
         <div class="menu-block customscroll">
             <div class="sidebar-menu">
                 <ul id="accordion-menu">
-                    @role('jurusan')
+                    @auth
                         <li>
                             <a href="{{ route('dashboard') }}"
                                 class="dropdown-toggle no-arrow {{ Request::is('dashboard') ? 'active' : '' }}">
                                 <span class="micon bi bi-grid-fill"></span><span class="mtext">Dashboard</span>
                             </a>
                         </li>
+                    @endauth
+                    @role('jurusan')
                         <li>
                             <a href="{{ route('jurusan.lokasi.index') }}"
                                 class="dropdown-toggle no-arrow {{ Request::is('jurusan/lokasi*') ? 'active' : '' }}">
@@ -311,7 +313,6 @@
                             </a>
                         </li>
                     @endrole
-
                     @role('admin lab')
                         <li>
                             <a href="{{ route('lab.ruang.index') }}"

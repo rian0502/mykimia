@@ -109,31 +109,29 @@
                             {{-- tampil saat mode mobile --}}
                             <div class="login">
                                 <a href="{{ route('dashboard') }}" class="nav-item nav-link">Dashboard</a>
-                                <a href="{{ route('logout') }}" class="nav-item nav-link text-danger">Keluar</a>
+                                <a href="{{ route('auth.logout') }}" class="nav-item nav-link text-danger">Keluar</a>
                             </div>
                         @else
                             <div class="login">
-                                <a href="{{ route('login') }}" class="nav-item nav-link text-primary">Masuk</a>
+                                <a href="{{ route('auth.login') }}" class="nav-item nav-link text-primary">Masuk</a>
                             </div>
                             {{-- tampil saat mode mobile --}}
                         @endauth
                     </div>
-                </div>
-                @auth
-                    <div class="new navbar-nav">
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle text-black text-bold"
-                                data-bs-toggle="dropdown">Putu Putra Eka
-                                Persada</a>
-                            <div class="dropdown-menu account bg-light rounded-0 rounded-bottom m-0">
+
+                    @auth
+                        <div class="ms-auto d-none d-lg-block">
+                            <div class="nav-item dropdown">
+                            <a href="#" class="name-account dropdown-toggle text-black text-bold" data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>
+                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
                                 <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
-                                <a href="{{ route('logout') }}" class="dropdown-item">Keluar</a>
+                                <a href="{{ route('auth.logout') }}" class="dropdown-item">Keluar</a>
                             </div>
                         </div>
                     </div>
                 @else
                     <div class="ms-auto d-none d-lg-block">
-                        <a href="{{ route('login') }}" class="btn btn-primary rounded-pill py-2 px-3">Masuk</a>
+                        <a href="{{ route('auth.login') }}" class="btn btn-primary rounded-pill py-2 px-3">Masuk</a>
                     </div>
                 @endauth
             </nav>

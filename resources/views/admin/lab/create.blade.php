@@ -20,7 +20,10 @@
                             <div class="weight-500 col-md-6">
                                 <div class="form-group">
                                     <label>Nama Kegiatan</label>
-                                    <input type="text" value="{{old('nama_kegiatan')}}" class="form-control" name="nama_kegiatan" placeholder="Nama Kegiatan"/>
+                                    <input type="text" value="{{old('nama_kegiatan')}}" class="form-control @error('nama_kegiatan') form-control-danger @enderror" name="nama_kegiatan" placeholder="Nama Kegiatan"/>
+                                    @error('nama_kegiatan')
+                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label>Keperluan</label>
@@ -32,7 +35,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Keterangan</label>
-                                    <textarea class="form-control textarea" name="ket"></textarea>
+                                    <textarea class="form-control textarea @error('ket') form-control-danger @enderror" name="ket"></textarea>
+                                    @error('ket')
+                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                             {{-- form untuk sebelah kanan --}}
@@ -51,22 +57,28 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Tanggal Kegiatan</label>
-                                    <input type="date" value="{{old('tanggal_kegiatan')}}" class="form-control" name="tanggal_kegiatan" placeholder="Tanggal Pakai"/>
+                                    <input type="date" value="{{old('tanggal_kegiatan')}}" class="form-control @error('tanggal_kegiatan') form-control-danger @enderror" name="tanggal_kegiatan" placeholder="Tanggal Pakai"/>
+                                    @error('tanggal_kegiatan')
+                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label>Jam Mulai</label>
 									<input
-										class="form-control time-picker-default"
+										class="form-control time-picker-default @error('jam_mulai') form-control-danger @enderror"
 										placeholder="time"
 										type="text"
                                         name="jam_mulai"
                                         value="{{old('jam_mulai')}}"
 									/>
+                                    @error('jam_mulai')
+                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label>Jam Selesai</label>
 									<input
-										class="form-control time-picker-default"
+										class="form-control time-picker-default @error('jam_selesai') form-control-danger @enderror"
 										placeholder="time"
 										type="text"
                                         name="jam_selesai"

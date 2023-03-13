@@ -49,6 +49,11 @@
         })(window, document, "script", "dataLayer", "GTM-NXZMQSS");
     </script>
     <!-- End Google Tag Manager -->
+    <style>
+        .input-group.custom {
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -61,7 +66,7 @@
             </div>
             <div class="login-menu">
                 <ul>
-                    <li><a href="/login">Kembali</a></li>
+                    <li><a href="{{route('auth.login')}}">Kembali</a></li>
                 </ul>
             </div>
         </div>
@@ -82,16 +87,35 @@
                         <h6 class="mb-20" style="text-align: center">
                             Masukkan alamat email Anda untuk mengatur ulang kata sandi Anda
                         </h6>
-                        <form action="link-reset" method="POST" enctype="multipart/form-data">
+                        @if (session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                            @elseif (session('error'))
+                            <div class="alert alert-danger">
+                                {{ session('error') }}
+                            </div>
+                        @endif
+
+                        <form action="{{route('auth.password.link.post')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="input-group custom">
-                                <input type="email" name="email" class="form-control form-control-lg" placeholder="Email" />
+                                <input type="email" name="email" class="form-control form-control-lg @error('email') form-control-danger @enderror" placeholder="Email" />
+
                                 <div class="input-group-append custom">
+                                    @error('email')
+
+                                    @else
+
                                     <span class="input-group-text"><i class="fa fa-envelope-o"
                                             aria-hidden="true"></i></span>
+                                    @enderror
                                 </div>
                             </div>
-                            <div class="row align-items-center">
+                            @error('email')
+                                <small class="form-control-feedback mb-2 text-danger">{{ $message }}</small>
+                                @enderror
+                            <div class="row align-items-center mt-3">
                                 <div class="col-4">
                                     <div class="input-group mb-0">
                                         <input type="submit" class="btn btn-primary btn-lg btn-block" value="Kirim" />
@@ -104,7 +128,7 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="input-group mb-0">
-                                        <a class="btn btn-outline-primary btn-lg btn-block" href="/login">Masuk</a>
+                                        <a class="btn btn-outline-primary btn-lg btn-block" href="{{route('auth.login')}}">Masuk</a>
                                     </div>
                                 </div>
                             </div>
