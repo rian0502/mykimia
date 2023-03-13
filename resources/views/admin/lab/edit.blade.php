@@ -20,8 +20,11 @@
                             <div class="weight-500 col-md-6">
                                 <div class="form-group">
                                     <label>Nama Kegiatan</label>
-                                    <input value="{{$lab->nama_kegiatan}}" type="text" class="form-control"
+                                    <input value="{{$lab->nama_kegiatan}}" type="text" class="form-control @error('nama_kegiatan') form-control-danger @enderror"
                                         name="nama_kegiatan" placeholder="Nama Kegiatan" />
+                                        @error('nama_kegiatan')
+                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label>Keperluan</label>
@@ -34,7 +37,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Keterangan</label>
-                                    <textarea class="form-control textarea" name="ket" value="{{$lab->keterangan}}"></textarea>
+                                    <textarea class="form-control textarea @error('ket') form-control-danger @enderror" name="ket" value="{{$lab->keterangan}}"></textarea>
+                                    @error('ket')
+                                    <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                @enderror
                                 </div>
                             </div>
                             {{-- form untuk sebelah kanan --}}
@@ -52,18 +58,27 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Tanggal Kegiatan</label>
-                                    <input value="{{$lab->tanggal_kegiatan}}" type="date" class="form-control"
+                                    <input value="{{$lab->tanggal_kegiatan}}" type="date" class="form-control @error('tanggal_kegiatan') form-control-danger @enderror"
                                         name="tanggal_kegiatan" placeholder="Tanggal Pakai" />
+                                        @error('tanggal_kegiatan')
+                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label>Jam Mulai</label>
-                                    <input value="{{$lab->jam_mulai}}" class="form-control time-picker-default"
+                                    <input value="{{$lab->jam_mulai}}" class="form-control time-picker-default @error('jam_mulai') form-control-danger @enderror"
                                         placeholder="time" type="text" name="jam_mulai" />
+                                        @error('jam_mulai')
+                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label>Jam Selesai</label>
-                                    <input value="{{$lab->jam_selesai}}" class="form-control time-picker-default"
+                                    <input value="{{$lab->jam_selesai}}" class="form-control time-picker-default @error('jam_selesai') form-control-danger @enderror"
                                         placeholder="time" type="text" name="jam_selesai" />
+                                        @error('jam_selesai')
+                                        <div class="form-control-feedback has-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                         </div>

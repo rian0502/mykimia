@@ -26,7 +26,8 @@ class UpdateResetPasswordRequest extends FormRequest
         return [
             'token' => 'required|string',
             'email' => 'required|email|exists:users,email',
-            'password' => 'required|string|min:8|confirmed',
+            'password' => 'required|min:8|regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,}$/',
+            'password_confirmation' => 'required|same:password',
         ];
     }
     public function messages()
@@ -38,8 +39,7 @@ class UpdateResetPasswordRequest extends FormRequest
             'email.exists' => 'Email Tidak Terdaftar',
             'password.required' => 'Password Harus diisi',
             'password.min' => 'Password Minimal 8 Karakter',
-            'password.confirmed' => 'Password Tidak Sama',
-            'password.string' => 'Password Harus Berupa String',
+            'password.regex' => 'Password Harus Mengandung Huruf Besar, Huruf Kecil, Angka, dan Simbol',
         ];
     }
     protected function prepareForValidation()

@@ -56,7 +56,7 @@
     <div class="login-header box-shadow">
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <div class="brand-logo">
-                <a href="login.html">
+                <a href="/">
                     <img src="/Assets/admin/vendors/images/deskapp-logo.svg" alt="" />
                 </a>
             </div>
@@ -67,159 +67,109 @@
             </div>
         </div>
     </div>
-    <div class="register-page-wrap d-flex align-items-center flex-wrap justify-content-center">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 col-lg-7">
-                    <div id="picture">
-                        <img src="/Assets/admin/vendors/images/register-page-img.png" alt="" />
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-5">
-                    <div class="register-box bg-white box-shadow border-radius-10">
-                        <div class="wizard-content">
-                            <form class="tab-wizard2 wizard-circle wizard" action="" method="" enctype="multipart/form-data">
-                                @csrf
-                                <h5>Kredensial Akun Dasar</h5>
-                                <section>
-                                    <div class="form-wrap max-width-600 mx-auto">
-                                        <div class="form-group row mt-5">
-                                            <label class="col-sm-4 col-form-label">Alamat Email*</label>
-                                            <div class="col-sm-8">
-                                                <input type="email" class="form-control" />
-                                            </div>
-                                        </div>
-                                        <div class="form-group row ">
-                                            <label class="col-sm-4 col-form-label">Kata Sandi*</label>
-                                            <div class="col-sm-8">
-                                                <input type="password" class="form-control" />
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Konfirmasi Kata Sandi*</label>
-                                            <div class="col-sm-8">
-                                                <input type="password" class="form-control" />
-                                            </div>
-                                        </div>
+
+    <!-- success Popup html End -->
+    <div class="justify-content-center" style="padding: 100px">
+        <div class="pd-ltr-20 xs-pd-20-10">
+            <div class="pd-20 card-box mb-30">
+                <form action="{{ route('lab.ruang.store') }}" method="POST">
+                    @csrf
+                    <div class="profile-edit-list row">
+                        {{-- form untuk sebelah kiri --}}
+                        <div class="weight-500 col-md-6">
+                            <div class="form-group">
+                                <label class="col-sm-4 col-form-label">Alamat Email*</label>
+                                <div class="col-sm-8">
+                                    <input type="email"
+                                        class="form-control @error('email') form-control-danger @enderror"
+                                        name="email" />
+                                    @error('email')
+                                        <small class="text-danger">{{ $message }}</small>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-4 col-form-label">Kata Sandi*</label>
+                                <div class="col-sm-8">
+                                    <input type="password" name="password"
+                                        class="form-control @error('password') form-control-danger @enderror" />
+                                    @error('password')
+                                        <small class="text-danger">{{ $message }}</small>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 col-form-label">Konfirmasi Kata Sandi*</label>
+                                <div class="col-sm-8">
+                                    <input type="password" name="password_confirm"
+                                        class="form-control @error('password_confirm') form-control-danger @enderror" />
+                                    @error('password_confirm')
+                                        <small class="text-danger">{{ $message }}</small>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        {{-- form untuk sebelah kanan --}}
+                        <div class="merek weight-500 col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Nama Lengkap*</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="nama_lengkap"
+                                        class="form-control @error('nama_lengkap') form-control-danger @enderror" />
+                                    @error('nama_lengkap')
+                                        <small class="text-danger">{{ $message }}</small>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row align-items-center">
+                                <label class="col-sm-4 col-form-label">Jenis Kelamin*</label>
+                                <div class="col-sm-8">
+                                    <div class="custom-control custom-radio custom-control-inline pb-0">
+                                        <input type="radio" id="male" name="gender"
+                                            class="custom-control-input" />
+                                        <label class="custom-control-label" for="male">Pria</label>
                                     </div>
-                                </section>
-                                <!-- Step 2 -->
-                                <h5>Informasi pribadi</h5>
-                                <section>
-                                    <div class="form-wrap max-width-600 mx-auto">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Nama Lengkap*</label>
-                                            <div class="col-sm-8">
-                                                <input type="text" class="form-control" />
-                                            </div>
-                                        </div>
-                                        <div class="form-group row align-items-center">
-                                            <label class="col-sm-4 col-form-label">Jenis Kelamin*</label>
-                                            <div class="col-sm-8">
-                                                <div class="custom-control custom-radio custom-control-inline pb-0">
-                                                    <input type="radio" id="male" name="gender"
-                                                        class="custom-control-input" />
-                                                    <label class="custom-control-label" for="male">Pria</label>
-                                                </div>
-                                                <div class="custom-control custom-radio custom-control-inline pb-0">
-                                                    <input type="radio" id="female" name="gender"
-                                                        class="custom-control-input" />
-                                                    <label class="custom-control-label" for="female">Wanita</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">NPM*</label>
-                                            <div class="col-sm-8">
-                                                <input type="text" class="form-control" />
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Angkatan*</label>
-                                            <div class="col-sm-8">
-                                                <input class="form-control year-picker" type="text">
-                                            </div>
-                                        </div>
+                                    <div class="custom-control custom-radio custom-control-inline pb-0">
+                                        <input type="radio" id="female" name="gender"
+                                            class="custom-control-input" />
+                                        <label class="custom-control-label" for="female">Wanita</label>
                                     </div>
-                                </section>
-                                <!-- Step 3 -->
-                                {{-- <h5>Informasi Ikhtisar</h5>
-                                <section>
-                                    <div class="form-wrap max-width-600 mx-auto">
-                                        <ul class="register-info">
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-sm-4 weight-600">Alamat Email</div>
-                                                    <div class="col-sm-8">putuputrae@gmail.com</div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-sm-4 weight-600">Username</div>
-                                                    <div class="col-sm-8">Putu Putra</div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-sm-4 weight-600">Kata Sandi</div>
-                                                    <div class="col-sm-8">123456789</div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-sm-4 weight-600">Nama Lengkap</div>
-                                                    <div class="col-sm-8">Putu Putra Eka Persada</div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-sm-4 weight-600">NPM</div>
-                                                    <div class="col-sm-8">2017051016</div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-sm-4 weight-600">Angkatan</div>
-                                                    <div class="col-sm-8">2020</div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="custom-control custom-checkbox mt-4">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck1" />
-                                            <label class="custom-control-label" for="customCheck1">Saya telah membaca dan menyetujui persyaratan layanan dan kebijakan privasi</label>
-                                        </div>
-                                    </div>
-                                </section> --}}
-                            </form>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">NPM*</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="npm"
+                                        class="form-control @error('npm') form-control-danger @enderror" />
+                                    @error('npm')
+                                        <small class="text-danger">{{ $message }}</small>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Angkatan*</label>
+                                <div class="col-sm-8">
+                                    <input name="angkatan"
+                                        class="form-control year-picker @error('angkatan') form-control-danger @enderror"
+                                        type="text">
+                                    @error('angkatan')
+                                        <small class="text-danger">{{ $message }}</small>
+                                    @enderror
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- success Popup html Start -->
-    <button type="button" id="success-modal-btn" hidden data-toggle="modal" data-target="#success-modal"
-        data-backdrop="static">
-        Launch modal
-    </button>
-    <div class="modal fade" id="success-modal" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered max-width-400" role="document">
-            <div class="modal-content">
-                <div class="modal-body text-center font-18">
-                    <h3 class="mb-20">Formulir Terkirim!</h3>
-                    <div class="mb-30 text-center">
-                        <img src="/Assets/admin/vendors/images/success.png" />
+
+
+                    <div class="form-group">
+                        <button type="submit" class="submit btn btn-primary">Submit</button>
                     </div>
-                    Silakan masuk ke akun Anda untuk melanjutkan
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <a href="/login" class="btn btn-primary">Selesai</a>
-                </div>
+
+                </form>
             </div>
         </div>
     </div>
-    <!-- success Popup html End -->
 
     <!-- js -->
     <script src="/Assets/admin/vendors/scripts/core.js"></script>

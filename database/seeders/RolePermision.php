@@ -20,7 +20,7 @@ class RolePermision extends Seeder
         //buatkan seeder menggunakan spatie
         $user = User::create([
             'name' => 'Jurusan Kimia',
-            'email' => 'febrianhasibuan090@gmail.com',
+            'email' => 'yogiandaru3@gmail.com',
             'email_verified_at' => now(),
             'password' => bcrypt('kajur'),
         ]);
@@ -37,9 +37,9 @@ class RolePermision extends Seeder
                 'guard_name' => 'web'
             ]);
         }
-        
+
         $user->assignRole('jurusan');
         $adminLab->assignRole('admin lab');
-        
+
     }
 }

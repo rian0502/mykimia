@@ -56,13 +56,18 @@
         })(window, document, "script", "dataLayer", "GTM-NXZMQSS");
     </script>
     <!-- End Google Tag Manager -->
+    <style>
+        .input-group.custom {
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 
 <body class="login-page">
     <div class="login-header box-shadow">
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <div class="brand-logo">
-                <a href="login.html">
+                <a href="/">
                     <img src="/Assets/admin/vendors/images/deskapp-logo.svg" alt="" />
                 </a>
             </div>
@@ -86,24 +91,42 @@
                         <div class="login-title">
                             <h2 class="text-center text-primary">Masuk Akun</h2>
                         </div>
-                        <form action="{{route('login.post')}}" method="POST" enctype="multipart/form-data">
+                        @error('status')
+                            <div class="alert alert-danger">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                        <form action="{{route('auth.login.post')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="input-group custom">
-                                <input name="email" type="text" class="form-control form-control-lg" placeholder="Email" />
+                                <input name="email" type="text" class="form-control form-control-lg @error('email') form-control-danger @enderror" placeholder="Email" />
                                 <div class="input-group-append custom">
-                                    <span class="input-group-text"><i class="icon-copy dw dw-email"></i></span>
+                                    @error('email')
+                                    @else
+                                        <span class="input-group-text"><i class="icon-copy dw dw-email"></i></span>
+
+                                    @enderror
                                 </div>
                             </div>
-                            <div class="input-group custom">
-                                <input name="password" type="password" class="form-control form-control-lg" placeholder="Kata Sandi" />
+                            @error('email')
+                                <small class="form-control-feedback text-danger">{{ $message }}</small>
+                            @enderror
+                            <div class="input-group custom mt-2">
+                                <input name="password" type="password" class="form-control form-control-lg @error('password') form-control-danger @enderror" placeholder="Kata Sandi" />
                                 <div class="input-group-append custom">
-                                    <span class="input-group-text"><i class="dw dw-padlock1"></i></span>
+                                    @error('email')
+                                    @else
+                                        <span class="input-group-text"><i class="dw dw-padlock1"></i></span>
+                                    @enderror
                                 </div>
                             </div>
+                            @error('password')
+                            <small class="form-control-feedback text-danger">{{ $message }}</small>
+                            @enderror
                             <div class="row pb-30">
                                 <div class="col-12">
                                     <div class="forgot-password">
-                                        <a href="/forgot-password">Lupa Kata Sandi?</a>
+                                        <a href="{{route('auth.password.forgot')}}">Lupa Kata Sandi?</a>
                                     </div>
                                 </div>
                             </div>
@@ -118,7 +141,7 @@
                                     </div>
                                     <div class="input-group mb-0">
                                         <a class="btn btn-outline-primary btn-lg btn-block"
-                                            href="{{ route('register') }}">Daftar Akun</a>
+                                            href="{{ route('auth.register') }}">Daftar Akun</a>
                                     </div>
                                 </div>
                             </div>

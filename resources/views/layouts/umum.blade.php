@@ -76,7 +76,6 @@
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
     <div class="container-fluid bg-white sticky-top">
         <div class="container">
@@ -109,7 +108,7 @@
                             {{-- tampil saat mode mobile --}}
                             <div class="login">
                                 <a href="{{ route('dashboard') }}" class="nav-item nav-link">Dashboard</a>
-                                <a href="{{ route('logout') }}" class="nav-item nav-link text-danger">Keluar</a>
+                                <a href="{{ route('auth.logout') }}" class="nav-item nav-link text-danger">Keluar</a>
                             </div>
                         @else
                             <div class="login">
@@ -123,11 +122,10 @@
                     <div class="new navbar-nav">
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle text-black text-bold"
-                                data-bs-toggle="dropdown">Putu Putra Eka
-                                Persada</a>
+                                data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>
                             <div class="dropdown-menu account bg-light rounded-0 rounded-bottom m-0">
                                 <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
-                                <a href="{{ route('logout') }}" class="dropdown-item">Keluar</a>
+                                <a href="{{ route('auth.logout') }}" class="dropdown-item">Keluar</a>
                             </div>
                         </div>
                     </div>
@@ -140,6 +138,7 @@
         </div>
     </div>
     <!-- Navbar End -->
+
 
 
     @yield('umum')
