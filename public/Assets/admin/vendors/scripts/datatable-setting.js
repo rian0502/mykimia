@@ -38,7 +38,7 @@ $("document").ready(function () {
             [10, 25, 50, "Semua"],
         ],
         language: {
-            info: "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
+            info: "Menampilkan _START_ - _END_ dari _TOTAL_ data",
             searchPlaceholder: "Pencarian",
             paginate: {
                 next: '<i class="ion-chevron-right"></i>',

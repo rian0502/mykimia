@@ -17,12 +17,12 @@
         rel="stylesheet" />
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="/Assets/admin/vendors/styles/core.css" />
-    <link rel="stylesheet" type="text/css" href="/Assets/admin/vendors/styles/icon-font.min.css" />
+    <link rel="stylesheet" type="text/css" href="/Assets/auth/vendors/styles/core.css" />
+    <link rel="stylesheet" type="text/css" href="/Assets/auth/vendors/styles/icon-font.min.css" />
     <link rel="stylesheet" type="text/css"
-        href="/Assets/admin/src/plugins/datatables/css/dataTables.bootstrap4.min.css" />
+        href="/Assets/auth/src/plugins/datatables/css/dataTables.bootstrap4.min.css" />
     <link rel="stylesheet" type="text/css"
-        href="/Assets/admin/src/plugins/datatables/css/responsive.bootstrap4.min.css" />
+        href="/Assets/auth/src/plugins/datatables/css/responsive.bootstrap4.min.css" />
     <link rel="stylesheet" type="text/css" href="/Assets/admin/vendors/styles/style.css" />
     <link rel="stylesheet" type="text/css" href="/Assets/src/lib/toastify/src/toastify.css" />
 

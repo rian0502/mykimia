@@ -19,7 +19,7 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/Assets/auth/vendors/styles/core.css" />
     <link rel="stylesheet" type="text/css" href="/Assets/auth/vendors/styles/icon-font.min.css" />
-    <link rel="stylesheet" type="text/css" href="/Assets/auth/vendors/styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="/Assets/admin/vendors/styles/style.css" />
 
     <!-- FontAwesome -->
     <link href="/Assets/FontAwesome/css/fontawesome.css" rel="stylesheet">
