@@ -112,7 +112,7 @@
                             </div>
                         @else
                             <div class="login">
-                                <a href="{{ route('login') }}" class="nav-item nav-link text-primary">Masuk</a>
+                                <a href="{{ route('auth.login') }}" class="nav-item nav-link text-primary">Masuk</a>
                             </div>
                             {{-- tampil saat mode mobile --}}
                         @endauth
@@ -131,7 +131,7 @@
                     </div>
                 @else
                     <div class="ms-auto d-none d-lg-block">
-                        <a href="{{ route('login') }}" class="btn btn-primary rounded-pill py-2 px-3">Masuk</a>
+                        <a href="{{ route('auth.login') }}" class="btn btn-primary rounded-pill py-2 px-3">Masuk</a>
                     </div>
                 @endauth
             </nav>

@@ -4186,11 +4186,17 @@ body.IE .register-page-wrap .container {
 .edit {
     margin-right: 20px;
 }
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
 @media (max-width: 767px) {
-     #picture{
+    #picture {
         /* transform: scale(0.8);
         margin-top: 70px; */
-        display:none;
+        display: none;
     }
     .table-actions {
         margin-top: 20px;
@@ -4333,5 +4339,4 @@ body.IE .register-page-wrap .container {
     .register-page-wrap .wizard-content .wizard .steps {
         display: none;
     }
-    
 }
