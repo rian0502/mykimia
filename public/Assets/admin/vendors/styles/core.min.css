@@ -8939,6 +8939,14 @@ button.bg-dark:hover {
     .mx-md-n4 {
         margin-left: -1.5rem !important;
     }
+    .mt-lg-5,
+    .my-lg-5 {
+        margin-top: 3rem !important;
+    }
+    .mt-lg-5,
+    .my-lg-5 {
+        margin-top: 3rem !important;
+    }
     .m-md-n5 {
         margin: -3rem !important;
     }
@@ -9077,10 +9085,7 @@ button.bg-dark:hover {
     .m-lg-5 {
         margin: 3rem !important;
     }
-    .mt-lg-5,
-    .my-lg-5 {
-        margin-top: 3rem !important;
-    }
+
     .mr-lg-5,
     .mx-lg-5 {
         margin-right: 3rem !important;
