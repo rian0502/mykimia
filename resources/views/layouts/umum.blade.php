@@ -76,7 +76,6 @@
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
     <div class="container-fluid bg-white sticky-top">
         <div class="container">
@@ -113,17 +112,18 @@
                             </div>
                         @else
                             <div class="login">
-                                <a href="{{ route('auth.login') }}" class="nav-item nav-link text-primary">Masuk</a>
+                                <a href="{{ route('login') }}" class="nav-item nav-link text-primary">Masuk</a>
                             </div>
                             {{-- tampil saat mode mobile --}}
                         @endauth
                     </div>
-
-                    @auth
-                        <div class="ms-auto d-none d-lg-block">
-                            <div class="nav-item dropdown">
-                            <a href="#" class="name-account dropdown-toggle text-black text-bold" data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>
-                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                </div>
+                @auth
+                    <div class="new navbar-nav">
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle text-black text-bold"
+                                data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>
+                            <div class="dropdown-menu account bg-light rounded-0 rounded-bottom m-0">
                                 <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
                                 <a href="{{ route('auth.logout') }}" class="dropdown-item">Keluar</a>
                             </div>
@@ -131,13 +131,14 @@
                     </div>
                 @else
                     <div class="ms-auto d-none d-lg-block">
-                        <a href="{{ route('auth.login') }}" class="btn btn-primary rounded-pill py-2 px-3">Masuk</a>
+                        <a href="{{ route('login') }}" class="btn btn-primary rounded-pill py-2 px-3">Masuk</a>
                     </div>
                 @endauth
             </nav>
         </div>
     </div>
     <!-- Navbar End -->
+
 
 
     @yield('umum')
