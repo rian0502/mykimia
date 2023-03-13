@@ -197,7 +197,7 @@
     </div>
     <!-- js -->
     <script src="/Assets/auth/vendors/scripts/core.js"></script>
-    <script src="/Assets/auth/vendors/scripts/script.min.js"></script>
+    <script src="/Assets/admin/vendors/scripts/script.min.js"></script>
     <script src="/Assets/auth/vendors/scripts/process.js"></script>
     <script src="/Assets/auth/vendors/scripts/layout-settings.js"></script>
     <script src="/Assets/auth/src/plugins/jquery-steps/jquery.steps.js"></script>
