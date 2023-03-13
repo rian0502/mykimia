@@ -4176,6 +4176,11 @@ body.IE .register-page-wrap .container {
     }
 }
 @media (max-width: 991px) {
+  
+    .card-boox {
+       width: 100%;
+       height: 100%;
+    }
     .device-usage-chart .width-50-p {
         width: 100%;
     }
@@ -4194,13 +4199,9 @@ body.IE .register-page-wrap .container {
 }
 @media (max-width: 767px) {
     #register {
-        margin-top: 330px;
+        margin-top: 380px;
     }
-    #picture {
-        /* transform: scale(0.8);
-        margin-top: 70px; */
-        display: none;
-    }
+     
 
     .table-actions {
         margin-top: 20px;
@@ -4316,6 +4317,7 @@ body.IE .register-page-wrap .container {
     .docs-buttons .btn-group-crop {
         display: block;
     }
+
     .select-role .btn-group .btn {
         padding-left: 35px;
         font-size: 14px;
