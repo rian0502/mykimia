@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <div class="col-md-2 col-lg-5">
-                    <div class="pd-20 card-box mb-30 mt-lg-5" style="margin-top: 150px">
+                    <div class="pd-20 card-box mb-30 mt-lg-5" id="register" style="">
                         <div class="clearfix">
                             <div class="login-title">
                                 <h2 class="text-center text-primary">Daftar Akun</h2>
