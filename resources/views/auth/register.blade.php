@@ -89,8 +89,11 @@
                             </h6>
 
                         </div>
-                        <form class="mt-5">
+                        <form class="mt-5" action="{{ route('auth.register.post') }}" method="POST"
+                            enctype="multipart/form-data">
+                            @csrf
                             <div class="profile-edit-list row">
+
                                 {{-- kiri --}}
                                 <div class="weight-500 col-md-6">
                                     <div class="form-group">
@@ -136,8 +139,10 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
+
+
+
                                 {{-- kanan --}}
                                 <div class="weight-500 col-md-6">
                                     <div class="form-group">
@@ -170,10 +175,11 @@
                             <div class="row mt-3">
                                 <div class="col-sm-12">
                                     <div class="input-group mb-0">
-                                        <button type="submit" class="btn btn-primary btn-lg btn-block">Daftar</button>
+                                        <button type="submit"
+                                            class="btn btn-primary btn-lg btn-block">Daftar</button>
                                     </div>
                                     <div class="font-16 weight-600 pt-10 pb-10 text-center" data-color="#707373">
-                                        
+
                                     </div>
                                     <div class="input-group mb-0">
                                         {{-- <a class="btn btn-outline-primary btn-lg btn-block"
